@@ -41,7 +41,7 @@ header {
 
 /************ SECCION CATEGORIA ***********/
 
-.contenedor-categoria {
+.seccion-categoria {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -51,4 +51,36 @@ header {
 
 .t-categoria {
     background-color: green;
+}
+
+/************ SECCION CATALOGO ***********/
+
+.seccion-catalogo {
+    display: flex;
+    background-color: blue;
+    height: 1500px;
+}
+
+aside {
+    background-color: crimson;
+    flex:1;
+}
+
+.contenedor-catalogo {
+    display:flex;
+    flex-direction: column;
+    background-color: aqua;
+    margin: 20px;
+    flex:4;
+}
+
+.contenedor-tarjetas {
+    display:flex;
+    flex-wrap: wrap;
+    background-color: chartreuse;
+}
+.tarjetas {
+    flex-basis: 350px;
+    background-color: rgb(228, 10, 144);
+    height: 500px;
 }
