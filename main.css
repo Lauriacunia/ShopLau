@@ -1,7 +1,43 @@
-.rojo {
-    background-color: red;
+* {
+    margin:0;
 }
 
-.verde {
-    background-color: green;
+/************ HEADER ************/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: blueviolet;
 }
+.contenedor-marca {
+    display: flex;
+    background-color: azure;
+    flex-basis: 350px;
+}
+.i-logo {
+    background-color: brown;
+    flex-basis: 50px;
+}
+
+.t-marca {
+    background-color: yellow
+}
+
+.contenedor-carrito {
+    display: flex;
+    background-color: azure;
+    flex-basis: 350px;
+}
+
+.i-carrito {
+    flex-basis: 50px;
+    background-color: brown;
+
+}
+
+.t-carrito {
+    background-color: yellow
+}
+
+/************ SECCION CATEGORIA ***********/
+
