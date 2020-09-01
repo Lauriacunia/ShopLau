@@ -52,7 +52,10 @@ header {
 .t-categoria {
     background-color: green;
 }
-
+.filtro {
+    display: flex;
+    justify-content: space-between;
+}
 /************ SECCION CATALOGO ***********/
 
 .seccion-catalogo {
