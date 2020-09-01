@@ -1,5 +1,6 @@
 * {
-    margin:0;
+    margin: 0px;
+    padding:0px;
 }
 
 /************ HEADER ************/
@@ -13,20 +14,27 @@ header {
     display: flex;
     background-color: azure;
     flex-basis: 350px;
+    align-items: center;   
 }
 .i-logo {
     background-color: brown;
-    flex-basis: 50px;
 }
 
 .t-marca {
-    background-color: yellow
+    background-color: yellow;
+    
 }
-
+.marca {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-left: 10px;
+}
 .contenedor-carrito {
     display: flex;
     background-color: azure;
     flex-basis: 350px;
+    align-items: center;
+    justify-content: right;   /* porque no me obedeceeee?? jajaja*/
 }
 
 .i-carrito {
@@ -36,9 +44,15 @@ header {
 }
 
 .t-carrito {
-    background-color: yellow
+    background-color: yellow;
+  
 }
 
+.carrito {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-left: 10px;
+}
 /************ SECCION CATEGORIA ***********/
 
 .seccion-categoria {
