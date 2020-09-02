@@ -1,6 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 * {
-    margin: 0px;
-    padding:0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+i{
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+input {
+    margin-right: 10px;
 }
 
 /************ HEADER ************/
@@ -9,6 +31,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: blueviolet;
+    font-family: 'Work Sans', sans-serif;
 }
 .contenedor-marca {
     display: flex;
@@ -34,13 +57,20 @@ header {
     background-color: azure;
     flex-basis: 350px;
     align-items: center;
-    justify-content: right;   /* porque no me obedeceeee?? jajaja*/
+    justify-content: flex-end; 
+    margin-right: 25px;  
 }
-
+.boton-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+}
 .i-carrito {
-    flex-basis: 50px;
+    flex-basis: 30px;
     background-color: brown;
-
+       
 }
 
 .t-carrito {
@@ -66,10 +96,8 @@ header {
 .t-categoria {
     background-color: green;
 }
-.filtro {
-    display: flex;
-    justify-content: space-between;
-}
+
+
 /************ SECCION CATALOGO ***********/
 
 .seccion-catalogo {
@@ -78,10 +106,61 @@ header {
     height: 1500px;
 }
 
+/* ----aside ----*/
+
 aside {
     background-color: crimson;
     flex:1;
 }
+.contenedor-aside {
+    display:flex;
+    flex-direction: column;
+    margin-left:30px;
+    margin-right:30px;
+    font-family: 'Work Sans', sans-serif;
+
+}
+.filtro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+.t-filtro {
+    font-size: 25px;
+}
+.tachito {
+    display:flex;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    align-items: center;
+}
+.i-tachito {
+    margin-right: 5px;
+}
+.t-limpiar {
+    font-size: 15px;
+}
+.contenedor-busqueda {
+    margin-top:15px;
+}
+
+
+.contenedor-puntaje {
+    margin-top: 15px;
+}
+.contenedor-estrellas{
+    display:flex;
+    align-items: center;
+    margin-top:10px;
+}
+.t-subtitulo {
+    font-size: 18px;
+}
+
+/* ----tarjetas ----*/
 
 .contenedor-catalogo {
     display:flex;
