@@ -38,25 +38,25 @@
 
    </header>
 
-<!--  *****************   SECCION CATEGORIA  *************************-->
-   <div class = "seccion-categoria">
-       <div class = "t-categoria">
+<!--  *****************   SECCION BANNER  *************************-->
+   <section class = "seccion-nanner">
+       <div class = "t-banner">
             <h1>ELECTRONICA</h1>
        </div>
 
-   </div>
+    </section>
 
 <!--  *****************   SECCION CATALOGO  *************************-->
-   <div class = "seccion-catalogo">
+   <section class = "seccion-catalogo">
  
         <aside>
             <div class = "contenedor-aside">
                 <div class = "filtro">
-                    <div class = "t-filtro">
-                        <h5>FILTROS</h5>
+                    <div class = "t-principal">
+                        <p>FILTROS</p>
                     </div>
-                    <div class= "boton-tachito">
-                        <button type="button" class="tachito">
+                    <div class= "contenedor-boton-tachito">
+                        <button type="button" class="boton-tachito">
                             <i class="fas fa-trash-alt i-tachito"></i> 
                             <p class = "t-limpiar">Limpiar</p>
                           </button> 
@@ -64,82 +64,105 @@
                 </div>
 
                 <div class = "contenedor-busqueda">
-                    
-                    <label class="busqueda" class= "t-subtitulo">BUSQUEDA
-                        <input type="text" class="search-input" name="Búsqueda"  placeholder="Buscar productos">
+                    <div class= "t-subtitulo">
+                        <p>BUSQUEDA</p> 
+                    </div>
+
+                    <div class ="contenedor-input-serch" >
+                        <input type="text" class="input-busqueda" name="busqueda"  placeholder="¿Qué estás buscando?">
                         <i class="fas fa-search" aria-hidden="true"></i>
-                      </label>
+                    </div>
+                      
                 </div>
 
 
                 <div class = "contenedor-categoria">
-                    <label for ="categoria" class= "t-subtitulo">CATEGORIA
-                            <input type = "checkbox" name = "categoria" value = "consolas">CONSOLAS</input>
-                            <input type = "checkbox" name = "categoria" value = "notbooks">NOTEBOOKS</input>
-                            <input type = "checkbox" name = "categoria" value = "tablets">TABLETS</input>
-                            <input type = "checkbox" name = "categoria" value = "smartphones">SMARTPHONES</input>
-                            <input type = "checkbox" name = "categoria" value = "accesorios">ACCESORIOS</input>
-
+                    <div class= "t-subtitulo">
+                        <p>CATEGORIA</p> 
+                    </div>
+                
+                        <div class = "contenedor-input-categoria">
+                            <label>
+                                <input type = "checkbox" name = "categoria" value = "consolas">CONSOLAS</input>
+                            </label>
+                            <label>
+                                <input type = "checkbox" name = "categoria" value = "notbooks">NOTEBOOKS</input>
+                            </label>
+                            <label>
+                                <input type = "checkbox" name = "categoria" value = "tablets">TABLETS</input>
+                            </label>
+                            <label>
+                                <input type = "checkbox" name = "categoria" value = "smartphones">SMARTPHONES</input>
+                            </label>
+                            <label>
+                                <input type = "checkbox" name = "categoria" value = "accesorios">ACCESORIOS</input> 
+                            </label>
+                            
+                        </div>
+                    </label>
                 </div>
 
                 <div class = "contenedor-puntaje">
-                    <label for ="puntaje" class= "t-subtitulo">PUNTAJE
-                        <div class = "contenedor-estrellas">
-                            <input type = "checkbox" name = "puntaje">
+                    <div class= "t-subtitulo">
+                        <p>PUNTAJE</p> 
+                    </div>
+                    
+                    <div class = "contenedor-estrellas">
+                        <input type = "checkbox" name = "puntaje">
                             <i class = "fas fa-star"></i>
                             <i class = "fas fa-star"></i>
                             <i class = "fas fa-star"></i>
                             <i class = "fas fa-star"></i>
                             <i class = "fas fa-star"></i>
                             <h5>(5)</h5>
-                             </input>
-                        </div>
+                        </input>
+                    </div>
                        
-                        <div class = "contenedor-estrellas">
-                            <input type = "checkbox" name = "puntaje">
-                                <i class = "fas fa-star"></i>
-                                <i class = "fas fa-star"></i>
-                                <i class = "fas fa-star"></i>
-                                <i class = "fas fa-star"></i>
-                                <i class = "far fa-star"></i>
-                                <h5>(4)</h5>
-                            </input>
-                        </div>
+                    <div class = "contenedor-estrellas">
+                        <input type = "checkbox" name = "puntaje">
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "far fa-star"></i>
+                            <h5>(4)</h5>
+                        </input>
+                    </div>
 
-                        <div class = "contenedor-estrellas">
-                            <input type = "checkbox" name = "puntaje">
-                                <i class = "fas fa-star"></i>
-                                <i class = "fas fa-star"></i>
-                                <i class = "fas fa-star"></i>
-                                <i class = "far fa-star"></i>
-                                <i class = "far fa-star"></i>
-                                <h5>(3)</h5>
-                            </input>
+                    <div class = "contenedor-estrellas">
+                        <input type = "checkbox" name = "puntaje">
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "far fa-star"></i>
+                            <i class = "far fa-star"></i>
+                            <h5>(3)</h5>
+                        </input>
                         
-                        </div>
+                    </div>
 
-                        <div class = "contenedor-estrellas">
-                            <input type = "checkbox" name = "puntaje">
-                                <i class = "fas fa-star"></i>
-                                <i class = "fas fa-star"></i>
-                                <i class = "far fa-star"></i>
-                                <i class = "far fa-star"></i>
-                                <i class = "far fa-star"></i>
-                                <h5>(2)</h5>
-                            </input>
+                    <div class = "contenedor-estrellas">
+                        <input type = "checkbox" name = "puntaje">
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "far fa-star"></i>
+                            <i class = "far fa-star"></i>
+                            <i class = "far fa-star"></i>
+                            <h5>(2)</h5>
+                        </input>
 
-                        </div>
+                    </div>
 
-                        <div class = "contenedor-estrellas">
-                            <input type = "checkbox" name = "puntaje">
-                                <i class = "fas fa-star"></i>
-                                <i class = "far fa-star"></i>
-                                <i class = "far fa-star"></i>
-                                <i class = "far fa-star"></i>
-                                <i class = "far fa-star"></i>
-                                <h5>(1)</h5>
-                            </input>
-                        </div>
+                    <div class = "contenedor-estrellas">
+                        <input type = "checkbox" name = "puntaje">
+                            <i class = "fas fa-star"></i>
+                            <i class = "far fa-star"></i>
+                            <i class = "far fa-star"></i>
+                            <i class = "far fa-star"></i>
+                            <i class = "far fa-star"></i>
+                            <h5>(1)</h5>
+                        </input>
+                    </div>    
                    
                 </div>
             </div>
@@ -166,7 +189,7 @@
 
 
         </div>
-    </div>
+    </section>
 <!--  *****************   FOOTER  *************************-->
 
 
