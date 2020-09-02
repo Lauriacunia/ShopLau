@@ -171,7 +171,21 @@ aside {
 .categoria {
     font-size: 14px;
 }
+.contenedor-input-categoria {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
 
+.input-categoria{
+    display:flex;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.t-categoria {
+    cursor: pointer;
+}
 .contenedor-puntaje {
     margin-top: 15px;
 }
@@ -179,6 +193,7 @@ aside {
     display:flex;
     align-items: center;
     margin-top:10px;
+    cursor: pointer;
 }
 .t-subtitulo {
     font-size: 18px;
