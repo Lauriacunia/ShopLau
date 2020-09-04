@@ -39,9 +39,9 @@
    </header>
 
 <!--  *****************   SECCION BANNER  *************************-->
-   <section class = "seccion-nanner">
+   <section class = "seccion-banner">
        <div class = "t-banner">
-            <h1>ELECTRONICA</h1>
+            <h1>TECH LIFE</h1>
        </div>
 
     </section>
@@ -51,25 +51,30 @@
  
         <aside>
             <div class = "contenedor-aside">
-                <div class = "filtro">
+
+                <div class = "contenedor-filtro">
+
                     <div class = "t-principal">
                         <p>FILTROS</p>
                     </div>
+
                     <div class= "contenedor-boton-tachito">
                         <button type="button" class="boton-tachito">
                             <i class="fas fa-trash-alt i-tachito"></i> 
                             <p class = "t-limpiar">Limpiar</p>
                           </button> 
                     </div>
+
                 </div>
 
                 <div class = "contenedor-busqueda">
+
                     <div class= "t-subtitulo">
                         <p>BUSQUEDA</p> 
                     </div>
 
                     <div class ="contenedor-input-serch" >
-                        <input type="text" class="input-busqueda" name="busqueda"  placeholder="¿Qué estás buscando?">
+                        <input type="text" id = "input-busqueda" name="busqueda"  placeholder="¿Qué estás buscando?">
                         <i class="fas fa-search" aria-hidden="true"></i>
                     </div>
                       
@@ -77,110 +82,440 @@
 
 
                 <div class = "contenedor-categoria">
-                    <label for ="categoria" class= "t-subtitulo">CATEGORIA
-                        <div class = "contenedor-input-categoria categoria">
-                            <label class = "input-categoria">
-                                <input type = "checkbox" name = "categoria" value = "consolas"></input><p class = "t-categoria">CONSOLAS</p>
-                            </label>
-                            <label class = "input-categoria">
-                                <input type = "checkbox" name = "categoria" value = "notbooks"></input><p  class = "t-categoria">NOTEBOOKS</p>
-                            </label>
-                            <label class = "input-categoria">
-                                <input type = "checkbox" name = "categoria" value = "tablets"></input><p  class = "t-categoria">TABLETS</p>
-                            </label>
-                            <label class = "input-categoria">
-                                <input type = "checkbox" name = "categoria" value = "smartphones"></input><p  class = "t-categoria">SMARTPHONES</p>
-                            </label>
-                            <label class = "input-categoria">
-                                <input type = "checkbox" name = "categoria" value = "accesorios"></input><p  class = "t-categoria">ACCESORIOS</p>
-                            </label>
-                            
-                        </div>
-                    </label>
+
+                    <div class= "t-subtitulo">
+                        <p>CATEGORIA</p> 
+                    </div>
+
+                    <div class ="contenedor-checkbox">
+
+                        <label for ="categoria">
+
+                            <div class = "contenedor-input-categoria categoria">
+                                <label class = "input-categoria">
+                                    <input type = "checkbox" name = "categoria" value = "consolas"></input><p class = "t-categoria">CONSOLAS</p>
+                                </label>
+                                <label class = "input-categoria">
+                                    <input type = "checkbox" name = "categoria" value = "notbooks"></input><p  class = "t-categoria">NOTEBOOKS</p>
+                                </label>
+                                <label class = "input-categoria">
+                                    <input type = "checkbox" name = "categoria" value = "tablets"></input><p  class = "t-categoria">TABLETS</p>
+                                </label>
+                                <label class = "input-categoria">
+                                    <input type = "checkbox" name = "categoria" value = "smartphones"></input><p  class = "t-categoria">SMARTPHONES</p>
+                                </label>
+                                <label class = "input-categoria">
+                                    <input type = "checkbox" name = "categoria" value = "accesorios"></input><p  class = "t-categoria">ACCESORIOS</p>
+                                </label> 
+                            </div>
+
+                        </label>
+
+                    </div>
                 </div>
 
                 <div class = "contenedor-puntaje">
+
                     <div class= "t-subtitulo">
                         <p>PUNTAJE</p> 
                     </div>
-                    
-                    <label class = "contenedor-estrellas">
-                        <input type = "checkbox" name = "puntaje">
-                            <i class = "fas fa-star"></i>
-                            <i class = "fas fa-star"></i>
-                            <i class = "fas fa-star"></i>
-                            <i class = "fas fa-star"></i>
-                            <i class = "fas fa-star"></i>
-                            <p>(5)</p>
-                         </input>
-                    </label>
-                       
-                    <label class = "contenedor-estrellas">
-                        <input type = "checkbox" name = "puntaje">
-                            <i class = "fas fa-star"></i>
-                            <i class = "fas fa-star"></i>
-                            <i class = "fas fa-star"></i>
-                            <i class = "fas fa-star"></i>
-                            <i class = "far fa-star"></i>
-                            <p>(4)</p>
-                        </input>
-                    </label>
 
-                    <label class = "contenedor-estrellas">
-                        <input type = "checkbox" name = "puntaje">
-                            <i class = "fas fa-star"></i>
-                            <i class = "fas fa-star"></i>
-                            <i class = "fas fa-star"></i>
-                            <i class = "far fa-star"></i>
-                            <i class = "far fa-star"></i>
-                            <p>(3)</p>
-                        </input>
+                    <div class = "subcontenedor-puntajes">
+
+                        <label class = "contenedor-estrellas">
+                            <input type = "checkbox"
+                             name = "puntaje"
+                             class="filtro-estrellas"
+                             value="5">
+                                <i class = "fas fa-star"></i>
+                                <i class = "fas fa-star"></i>
+                                <i class = "fas fa-star"></i>
+                                <i class = "fas fa-star"></i>
+                                <i class = "fas fa-star"></i>
+                                <p>(5)</p>
+                            </input>
+                        </label>
                         
-                    </label>
+                        <label class = "contenedor-estrellas">
+                            <input type = "checkbox"
+                             name = "puntaje"
+                             class="filtro-estrellas"
+                             value="4">
+                                <i class = "fas fa-star"></i>
+                                <i class = "fas fa-star"></i>
+                                <i class = "fas fa-star"></i>
+                                <i class = "fas fa-star"></i>
+                                <i class = "far fa-star"></i>
+                                <p>(4)</p>
+                            </input>
+                        </label>
 
-                    <label class = "contenedor-estrellas">
-                        <input type = "checkbox" name = "puntaje">
-                            <i class = "fas fa-star"></i>
-                            <i class = "fas fa-star"></i>
-                            <i class = "far fa-star"></i>
-                            <i class = "far fa-star"></i>
-                            <i class = "far fa-star"></i>
-                            <p>(2)</p>
-                        </input>
+                        <label class = "contenedor-estrellas">
+                            <input type = "checkbox"
+                             name = "puntaje"
+                             class="filtro-estrellas"
+                             value="3">
+                                <i class = "fas fa-star"></i>
+                                <i class = "fas fa-star"></i>
+                                <i class = "fas fa-star"></i>
+                                <i class = "far fa-star"></i>
+                                <i class = "far fa-star"></i>
+                                <p>(3)</p>
+                            </input>
+                            
+                        </label>
 
-                    </label>
+                        <label class = "contenedor-estrellas">
+                            <input type = "checkbox"
+                             name = "puntaje"
+                             class="filtro-estrellas"
+                             value="2">
+                                <i class = "fas fa-star"></i>
+                                <i class = "fas fa-star"></i>
+                                <i class = "far fa-star"></i>
+                                <i class = "far fa-star"></i>
+                                <i class = "far fa-star"></i>
+                                <p>(2)</p>
+                            </input>
 
-                    <label class = "contenedor-estrellas">
-                        <input type = "checkbox" name = "puntaje">
-                            <i class = "fas fa-star"></i>
-                            <i class = "far fa-star"></i>
-                            <i class = "far fa-star"></i>
-                            <i class = "far fa-star"></i>
-                            <i class = "far fa-star"></i>
-                            <p>(1)</p>
-                        </input>
-                    </label>    
-                   
+                        </label>
+
+                        <label class = "contenedor-estrellas">
+                            <input type = "checkbox"
+                             name = "puntaje"
+                             class="filtro-estrellas"
+                             value="1">
+                                <i class = "fas fa-star"></i>
+                                <i class = "far fa-star"></i>
+                                <i class = "far fa-star"></i>
+                                <i class = "far fa-star"></i>
+                                <i class = "far fa-star"></i>
+                                <p>(1)</p>
+                            </input>
+                        </label>    
+                    </div>
                 </div>
             </div>
 
         </aside>
 
-        <div class = "contenedor-catalogo">
-            <div class = "encabezado-catalogo">
+<!-- ========================  SECCION CATALOGO ========================= --> 
 
+        <div class = "contenedor-catalogo ">
+            <div class = "encabezado-catalogo ">
+                <div class = "t-mostrando">
+                    <p>Mostrando <span id = "nro-productos">12</span>producto(s) de 12</p>
+                </div>
+                <div class = "filtro-catalogo">
+                    <div class ="t-verComo">
+                        <p>Ver como</p>
+                    </div>
+                    <div id = "i-flex">
+                        <button type ="button">
+                             <i class="fas fa-th"></i>
+                        </button>
+                    </div>
+                    <div id = "i-list">
+                        <button type ="button">
+                            <i class="fas fa-list" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
 
+<!-- ==========================  TARJETAS ==================================-->
+
             <div class = "contenedor-tarjetas">
-                <div class = "tarjeta"></div>
-                <div class = "tarjeta"></div>
-                <div class = "tarjeta"></div>
-                <div class = "tarjeta"></div>
-                <div class = "tarjeta"></div>
-                <div class = "tarjeta"></div>
-                <div class = "tarjeta"></div>
-                <div class = "tarjeta"></div>
-                <div class = "tarjeta"></div>
+
+                <div class = "tarjeta"
+                data-nombre="metabolic balance"
+                data-rating="4">
+
+                    <div class = "contenedor-imagen">
+                        <img src = "images/pizza.jpg">
+                    </div>
+                    <div class = "contenedor-titulo">
+                        <p class = "t-producto">METABOLIC BALANCE</p>
+                    </div>
+                    <div>
+                        <p class = "t-precio"> B 4.000.000 </p>
+                    </div>
+                    <div class = "contenedor-estrellas-tarjeta">
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "far fa-star"></i>
+                    </div>
+                    <div class ="boton-comprar">
+                        <button type="button" class ="add-to-card">COMPRAR</button>
+                    </div>
+                </div>
+
+                <div class = "tarjeta"
+                data-nombre="wake up darling"
+                data-rating="3">
+                    <div class = "contenedor-imagen">
+                        <img src = "images/gallo.jpg">
+                    </div>
+                    <div class = "contenedor-titulo">
+                        <p class = "t-producto">WAKE UP DARLING</p>
+                    </div>
+                    <div>
+                        <p class = "t-precio"> B 3.700.000 </p>
+                    </div>
+                    <div class = "contenedor-estrellas-tarjeta">
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                    </div>
+                    <div class ="boton-comprar">
+                        <button type="button" class ="add-to-card">COMPRAR</button>
+                    </div>
+                </div>
+                
+                <div class = "tarjeta"
+                data-nombre="karateca language"
+                data-rating="3">
+
+                    <div class = "contenedor-imagen">
+                        <img src = "images/chino.jpg">
+                    </div>
+                    <div class = "contenedor-titulo">
+                        <p class = "t-producto">KARATECA LANGUAGE</p>
+                    </div>
+                    <div>
+                        <p class = "t-precio"> B 1.750.000 </p>
+                    </div>
+                    <div class = "contenedor-estrellas-tarjeta">
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                    </div>
+                    <div class ="boton-comprar">
+                        <button type="button" class ="add-to-card">COMPRAR</button>
+                    </div>
+                </div>
+                <div class = "tarjeta"
+                data-nombre="tell me a story"
+                data-rating="1">
+                    <div class = "contenedor-imagen">
+                        <img src = "images/libro.jpg">
+                    </div>
+                    <div class = "contenedor-titulo">
+                        <p class = "t-producto">TELL ME A STORY</p>
+                    </div>
+                    <div>
+                        <p class = "t-precio"> B 850.000 </p>
+                    </div>
+                    <div class = "contenedor-estrellas-tarjeta">
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                    </div>
+                    <div class ="boton-comprar">
+                        <button type="button" class ="add-to-card">COMPRAR</button>
+                    </div>
+                </div>
+
+                <div class = "tarjeta"
+                data-nombre="dont stop dancing"
+                data-rating="4">
+                    <div class = "contenedor-imagen">
+                        <img src = "images/dance.jpg">
+                    </div>
+                    <div class = "contenedor-titulo">
+                        <p class = "t-producto">DONT STOP DANCING</p>
+                    </div>
+                    <div>
+                        <p class = "t-precio"> B 1.280.000 </p>
+                    </div>
+                    <div class = "contenedor-estrellas-tarjeta">
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                    </div>
+                    <div class ="boton-comprar">
+                        <button type="button" class ="add-to-card">COMPRAR</button>
+                    </div>
+                </div>
+                
+                <div class = "tarjeta"
+                data-nombre="motor skill"
+                data-rating="3">
+                    <div class = "contenedor-imagen">
+                        <img src = "images/motor.jpg">
+                    </div>
+                    <div class = "contenedor-titulo">
+                        <p class = "t-producto">MOTOR SKILL</p>
+                    </div>
+                    <div>
+                        <p class = "t-precio"> B 850.000</p>
+                    </div>
+                    <div class = "contenedor-estrellas-tarjeta">
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                    </div>
+                    <div class ="boton-comprar">
+                        <button type="button" class ="add-to-card">COMPRAR</button>
+                    </div>
+                </div>
+
+                <div class = "tarjeta"
+                data-nombre="route 66"
+                data-rating="2">
+                    <div class = "contenedor-imagen">
+                        <img src = "images/auto.jpg">
+                    </div>
+                    <div class = "contenedor-titulo">
+                        <p class = "t-producto">ROUTE 66</p>
+                    </div>
+                    <div>
+                        <p class = "t-precio"> B 680.000</p>
+                    </div>
+                    <div class = "contenedor-estrellas-tarjeta">
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                    </div>
+                    <div class ="boton-comprar">
+                        <button type="button" class ="add-to-card">COMPRAR</button>
+                    </div>
+                </div>
+
+                <div class = "tarjeta"
+                data-nombre="hibernate"
+                data-rating="4">
+                    <div class = "contenedor-imagen">
+                        <img src = "images/ternurita.jpg">
+                    </div>
+                    <div class = "contenedor-titulo">
+                        <p class = "t-producto">HIBERNATE</p>
+                    </div>
+                    <div>
+                        <p class = "t-precio">B 3.600.000 </p>
+                    </div>
+                    <div class = "contenedor-estrellas-tarjeta">
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                    </div>
+                    <div class ="boton-comprar">
+                        <button type="button" class ="add-to-card">COMPRAR</button>
+                    </div>
+                </div>
+                
+                <div class = "tarjeta"
+                data-nombre="good memories "
+                data-rating="5">
+                    <div class = "contenedor-imagen">
+                        <img src = "images/foto.jpg">
+                    </div>
+                    <div class = "contenedor-titulo">
+                        <p class = "t-producto">GOOD MEMORIES</p>
+                    </div>
+                    <div>
+                        <p class = "t-precio">B 7.900.000 </p>
+                    </div>
+                    <div class = "contenedor-estrellas-tarjeta">
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                    </div>
+                    <div class ="boton-comprar">
+                        <button type="button" class ="add-to-card">COMPRAR</button>
+                    </div>
+                </div>
+
+                <div class = "tarjeta"
+                data-nombre="net brain "
+                data-rating="5">
+                    <div class = "contenedor-imagen">
+                        <img src = "images/brain.jpg">
+                    </div>
+                    <div class = "contenedor-titulo">
+                        <p class = "t-producto">NET-BRAIN</p>
+                    </div>
+                    <div>
+                        <p class = "t-precio"> B 15.000.000.000</p>
+                    </div>
+                    <div class = "contenedor-estrellas-tarjeta">
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                    </div>
+                    <div class ="boton-comprar">
+                        <button type="button" class ="add-to-card">COMPRAR</button>
+                    </div>
+                </div>
+
+                <div class = "tarjeta"
+                data-nombre="inmune warriors"
+                data-rating="5">
+                    <div class = "contenedor-imagen">
+                        <img src = "images/germen.jpg">
+                    </div>
+                    <div class = "contenedor-titulo">
+                        <p class = "t-producto">IMMUNE WARRIORS</p>
+                    </div>
+                    <div>
+                        <p class = "t-precio"> B 30.000.000 </p>
+                    </div>
+                    <div class = "contenedor-estrellas-tarjeta">
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                    </div>
+                    <div class ="boton-comprar">
+                        <button type="button" class ="add-to-card">COMPRAR</button>
+                    </div>
+                </div>
+                
+                <div class = "tarjeta"
+                data-nombre="bionic eye"
+                data-rating="2">
+                    <div class = "contenedor-imagen">
+                        <img src = "images/ojo.jpg">
+                    </div>
+                    <div class = "contenedor-titulo">
+                        <p class = "t-producto">BIONIC EYE</p>
+                    </div>
+                    <div>
+                        <p class = "t-precio">B 7.000.000</p>
+                    </div>
+                    <div class = "contenedor-estrellas-tarjeta">
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                        <i class = "far fa-star"></i>
+                    </div>
+                    <div class ="boton-comprar">
+                        <button type="button" class ="add-to-card">COMPRAR</button>
+                    </div>
+                </div>
+                
 
             </div>
 
@@ -188,7 +523,12 @@
         </div>
     </section>
 <!--  *****************   FOOTER  *************************-->
-
+    <footer>
+        <div class="logo-container">
+            <img src="images/iso_blanco.svg" alt="" aria-hidden="true" class="logo">
+            <p>ADA SHOP - Gracias por visitarnos 💚</p>
+        </div>
+    </footer>
 
     <script src="index.js"></script>
            
