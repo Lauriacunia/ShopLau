@@ -1,6 +1,10 @@
 const filtroNombre = document.querySelector('#input-busqueda');
+console.log(filtroNombre)
+console.log(filtroNombre.value) // ¿como veo en pantalla el texto que tipeo?
 const tarjetas = document.getElementsByClassName('tarjeta');
+console.log(tarjetas)
 const filtroRating = document.getElementsByClassName('filtro-estrellas');
+console.log(filtroRating)
 
 // cuando se escriba algo en el input
 filtroNombre.oninput = () => {
@@ -8,7 +12,9 @@ filtroNombre.oninput = () => {
     for (let tarjeta of tarjetas) {
       // me fijo el nombre de la tarjeta y qué buscó el usuario
       const titulo = tarjeta.dataset.nombre;
+      console.log(titulo)
       const busqueda = filtroNombre.value;
+      console.log(busqueda)
       // si el titulo incluye lo que buscó el usuario...
       if (titulo.includes(busqueda)) {
         // le quito la clase "hidden" a la tarjeta
