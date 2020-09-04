@@ -18,9 +18,11 @@ filtroNombre.oninput = () => {
       // si el titulo incluye lo que buscó el usuario...
       if (titulo.includes(busqueda)) {
         // le quito la clase "hidden" a la tarjeta
+        console.log("INCLUYEEEEEeeeeeeeeeeeeeeeeeeeeee")
         tarjeta.classList.remove('hidden');
       } else {
         // se la agrego
+        console.log("NO INCLUYEEEeeeeeeeeeeeeeeeeeeeeee")
         tarjeta.classList.add('hidden');
       }
     }
