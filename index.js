@@ -19,15 +19,15 @@ filtroNombre.oninput = () => {
       if (titulo.includes(busqueda)) {
         // le quito la clase "hidden" a la tarjeta
         console.log("INCLUYEEEEEeeeeeeeeeeeeeeeeeeeeee")
-        tarjeta.classList.contains('hidden')
+        console.log(tarjeta.classList.contains('hidden'))
         tarjeta.classList.remove('hidden');
-        tarjeta.classList.contains('hidden')
+        console.log(tarjeta.classList.contains('hidden'))
       } else {
         // se la agrego
         console.log("NO INCLUYEEEeeeeeeeeeeeeeeeeeeeeee")
-        tarjeta.classList.contains('hidden')
+        console.log(tarjeta.classList.contains('hidden'))
         tarjeta.classList.add('hidden');
-        tarjeta.classList.contains('hidden')
+        console.log(tarjeta.classList.contains('hidden'))
       }
     }
   };
