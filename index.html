@@ -10,16 +10,26 @@
 </head>
 <body>
 
-<!--  *****************   HEADER  *************************-->
+<!--  **************************   HEADER  *************************-->
    <header>
-       <div class= "contenedor-marca">
+       <div class= "contenedor-nav">
+           <nav>
+               <ul class= "nav-izq">
+                   <li class= "menu-header">quienes somos</li>
+                   <li class= "menu-header">sucursales</li>
+               </ul>
+
+           </nav>
            <div class = "i-logo">
                 <img src="https://img.icons8.com/cotton/64/000000/brain-3.png"/>
            </div>
+           <nav>
+            <ul class= "nav-der">
+                <li class= "menu-header">productos</li>
+                <li class= "menu-header">promociones</li>
+            </ul>
 
-           <div class= "t-marca">
-               <h4 class= "marca">NEUROCLICK</h4>
-           </div>
+        </nav>
 
        </div>
 
@@ -38,6 +48,7 @@
    </header>
 
 <!--  *****************   SECCION BANNER  *************************-->
+
    <section class = "seccion-banner">
        <div class = "t-banner">
             <h1>TECH LIFE</h1>
@@ -45,6 +56,56 @@
 
     </section>
 
+<!-- ************************** SECCION ABOUT US ********************-->
+    <section seccion = "seccion-us">
+        <div class = "contenedor-us">
+
+            <div class = "contenedor-column">
+
+                <div class = "columna1-us">
+
+                    <div class= "contenedor-t-us">
+                        <p class = t-us>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, earum tempore. Sequi sapiente minus dolores. Voluptatibus nam voluptatem, doloribus rerum id natus quidem nulla repellendus illo dicta enim distinctio consectetur.
+                        </p>
+                    </div>
+                    <div class ="contenedor-ventas">
+                        <div class = "venta1">
+                            <img src ="images/ternurita.jpg">
+    
+                        </div>
+                        <div class = "venta2">
+                            <img src ="images/ternurita.jpg">
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+                <div class = "columna2-us">
+                    <div class ="pic-increible">
+                        <img src = "images/prueba.jpg">
+
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+        <div class = "contenedor-row">
+            <div class = "contenedor-descuentos">
+                <div>
+                    <p class = "t-descuentos">Cambiá tu vida hoy y pagalo en 6 coutas sin interés</p>
+                </div>
+               <div>
+                     <p class = "t-descuentos">¿Ya viste nuestros Lanzamientos del mes?</p>
+               </div>
+                
+            </div>
+
+        </div>
+
+    </section>
 <!--  *****************   SECCION CATALOGO  *************************-->
    <section class = "seccion-catalogo">
  
@@ -94,19 +155,44 @@
 
                             <div class = "contenedor-input-categoria categoria">
                                 <label class = "input-categoria">
-                                    <input type = "checkbox" name = "categoria" value = "consolas"></input><p class = "t-categoria">CONSOLAS</p>
+                                    <input type = "checkbox" 
+                                    class="checkbox-filtro filtro-categoria"
+                                    name = "categoria"
+                                    value = "consolas">
+                                </input>
+                                <p class = "t-categoria">CONSOLAS</p>
                                 </label>
                                 <label class = "input-categoria">
-                                    <input type = "checkbox" name = "categoria" value = "notbooks"></input><p  class = "t-categoria">NOTEBOOKS</p>
+                                    <input type = "checkbox"
+                                     class="checkbox-filtro filtro-categoria"
+                                     name = "categoria"
+                                     value = "notbooks">
+                                    </input>
+                                    <p  class = "t-categoria">NOTEBOOKS</p>
                                 </label>
                                 <label class = "input-categoria">
-                                    <input type = "checkbox" name = "categoria" value = "tablets"></input><p  class = "t-categoria">TABLETS</p>
+                                    <input type = "checkbox"
+                                     class="checkbox-filtro filtro-categoria"
+                                     name = "categoria"
+                                     value = "tablets">
+                                     /input>
+                                     <p  class = "t-categoria">TABLETS</p>
                                 </label>
                                 <label class = "input-categoria">
-                                    <input type = "checkbox" name = "categoria" value = "smartphones"></input><p  class = "t-categoria">SMARTPHONES</p>
+                                    <input type = "checkbox"
+                                     class="checkbox-filtro filtro-categoria"
+                                     name = "categoria" 
+                                     value = "smartphones">
+                                    </input>
+                                    <p  class = "t-categoria">SMARTPHONES</p>
                                 </label>
                                 <label class = "input-categoria">
-                                    <input type = "checkbox" name = "categoria" value = "accesorios"></input><p  class = "t-categoria">ACCESORIOS</p>
+                                    <input type = "checkbox" 
+                                    class="checkbox-filtro filtro-categoria" 
+                                    name = "categoria" 
+                                    value = "accesorios">
+                                </input>
+                                <p  class = "t-categoria">ACCESORIOS</p>
                                 </label> 
                             </div>
 
@@ -126,7 +212,7 @@
                         <label class = "contenedor-estrellas">
                             <input type = "checkbox"
                              name = "puntaje"
-                             class="filtro-estrellas"
+                             class="checkbox-filtro filtro-estrella"
                              value="5">
                                 <i class = "fas fa-star"></i>
                                 <i class = "fas fa-star"></i>
@@ -140,7 +226,7 @@
                         <label class = "contenedor-estrellas">
                             <input type = "checkbox"
                              name = "puntaje"
-                             class="filtro-estrellas"
+                             class="checkbox-filtro filtro-estrella"
                              value="4">
                                 <i class = "fas fa-star"></i>
                                 <i class = "fas fa-star"></i>
@@ -154,7 +240,7 @@
                         <label class = "contenedor-estrellas">
                             <input type = "checkbox"
                              name = "puntaje"
-                             class="filtro-estrellas"
+                             class="checkbox-filtro filtro-estrella"
                              value="3">
                                 <i class = "fas fa-star"></i>
                                 <i class = "fas fa-star"></i>
@@ -169,7 +255,7 @@
                         <label class = "contenedor-estrellas">
                             <input type = "checkbox"
                              name = "puntaje"
-                             class="filtro-estrellas"
+                             class="checkbox-filtro filtro-estrella"
                              value="2">
                                 <i class = "fas fa-star"></i>
                                 <i class = "fas fa-star"></i>
@@ -184,7 +270,7 @@
                         <label class = "contenedor-estrellas">
                             <input type = "checkbox"
                              name = "puntaje"
-                             class="filtro-estrellas"
+                             class="checkbox-filtro filtro-estrella"
                              value="1">
                                 <i class = "fas fa-star"></i>
                                 <i class = "far fa-star"></i>
@@ -316,7 +402,7 @@
                     </div>
                     <div class = "contenedor-estrellas-tarjeta">
                         <i class = "fas fa-star"></i>
-                        <i class = "fas fa-star"></i>
+                        <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
@@ -341,8 +427,8 @@
                     <div class = "contenedor-estrellas-tarjeta">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
-                        <i class = "far fa-star"></i>
-                        <i class = "far fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
                         <i class = "far fa-star"></i>
                     </div>
                     <div class ="boton-comprar">
@@ -365,7 +451,7 @@
                     <div class = "contenedor-estrellas-tarjeta">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
-                        <i class = "far fa-star"></i>
+                        <i class = "fas fa-star"></i>
                         <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
                     </div>
@@ -413,8 +499,8 @@
                     <div class = "contenedor-estrellas-tarjeta">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
-                        <i class = "far fa-star"></i>
-                        <i class = "far fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
                         <i class = "far fa-star"></i>
                     </div>
                     <div class ="boton-comprar">
@@ -437,9 +523,9 @@
                     <div class = "contenedor-estrellas-tarjeta">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
-                        <i class = "far fa-star"></i>
-                        <i class = "far fa-star"></i>
-                        <i class = "far fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
                     </div>
                     <div class ="boton-comprar">
                         <button type="button" class ="add-to-card">COMPRAR</button>
@@ -461,9 +547,9 @@
                     <div class = "contenedor-estrellas-tarjeta">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
-                        <i class = "far fa-star"></i>
-                        <i class = "far fa-star"></i>
-                        <i class = "far fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
                     </div>
                     <div class ="boton-comprar">
                         <button type="button" class ="add-to-card">COMPRAR</button>
@@ -485,9 +571,9 @@
                     <div class = "contenedor-estrellas-tarjeta">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
-                        <i class = "far fa-star"></i>
-                        <i class = "far fa-star"></i>
-                        <i class = "far fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
+                        <i class = "fas fa-star"></i>
                     </div>
                     <div class ="boton-comprar">
                         <button type="button" class ="add-to-card">COMPRAR</button>
@@ -523,6 +609,23 @@
 
 
         </div>
+    </section>
+
+<!-- *************************** SECCION SUSCRIBETE **********************-->
+    <section class = "seccion-suscribete">
+
+        <div class ="contenedor-suscribete">
+            <div class = "t-suscribete">
+                <p>Suscribete ahora a nuestro newsletter y consigue un descuento del 15% en tu próxima compra</p>
+            </div>
+            <div class = "input-suscribete">
+                <form>
+                    <input type = "button" placeholder = "Ingresa tu e-mail" </input>
+                </form>
+                
+            </div>
+        </div>
+
     </section>
 <!--  *****************   FOOTER  *************************-->
     <footer>
