@@ -51,9 +51,10 @@ for (let checkbox of checkboxes) {
 
 // Funcion Booleana para saber si un checkbox esta checked.
 
-const CheckboxOn = () => {
+const checkboxOn = () => {
   for (let checkbox of checkboxes) {
     if (checkbox.checked) {
+      console.dir(checkbox)
       return true;
     }
   }
@@ -62,8 +63,13 @@ const CheckboxOn = () => {
 const comparoCheckboxVsTarjeta = tarjeta => {
 console.log(tarjeta)
   for (let checkbox of checkboxes) { // Recorro los checkbox y comparo con el valor de rating de la tarjeta 
-    if ((checkbox.value === tarjeta.dataset.rating) || (checkbox.value === tarjeta.dataset.categoria) && (checkbox.checked)) { // para filtro de ratings
-
+    if (checkbox.value === tarjeta.dataset.rating || checkbox.value === tarjeta.dataset.categoria && checkbox.checked) { // para filtro de ratings
+      console.log(checkbox.value)
+      console.dir(checkbox)
+      console.log(checkbox.value === tarjeta.dataset.rating)
+      console.log( checkbox.value === tarjeta.dataset.categoria)
+      console.log( checkbox.value === tarjeta.dataset.rating || checkbox.value === tarjeta.dataset.categoria && checkbox.checked)
+      console.log(checkbox.value)
       return true;}
    
   }
@@ -74,7 +80,7 @@ const filtrarTarjetas = () => {
 
     tarjeta.classList.add('hidden'); //Escondo todas las tarjetas para empezar 
     
-    if (CheckboxOn()) { // chequeo que filtro esta seleccionado 
+    if (checkboxOn()) { // chequeo que filtro esta seleccionado 
       if (comparoCheckboxVsTarjeta(tarjeta)) { // Si los valores coinciden--> Mostra tarjeta
         tarjeta.classList.remove('hidden');
       }
