@@ -61,12 +61,8 @@ const CheckboxOn = () => {
 
 const comparoCheckboxVsTarjeta = tarjeta => {
 console.log(tarjeta)
-  for (let checkbox of filtroRating) { // Recorro los checkbox y comparo con el valor de rating de la tarjeta 
-    if (checkbox.value === tarjeta.dataset.rating || checkbox.value === tarjeta.dataset.categoria && checkbox.checked) { // para filtro de ratings
-      console.log(checkbox.value)
-      console.log(checkbox.value === tarjeta.dataset.rating) 
-      console.log(checkbox.value === tarjeta.dataset.categoria)
-      console.log(checkbox.value === tarjeta.dataset.rating || checkbox.value === tarjeta.dataset.categoria && checkbox.checked)
+  for (let checkbox of checkboxes) { // Recorro los checkbox y comparo con el valor de rating de la tarjeta 
+    if ((checkbox.value === tarjeta.dataset.rating) || (checkbox.value === tarjeta.dataset.categoria) && (checkbox.checked)) { // para filtro de ratings
 
       return true;}
    
