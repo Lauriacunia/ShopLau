@@ -10,6 +10,7 @@ const filtroCategoria = document.getElementsByClassName('filtro-categoria');
 
 const checkboxes = document.querySelectorAll(".checkbox-filtro")  
 
+
 //*************** FILTRO DE BUSQUEDA ********************/
 
 // cuando se escriba algo en el input
@@ -42,7 +43,7 @@ filtroNombre.oninput = () => {
 
 // Si hace click en un checkbox de estrella--> Filtra tarjetas
 
-for (let checkbox of filtroRating) {
+for (let checkbox of checkboxes) {
   checkbox.onclick = () => {
     filtrarTarjetas();
   };
@@ -51,7 +52,7 @@ for (let checkbox of filtroRating) {
 // Funcion Booleana para saber si un checkbox esta checked.
 
 const CheckboxOn = () => {
-  for (let checkbox of filtroRating) {
+  for (let checkbox of checkboxes) {
     if (checkbox.checked) {
       return true;
     }
@@ -59,11 +60,16 @@ const CheckboxOn = () => {
 };
 
 const comparoCheckboxVsTarjeta = tarjeta => {
-
+console.log(tarjeta)
   for (let checkbox of filtroRating) { // Recorro los checkbox y comparo con el valor de rating de la tarjeta 
-    if (checkbox.value === tarjeta.dataset.rating && checkbox.checked) {
-      return true;
-    }
+    if (checkbox.value === tarjeta.dataset.rating || checkbox.value === tarjeta.dataset.categoria && checkbox.checked) { // para filtro de ratings
+      console.log(checkbox.value)
+      console.log(checkbox.value === tarjeta.dataset.rating) 
+      console.log(checkbox.value === tarjeta.dataset.categoria)
+      console.log(checkbox.value === tarjeta.dataset.rating || checkbox.value === tarjeta.dataset.categoria && checkbox.checked)
+
+      return true;}
+   
   }
 };
 
