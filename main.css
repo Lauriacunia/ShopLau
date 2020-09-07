@@ -171,10 +171,9 @@ header {
     font-size: 14px;
 }
 
-/************ SECCION CATALOGO ***********/
-
-.seccion-catalogo {
-    display: flex;
+/************ SECCION FILTROS ***********/
+.seccion-filtros {
+    display:flex;
     background-color: blue;
 }
 

@@ -1,108 +1,131 @@
-const filtroNombre = document.querySelector('#input-busqueda');
+const filtroBusqueda = document.querySelector('#input-busqueda');
 
-const tarjetas = document.getElementsByClassName('tarjeta');
+const productos = document.getElementsByClassName('tarjeta');
 
-const filtroRating = document.getElementsByClassName('filtro-estrella');
+const filtrosRating = document.getElementsByClassName('filtro-estrella');
 
 const botonLimpiar = document.querySelector('.boton-tachito');
 
-const filtroCategoria = document.getElementsByClassName('filtro-categoria');
+const filtrosCategoria = document.getElementsByClassName('filtro-categoria');
 
 const checkboxes = document.querySelectorAll(".checkbox-filtro")  
 
 
-//*************** FILTRO DE BUSQUEDA ********************/
 
-// cuando se escriba algo en el input
-filtroNombre.oninput = () => {
-    // recorro una a una cada tarjeta
-    for (let tarjeta of tarjetas) {
-      // me fijo el nombre de la tarjeta y qué buscó el usuario
-      const titulo = tarjeta.dataset.nombre;
-      console.log(titulo)
-      const busqueda = filtroNombre.value;
-      console.log(busqueda)
-      // si el titulo incluye lo que buscó el usuario...
-      if (titulo.includes(busqueda)) {
-        // le quito la clase "hidden" a la tarjeta
-        console.log("INCLUYEEEEEeeeeeeeeeeeeeeeeeeeeee")
-        console.log(tarjeta.classList.contains('hidden'))
-        tarjeta.classList.remove('hidden');
-        console.log(tarjeta.classList.contains('hidden'))
-      } else {
-        // se la agrego
-        console.log("NO INCLUYEEEeeeeeeeeeeeeeeeeeeeeee")
-        console.log(tarjeta.classList.contains('hidden'))
-        tarjeta.classList.add('hidden');
-        console.log(tarjeta.classList.contains('hidden'))
-      }
-    }
+/******************💛💛💛 FILTROS 💛💛💛***************/
+
+/*----Chequea si hay checkbox chequeados ON */
+
+const busquedaOn = () => {
+
+  if(filtroBusqueda.value.length !== 0){
+    return true
+  }else {
+    return false
   }
-
-/******************* FILTRO POR PUNTAJE-ESTRELLAS ***************/
-
-// Si hace click en un checkbox de estrella--> Filtra tarjetas
-
-for (let checkbox of checkboxes) {
-  checkbox.onclick = () => {
-    filtrarTarjetas();
-  };
 }
 
-// Funcion Booleana para saber si un checkbox esta checked.
+const categoriaOn = () => {
 
-const checkboxOn = () => {
-  for (let checkbox of checkboxes) {
-    if (checkbox.checked) {
-      console.dir(checkbox)
-      return true;
+  for (const filtro of filtrosCategoria) {
+    if (filtro.checked) {
+      return true
     }
   }
-};
 
-const comparoCheckboxVsTarjeta = tarjeta => {
-console.log(tarjeta)
-  for (let checkbox of checkboxes) { // Recorro los checkbox y comparo con el valor de rating de la tarjeta 
-    if (checkbox.value === tarjeta.dataset.rating || checkbox.value === tarjeta.dataset.categoria && checkbox.checked) { // para filtro de ratings
-      console.log(checkbox.value)
-      console.dir(checkbox)
-      console.log(checkbox.value === tarjeta.dataset.rating)
-      console.log( checkbox.value === tarjeta.dataset.categoria)
-      console.log( checkbox.value === tarjeta.dataset.rating || checkbox.value === tarjeta.dataset.categoria && checkbox.checked)
-      console.log(checkbox.value)
-      return true;}
+  return false
+}
+
+const ratingOn = () => {
+
+  for (const filtro of filtrosRating) {
+    if (filtro.checked) {
+      return true
+    }
+  }
+
+  return false
+}
+/* --------- Pasa Filtros por separado -----------*/
+const pasaFiltroCategoria = (producto) => {
+  const categoria = producto.dataset.categoria
+  console.log(categoria)
+  const filtroCategoria = document.querySelector(`.filtro-categoria[value="${categoria}"]`)
+  console.log(filtroCategoria)
+  return filtroCategoria.checked
+}
+
+const pasaFiltroRating = (producto) => {
+  const rating = producto.dataset.rating
+  const filtroRating = document.querySelector(`.filtro-estrella[value="${rating}"]`)
+
+  return filtroRating.checked
+}
+
+const pasaFiltroBusqueda = (producto) => {
+  const nombre = producto.dataset.nombre
+
+  return nombre.toLowerCase().includes(filtroBusqueda.value.toLowerCase())
+}
+
+/* ------ Filtrado de cada Checkbox -------*/
+
+const pasaFiltros = (producto) => {
+
+  return ( // condicion: si pasa filtro o no esta chequeado-incluyendo a todos
+    (pasaFiltroCategoria(producto) || !categoriaOn()) &&
+    (pasaFiltroRating(producto) || !ratingOn()) &&
+    (pasaFiltroBusqueda(producto) || !busquedaOn())
+  )
+  }
+
+
+/* ------- Actualizar Productos Filtrados ------ */
+
+const actualizarCantidadProductosFiltrados = () => {
+  let contador = 0
+
+  for (const producto of productos) {
+    if (pasaFiltros(producto)) {
+      contador++
+    }
+  }
+
+  let productosFiltrados = document.getElementById('nro-productos')
+
+  productosFiltrados.innerText = `Mostrando ${contador} producto(s) de ${productos.length}`
+}
+
+/* -------- Mostrar Productos que pasen los filtros -------------*/
+
+
+const actualizarProductosFiltrados = () => {
+
+  for (const producto of productos) {
+
+    producto.classList.add('hidden'); //Escondo todas las tarjetas para empezar 
    
-  }
-};
-
-const filtrarTarjetas = () => {
-  for (let tarjeta of tarjetas) { // Recorro tarjetas
-
-    tarjeta.classList.add('hidden'); //Escondo todas las tarjetas para empezar 
-    
-    if (checkboxOn()) { // chequeo que filtro esta seleccionado 
-      if (comparoCheckboxVsTarjeta(tarjeta)) { // Si los valores coinciden--> Mostra tarjeta
-        tarjeta.classList.remove('hidden');
-      }
-    }
-    else {
-      tarjeta.classList.remove('hidden')
+    if (pasaFiltros(producto)) {
+      producto.classList.remove('hidden')
+    } else {
+      producto.classList.add('hidden')
     }
   }
-};
+}
+
+/*-------- Inicio del proceso de filtrado ---------*/
+
+const filtrarProductos = () => {
+  actualizarProductosFiltrados()
+  actualizarCantidadProductosFiltrados()
+}
 
 
 
+/******************💛💛💛 LIMPIAR FILTROS 💛💛💛********************* */
 
 
-/********************FILTRO POR CATEGORIA *******************/
-
-
-  
-/****************** LIMPIAR FILTROS ********************* */
-
-
-const limpiarBusqueda = () => filtroNombre.value = "";
+const limpiarBusqueda = () => filtroBusqueda.value = "";
 const limpiarCheckboxes = () => {
     for (let checkbox of checkboxes) {
       if (checkbox.checked) {    
@@ -113,13 +136,31 @@ const limpiarCheckboxes = () => {
 }
 
 const mostrarTarjetas = () => {
-  for (let tarjeta of tarjetas) {
-    tarjeta.classList.remove('hidden')
+  for (let producto of productos) {
+    producto.classList.remove('hidden')
   }
 }
+
+
+/************** 💛💛💛 INICIALIZAR FILTROS 💛💛💛*********** */
+
+// Si hace click en un checkbox o inicia una busqueda-> Filtrar PRODUCTOS
+
+for (let checkbox of checkboxes) {
+  checkbox.onclick = () => {
+    filtrarProductos();
+  };
+}
+// Si empieza una busqueda por nombre
+
+filtroBusqueda.oninput = () =>{
+    filtrarProductos();
+}
+
 
 botonLimpiar.onclick = () => { 
   limpiarCheckboxes();  //destildo todos los checkboxes
   limpiarBusqueda();   // borro form de busqueda
   mostrarTarjetas();  // vuelvo a mostrar todas las tarjetas
+  actualizarCantidadProductosFiltrados(); // actualiza el conteo de productos que muestra
 }
