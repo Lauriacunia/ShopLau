@@ -12,39 +12,42 @@
 
 <!--  **************************🐼🐼🐼   HEADER  🐼🐼🐼 *************************-->
    <header>
-       <div class= "contenedor-nav">
-           <nav>
-               <ul class= "nav-izq">
-                   <li class= "menu-header">quienes somos</li>
-                   <li class= "menu-header">sucursales</li>
+       <div class= "header-container">
+
+        <!-- inicia menu de navegacion header -->
+
+           <nav class = "header-menu">
+               <ul class= "header-menu-list">
+                   <li class= "header-menu-item">quienes somos</li>
+                   <li class= "header-menu-item">sucursales</li>
+                   <li class= "header-menu-item">
+                        <div class = "header-logo-container">
+                            <img class ="logo" src="https://img.icons8.com/cotton/64/000000/brain-3.png"/>
+                        </div>
+                   </li>
+                    <li class= "header-menu-item">productos</li>
+                    <li class= "header-menu-item">promociones</li>
                </ul>
-
            </nav>
-           <div class = "i-logo">
-                <img src="https://img.icons8.com/cotton/64/000000/brain-3.png"/>
-           </div>
-           <nav>
-            <ul class= "nav-der">
-                <li class= "menu-header">productos</li>
-                <li class= "menu-header">promociones</li>
-            </ul>
 
-        </nav>
+        <!--finaliza menu de navegacion header-->
 
-       </div>
+        <!-- inicia boton cart-title-->
 
-       <div class = "contenedor-carrito">
-           <button type = "button" class = "boton-header">
-                <div class = "i-carrito">
-                        <img src="https://img.icons8.com/windows/32/000000/shopping-cart.png"/>
-                </div>
+            <div class = "header-button-cart-container">
+                <button class = "header-button-cart" type = "button">
+                    <div class = "cart-icon-container">
+                        <img class= "cart-icon" src="https://img.icons8.com/windows/32/000000/shopping-cart.png"/>
+                    </div>
+                    <div class = "cart-title-container">
+                        <h4 class = "cart-title">Carrito(<span class ="count">0</span> ítems) </h4>
+                    </div>
+                </button>
+            </div>
+            
+        <!--finaliza boton cart-->
 
-                <div class = "t-carrito">
-                        <h4 class = "carrito">Carrito (<span class ="count">0</span> ítems) </h4>
-                </div>
-           </button>
-       </div>
-
+        </div>
    </header>
 
 <!--  *****************🐼🐼🐼   SECCION BANNER  🐼🐼🐼 *************************-->
@@ -59,50 +62,61 @@
 <!-- ********************🐼🐼🐼 SECCION ABOUT US 🐼🐼🐼********************-->
 
     <section seccion = "seccion-us">
+
         <div class = "contenedor-us">
 
-            <div class = "contenedor-column">
+            <div class = "contenedor-slide">
 
-                <div class = "columna1-us">
-
-                    <div class= "contenedor-t-us">
-                        <p class = t-us>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, earum tempore. Sequi sapiente minus dolores. Voluptatibus nam voluptatem, doloribus rerum id natus quidem nulla repellendus illo dicta enim distinctio consectetur.
-                        </p>
-                    </div>
-                    <div class ="contenedor-ventas">
+                <ul id ="slider-img">
+                    <li id ="slide1">
                         <div class = "venta1">
                             <img src ="images/ternurita.jpg">
-    
                         </div>
+                    </li>
+                    <li id ="slide2">
                         <div class = "venta2">
-                            <img src ="images/ternurita.jpg">
+                            <img src ="images/libro.jpg">
                         </div>
-
-                    </div>
-                    
-
+                    </li>
+                    <li id = "slide3">
+                        <div class = "venta3">
+                            <img src ="images/pizza.jpg">
+                        </div>
+                    </li>
+                </ul>
+                               
+                
+                <div class= "contenedor-i-slide">
+                    <ul id= "slider-icon">
+                        <li><a href="#slide1"></a></li>
+                        <li><a href="#slide2"></a></li>
+                        <li><a href="#slide3"></a></li>
+                    </ul>
+                    <i class="fas fa-circle"></i>
+                    <i class="far fa-circle"></i>
+                    <i class="far fa-circle"></i>
                 </div>
-                <div class = "columna2-us">
-                    <div class ="pic-increible">
-                        <img src = "images/prueba.jpg">
 
-                    </div>
-                </div>
-            
             </div>
+                    
+            <!-- <div class = "contenedor-imgGrande">
+                <div class ="pic-increible">
+                    <img src = "images/prueba.jpg">
+                </div>
+            </div> -->
+            
         </div>
 
-        <div class = "contenedor-row">
-            <div class = "contenedor-descuentos">
-                <div>
-                    <p class = "t-descuentos">Cambiá tu vida hoy y pagalo en 6 coutas sin interés</p>
-                </div>
-               <div>
-                     <p class = "t-descuentos">¿Ya viste nuestros Lanzamientos del mes?</p>
-               </div>
-                
+        <div class = "contenedor-promo">
+           
+            <div>
+                <p class = "t-descuentos">Cambiá tu vida hoy y pagalo en 6 coutas sin interés</p>
             </div>
+            <div>
+                <p class = "t-descuentos">¿Ya viste nuestros Lanzamientos del mes?</p>
+            </div>
+                
+        </div>
 
         </div>
 

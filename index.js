@@ -49,10 +49,10 @@ const ratingOn = () => {
 /* --------- Pasa Filtros por separado -----------*/
 const pasaFiltroCategoria = (producto) => {
   const categoria = producto.dataset.categoria
-  console.log(categoria)
+  // aca empieza un truco de magia a lo Copperfield- selecciona UN solo filtro que coincide con la tarjeta y lo pone chequeado !!
   const filtroCategoria = document.querySelector(`.filtro-categoria[value="${categoria}"]`)
-  console.log(filtroCategoria)
-  return filtroCategoria.checked
+  
+  return filtroCategoria.checked // charan!
 }
 
 const pasaFiltroRating = (producto) => {

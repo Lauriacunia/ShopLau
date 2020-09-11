@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
@@ -32,26 +31,26 @@ li {
     list-style-type: none;
 }
   
-/************ HEADER ************/
+/***************👇👇👇 HEADER 👇👇👇************/
 
 header {
     display: flex;
     background-color: blueviolet;
     
 }
-.contenedor-nav {
+.header-container {
     display: flex;
     background-color: azure;
     align-items: center; 
     flex:7, 1, 650;  
 }
-.nav-izq {
+.header-menu-list {
     display:flex;
 }
 .nav-der {
     display: flex;
 }
-.i-logo {
+.header-logo-container {
     background-color: brown;
     width: 40px;
     height: auto;
@@ -61,7 +60,7 @@ header {
     background-color: yellow;
     
 }
-.menu-header {
+.header-menu-item {
     font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
     letter-spacing: 2px;
     font-size: 0.8em;
@@ -76,7 +75,7 @@ header {
     margin-top: 25px;
     margin-left: 10px;
 }
-.contenedor-carrito {
+.header-button-cart-container {
     display: flex;
     background-color: azure;
     align-items: center;
@@ -84,7 +83,7 @@ header {
     margin-right: 25px;  
     flex: 3, 1, 350;
 }
-.boton-header {
+.header-button-cart {
     display: flex;
     align-items: center;
     border: 0;
@@ -94,23 +93,23 @@ header {
     font-size: 0.8em;
     font-weight: bold;
 }
-.i-carrito {
+.cart-icon-container {
     flex-basis: 30px;
     background-color: brown;
        
 }
 
-.t-carrito {
+.cart-title-container {
     background-color: yellow;
   
 }
 
-.carrito {
+.cart-title {
     margin-bottom: 25px;
     margin-top: 25px;
     margin-left: 10px;
 }
-/************ SECCION BANNER ***********/
+/************ 👇👇👇  SECCION BANNER  👇👇👇***********/
 
 .seccion-banner {
     display:flex;
@@ -124,7 +123,7 @@ header {
     background-color: green;
 }
 
-/********** SECCION ABOUT US ************/
+/**********👇👇👇  SECCION ABOUT US 👇👇👇************/
 .seccion-us {
     display: flex;
     justify-content: center;
@@ -135,28 +134,42 @@ header {
     background-color: deeppink;
 
 }
-.contenedor-column {
-    display:flex;
+.contenedor-slide {
+    /* display:flex;
+    flex-direction:column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     background-color: rgb(28, 255, 20);
+    min-width: 300px;
+    min-height: 300px;
 
 }
-.columna1-us {
+#slider-img {
+    position:relative;
+}
+#slider-img li {
+    position:absolute;
+    top:0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+#slider-img li:first-child {
+    opacity: 1;
+}
+
+#slider-icon li:target {
+ opacity: 1;
+}
+.contenedor-i-slide{
     display:flex;
-    flex-direction: column;
+   
+
+}
+.contenedor-imgGrande {
     background-color: orange;
 }
-.contenedor-ventas {
-    display: flex;
-    background-color: lightcoral;
-}
-.t-us {
-    font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
-    letter-spacing: 2px;
-    font-size: 16px;
-}
-.contenedor-descuentos {
+
+.contenedor-promo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -164,14 +177,13 @@ header {
     margin-top:30px;
     margin-bottom: 30px;
     background-color: rgb(61, 78, 61);
-}
-.t-descuentos{
     font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
     letter-spacing: 2px;
     font-size: 14px;
 }
 
-/************ SECCION FILTROS ***********/
+
+/************👇👇👇 SECCION FILTROS  👇👇👇***********/
 .seccion-filtros {
     display:flex;
     background-color: blue;
@@ -377,7 +389,8 @@ aside {
   }
 
 
-/* ********* SUSCRIBETE **********/
+/* ********* 👇👇👇 SUSCRIBETE 👇👇👇**********/
+
 .seccion-suscribete {
     background-color: aqua;
     display:flex;
@@ -414,7 +427,7 @@ aside {
     background-color: red;
     
 }
-/***********FOOTER ************** */
+/*********** 👇👇👇  FOOTER  👇👇👇************** */
 footer {
     display:flex;
     justify-content: center;
