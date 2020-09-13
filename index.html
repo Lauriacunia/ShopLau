@@ -10,29 +10,39 @@
 </head>
 <body>
 
-<!--  **************************🐼🐼🐼   HEADER  🐼🐼🐼 *************************-->
-   <header>
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  INICIO HEADER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+
+    <header>
+
        <div class= "header-container">
 
-        <!-- inicia menu de navegacion header -->
+            <!-- inicia marca del header -->
 
-           <nav class = "header-menu">
-               <ul class= "header-menu-list">
-                   <li class= "header-menu-item">quienes somos</li>
-                   <li class= "header-menu-item">sucursales</li>
-                   <li class= "header-menu-item">
+            <div class= "header-branding-container">
+                <h1 class = "header-branding">neuroclick</h1>
+            </div>
+
+            <!-- finaliza marca del header-->
+
+            <!-- inicia menu de navegacion header -->
+
+            <nav class = "header-menu-container">
+                <ul class= "header-menu-list">
+                    <li class= "header-menu-item">quienes somos</li>
+                    <li class= "header-menu-item">sucursales</li>
+                    <li class= "header-menu-item">
                         <div class = "header-logo-container">
                             <img class ="logo" src="https://img.icons8.com/cotton/64/000000/brain-3.png"/>
                         </div>
-                   </li>
+                    </li>
                     <li class= "header-menu-item">productos</li>
                     <li class= "header-menu-item">promociones</li>
-               </ul>
-           </nav>
+                </ul>
+            </nav>
 
-        <!--finaliza menu de navegacion header-->
+            <!--finaliza menu de navegacion header-->
 
-        <!-- inicia boton cart-title-->
+            <!-- inicia boton cart-->
 
             <div class = "header-button-cart-container">
                 <button class = "header-button-cart" type = "button">
@@ -45,86 +55,80 @@
                 </button>
             </div>
             
-        <!--finaliza boton cart-->
+            <!--finaliza boton cart-->
 
         </div>
+
    </header>
 
-<!--  *****************🐼🐼🐼   SECCION BANNER  🐼🐼🐼 *************************-->
+<!--★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ FIN HEADER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-   <section class = "seccion-banner">
-       <div class = "t-banner">
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO BANNER  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+
+    <section class = "banner-container">
+        <div class = "banner-title">
             <h1>TECH LIFE</h1>
-       </div>
+        </div>
+    </section>
+
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN BANNER  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO SLIDER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+
+    <section class = "display-container">
+        
+        <!-- Inicia contenedor de slides -->
+
+        <div class = "display-slides-container">
+            <ul id ="slides-list">
+                <li id ="slide-1">
+                    <img src ="images/ternurita.jpg">
+                </li>
+                <li id ="slide-2">
+                    <img src ="images/libro.jpg">
+                </li>
+                <li id = "slide-3">
+                    <img src ="images/pizza.jpg">
+                </li>
+            </ul> 
+        </div>
+        
+        <!-- Finaliza el contenedor de slides -->
+
+        <!-- Inicia el contenedor de iconos -->
+
+        <div class= "display-icons-container">
+            <ul id= "icons-list">
+                <li>
+                    <a href="#slide-1">
+                        <i class="fas fa-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#slide-2">
+                        <i class="far fa-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#slide-3">
+                        <i class="far fa-circle"></i>
+                    </a>
+                </li>
+            </ul>             
+        </div>
+
+        <!-- Finaliza el contenedor de iconos-->
 
     </section>
 
-<!-- ********************🐼🐼🐼 SECCION ABOUT US 🐼🐼🐼********************-->
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN SLIDER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-    <section seccion = "seccion-us">
-
-        <div class = "contenedor-us">
-
-            <div class = "contenedor-slide">
-
-                <ul id ="slider-img">
-                    <li id ="slide1">
-                        <div class = "venta1">
-                            <img src ="images/ternurita.jpg">
-                        </div>
-                    </li>
-                    <li id ="slide2">
-                        <div class = "venta2">
-                            <img src ="images/libro.jpg">
-                        </div>
-                    </li>
-                    <li id = "slide3">
-                        <div class = "venta3">
-                            <img src ="images/pizza.jpg">
-                        </div>
-                    </li>
-                </ul>
-                               
-                
-                <div class= "contenedor-i-slide">
-                    <ul id= "slider-icon">
-                        <li><a href="#slide1"></a></li>
-                        <li><a href="#slide2"></a></li>
-                        <li><a href="#slide3"></a></li>
-                    </ul>
-                    <i class="fas fa-circle"></i>
-                    <i class="far fa-circle"></i>
-                    <i class="far fa-circle"></i>
-                </div>
-
-            </div>
-                    
-            <!-- <div class = "contenedor-imgGrande">
-                <div class ="pic-increible">
-                    <img src = "images/prueba.jpg">
-                </div>
-            </div> -->
-            
-        </div>
-
-        <div class = "contenedor-promo">
-           
-            <div>
-                <p class = "t-descuentos">Cambiá tu vida hoy y pagalo en 6 coutas sin interés</p>
-            </div>
-            <div>
-                <p class = "t-descuentos">¿Ya viste nuestros Lanzamientos del mes?</p>
-            </div>
-                
-        </div>
-
-        </div>
-
-    </section>
-<!--  *******************🐼🐼🐼   SECCION FILTROS  🐼🐼🐼*************************-->
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO CATALOGO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
    <section class = "seccion-filtros">
- 
+
+        <!-- ♪:;;;:♪:;;;:♪:;;Inicio Filtros ;:♪:;;;:♪:;;;:♪:;;;: -->
+
         <aside>
             <div class = "contenedor-aside">
 
@@ -301,8 +305,9 @@
             </div>
 
         </aside>
+        <!-- ♪:;;;:♪:;;;:♪:;; Fin Filtros ;:♪:;;;:♪:;;;:♪:;;;: -->
 
-<!-- ========================🐼🐼🐼  SECCION CATALOGO 🐼🐼🐼========================= --> 
+        <!-- ♪:;;;:♪:;;;:♪:;; Inicio Productos ;:♪:;;;:♪:;;;:♪:;;;: -->
 
         <div class = "contenedor-catalogo ">
             <div class = "encabezado-catalogo ">
@@ -325,8 +330,6 @@
                     </div>
                 </div>
             </div>
-
-<!-- ==========================  TARJETAS ==================================-->
 
             <div class = "contenedor-tarjetas">
 
@@ -631,15 +634,16 @@
                         <button type="button" class ="add-to-card">COMPRAR</button>
                     </div>
                 </article>
-                
+                <!-- ♪:;;;:♪:;;;:♪:; Fin Productos ;:♪:;;;:♪:;;;:♪:;;;: -->
 
             </div>
-
 
         </div>
  </section>
 
-<!-- ***************************🐼🐼🐼 SECCION SUSCRIBETE 🐼🐼🐼**********************-->
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN CATALOGO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO FORM SUSCRIBE ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
     <section class = "seccion-suscribete">
 
@@ -656,17 +660,20 @@
         </div>
 
     </section>
-<!--  ********************🐼🐼🐼   FOOTER  🐼🐼🐼*************************-->
+
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN FORM SUSCRIBE ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO FOOTER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
     <footer>
         <div class="logo-container">
             <img>
             <p>ADA SHOP - Gracias por visitarnos 💚</p>
         </div>
     </footer>
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN FOOTER★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-    <script src="index.js"></script>
-           
 
-       
+<script src="index.js"></script>
+                 
 </body>
 </html>

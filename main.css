@@ -34,35 +34,38 @@ li {
 /***************👇👇👇 HEADER 👇👇👇************/
 
 header {
-    display: flex;
-    background-color: blueviolet;
-    
+    background-color: blueviolet;   
 }
 .header-container {
     display: flex;
     background-color: azure;
     align-items: center; 
-    flex:7, 1, 650;  
+    justify-content: space-between; 
+}
+.header-branding-container {
+    flex: 1;
+}
+.header-menu-container {
+    flex: 5;
+    
 }
 .header-menu-list {
     display:flex;
+    justify-content: center;
+    align-items: center;
 }
-.nav-der {
-    display: flex;
-}
+
 .header-logo-container {
     background-color: brown;
     width: 40px;
     height: auto;
 }
 
-.t-marca {
-    background-color: yellow;
-    
-}
+
 .header-menu-item {
     font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
     letter-spacing: 2px;
+    
     font-size: 0.8em;
     font-weight: bold;
     text-decoration: underline;
@@ -70,18 +73,13 @@ header {
     margin-right: 10px;
 
 }
-.marca {
-    margin-bottom: 25px;
-    margin-top: 25px;
-    margin-left: 10px;
-}
+
 .header-button-cart-container {
     display: flex;
+    justify-content: center;
     background-color: azure;
-    align-items: center;
-    justify-content: flex-end; 
-    margin-right: 25px;  
-    flex: 3, 1, 350;
+    flex: 1; 
+
 }
 .header-button-cart {
     display: flex;
@@ -90,18 +88,16 @@ header {
     background: transparent;
     font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
     letter-spacing: 2px;
-    font-size: 0.8em;
+    font-size: 10px;
     font-weight: bold;
 }
 .cart-icon-container {
     flex-basis: 30px;
-    background-color: brown;
-       
+    background-color: brown;    
 }
 
 .cart-title-container {
-    background-color: yellow;
-  
+    background-color: yellow;  
 }
 
 .cart-title {
@@ -111,7 +107,7 @@ header {
 }
 /************ 👇👇👇  SECCION BANNER  👇👇👇***********/
 
-.seccion-banner {
+.banner-container {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -119,22 +115,22 @@ header {
     background-color: red;
 }
 
-.t-banner {
+.banner-title {
     background-color: green;
 }
 
 /**********👇👇👇  SECCION ABOUT US 👇👇👇************/
-.seccion-us {
+.display {
     display: flex;
     justify-content: center;
 }
-.contenedor-us {
+.display-container {
     display:flex;
     justify-content: center;
     background-color: deeppink;
 
 }
-.contenedor-slide {
+.display-slides-container {
     /* display:flex;
     flex-direction:column;
     align-items: center;
@@ -144,23 +140,23 @@ header {
     min-height: 300px;
 
 }
-#slider-img {
+#slides-list {
     position:relative;
 }
-#slider-img li {
+#slides-list li {
     position:absolute;
     top:0;
     opacity: 0;
     transition: opacity 0.5s;
 }
-#slider-img li:first-child {
+#images-list li:first-child {
     opacity: 1;
 }
 
-#slider-icon li:target {
+#icons-list li:target {
  opacity: 1;
 }
-.contenedor-i-slide{
+.display-icons-container{
     display:flex;
    
 
