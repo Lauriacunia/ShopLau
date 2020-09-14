@@ -1,14 +1,14 @@
-const filtroBusqueda = document.querySelector('#input-busqueda');
+const filtroBusqueda = document.querySelector('#input-search');
 
-const productos = document.getElementsByClassName('tarjeta');
+const productos = document.getElementsByClassName('product');
 
-const filtrosRating = document.getElementsByClassName('filtro-estrella');
+const filtrosRating = document.getElementsByClassName('filter-review');
 
-const botonLimpiar = document.querySelector('.boton-tachito');
+const botonLimpiar = document.querySelector('.clear-btn');
 
-const filtrosCategoria = document.getElementsByClassName('filtro-categoria');
+const filtroscategory = document.getElementsByClassName('filter-category');
 
-const checkboxes = document.querySelectorAll(".checkbox-filtro")  
+const checkboxes = document.querySelectorAll(".filter")  
 
 
 
@@ -25,9 +25,9 @@ const busquedaOn = () => {
   }
 }
 
-const categoriaOn = () => {
+const categoryOn = () => {
 
-  for (const filtro of filtrosCategoria) {
+  for (const filtro of filtroscategory) {
     if (filtro.checked) {
       return true
     }
@@ -47,17 +47,17 @@ const ratingOn = () => {
   return false
 }
 /* --------- Pasa Filtros por separado -----------*/
-const pasaFiltroCategoria = (producto) => {
-  const categoria = producto.dataset.categoria
-  // aca empieza un truco de magia a lo Copperfield- selecciona UN solo filtro que coincide con la tarjeta y lo pone chequeado !!
-  const filtroCategoria = document.querySelector(`.filtro-categoria[value="${categoria}"]`)
+const pasaFiltrocategory = (producto) => {
+  const category = producto.dataset.category
+  // aca empieza un truco de magia a lo Copperfield- selecciona UN solo filtro que coincide con la product y lo pone chequeado !!
+  const filtrocategory = document.querySelector(`.filter-category[value="${category}"]`)
   
-  return filtroCategoria.checked // charan!
+  return filtrocategory.checked // charan!
 }
 
 const pasaFiltroRating = (producto) => {
   const rating = producto.dataset.rating
-  const filtroRating = document.querySelector(`.filtro-estrella[value="${rating}"]`)
+  const filtroRating = document.querySelector(`.filter-review[value="${rating}"]`)
 
   return filtroRating.checked
 }
@@ -73,7 +73,7 @@ const pasaFiltroBusqueda = (producto) => {
 const pasaFiltros = (producto) => {
 
   return ( // condicion: si pasa filtro o no esta chequeado-incluyendo a todos
-    (pasaFiltroCategoria(producto) || !categoriaOn()) &&
+    (pasaFiltrocategory(producto) || !categoryOn()) &&
     (pasaFiltroRating(producto) || !ratingOn()) &&
     (pasaFiltroBusqueda(producto) || !busquedaOn())
   )
@@ -91,7 +91,7 @@ const actualizarCantidadProductosFiltrados = () => {
     }
   }
 
-  let productosFiltrados = document.getElementById('nro-productos')
+  let productosFiltrados = document.getElementById('products-qty')
 
   productosFiltrados.innerText = `Mostrando ${contador} producto(s) de ${productos.length}`
 }
@@ -103,7 +103,7 @@ const actualizarProductosFiltrados = () => {
 
   for (const producto of productos) {
 
-    producto.classList.add('hidden'); //Escondo todas las tarjetas para empezar 
+    producto.classList.add('hidden'); //Escondo todas las products para empezar 
    
     if (pasaFiltros(producto)) {
       producto.classList.remove('hidden')
@@ -135,7 +135,7 @@ const limpiarCheckboxes = () => {
 
 }
 
-const mostrarTarjetas = () => {
+const mostrarproducts = () => {
   for (let producto of productos) {
     producto.classList.remove('hidden')
   }
@@ -161,6 +161,6 @@ filtroBusqueda.oninput = () =>{
 botonLimpiar.onclick = () => { 
   limpiarCheckboxes();  //destildo todos los checkboxes
   limpiarBusqueda();   // borro form de busqueda
-  mostrarTarjetas();  // vuelvo a mostrar todas las tarjetas
+  mostrarproducts();  // vuelvo a mostrar todas las products
   actualizarCantidadProductosFiltrados(); // actualiza el conteo de productos que muestra
 }

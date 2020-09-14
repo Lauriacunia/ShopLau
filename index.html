@@ -13,59 +13,52 @@
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  INICIO HEADER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
     <header>
-
-       <div class= "header-container">
-
-            <!-- inicia marca del header -->
-
-            <div class= "header-branding-container">
-                <h1 class = "header-branding">neuroclick</h1>
-            </div>
-
-            <!-- finaliza marca del header-->
-
-            <!-- inicia menu de navegacion header -->
-
-            <nav class = "header-menu-container">
-                <ul class= "header-menu-list">
-                    <li class= "header-menu-item">quienes somos</li>
-                    <li class= "header-menu-item">sucursales</li>
-                    <li class= "header-menu-item">
-                        <div class = "header-logo-container">
-                            <img class ="logo" src="https://img.icons8.com/cotton/64/000000/brain-3.png"/>
-                        </div>
-                    </li>
-                    <li class= "header-menu-item">productos</li>
-                    <li class= "header-menu-item">promociones</li>
-                </ul>
-            </nav>
-
-            <!--finaliza menu de navegacion header-->
-
-            <!-- inicia boton cart-->
-
-            <div class = "header-button-cart-container">
-                <button class = "header-button-cart" type = "button">
-                    <div class = "cart-icon-container">
-                        <img class= "cart-icon" src="https://img.icons8.com/windows/32/000000/shopping-cart.png"/>
-                    </div>
-                    <div class = "cart-title-container">
-                        <h4 class = "cart-title">Carrito(<span class ="count">0</span> ítems) </h4>
-                    </div>
-                </button>
-            </div>
-            
-            <!--finaliza boton cart-->
-
+        <!-- inicia marca del header -->
+        <div class= "header-branding">
+            <h1 class = "branding">neuroclick</h1>
         </div>
 
+        <!-- finaliza marca del header-->
+
+        <!-- inicia menu de navegacion header -->
+
+        <nav class = "header-menu">
+            <ul class= "header-menu-list">
+                <li class= "header-menu-item">quienes somos</li>
+                <li class= "header-menu-item">sucursales</li>
+                <li class= "header-menu-item">
+                    <div class = "header-logo">
+                        <img class ="logo" src="https://img.icons8.com/cotton/64/000000/brain-3.png"/>
+                    </div>
+                </li>
+                <li class= "header-menu-item">productos</li>
+                <li class= "header-menu-item">promociones</li>
+            </ul>
+        </nav>
+
+        <!--finaliza menu de navegacion header-->
+
+        <!-- inicia boton cart-->
+
+        <div class = "header-button-cart">
+            <button class = "button-cart" type = "button">
+                <div class = "cart-icon">
+                    <img src="https://img.icons8.com/windows/32/000000/shopping-cart.png"/>
+                </div>
+                <div class = "cart-title">
+                    <h4>Carrito(<span class ="count">0</span> ítems) </h4>
+                </div>
+            </button>
+        </div>
+        
+        <!--finaliza boton cart-->    
    </header>
 
 <!--★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ FIN HEADER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO BANNER  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-    <section class = "banner-container">
+    <section class = "banner">
         <div class = "banner-title">
             <h1>TECH LIFE</h1>
         </div>
@@ -73,166 +66,178 @@
 
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN BANNER  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO SLIDER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO PROMO GRID ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-    <section class = "display-container">
-        
+    <section class= "promo-grid">
+    
         <!-- Inicia contenedor de slides -->
-
-        <div class = "display-slides-container">
-            <ul id ="slides-list">
-                <li id ="slide-1">
-                    <img src ="images/ternurita.jpg">
-                </li>
-                <li id ="slide-2">
-                    <img src ="images/libro.jpg">
-                </li>
-                <li id = "slide-3">
-                    <img src ="images/pizza.jpg">
-                </li>
-            </ul> 
-        </div>
+        <div class = "display">
+            <div class = "display-slides-container">
+                <ul class ="slides-list">
+                    <li id ="slide-1">
+                        <img src ="images/ternurita.jpg">
+                    </li>
+                    <li id ="slide-2">
+                        <img src ="images/libro.jpg">
+                    </li>
+                    <li id = "slide-3">
+                        <img src ="images/pizza.jpg">
+                    </li>
+                </ul> 
+            </div>
         
-        <!-- Finaliza el contenedor de slides -->
-
-        <!-- Inicia el contenedor de iconos -->
-
-        <div class= "display-icons-container">
-            <ul id= "icons-list">
-                <li>
-                    <a href="#slide-1">
-                        <i class="fas fa-circle"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#slide-2">
-                        <i class="far fa-circle"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#slide-3">
-                        <i class="far fa-circle"></i>
-                    </a>
-                </li>
-            </ul>             
+            <div class= "display-icons-container">
+                <ul class = "icons-list">
+                    <li>
+                        <a href="#slide-1">
+                            <i class="fas fa-circle"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#slide-2">
+                            <i class="far fa-circle"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#slide-3">
+                            <i class="far fa-circle"></i>
+                        </a>
+                    </li>
+                </ul>             
+            </div>
         </div>
+        <!-- Finaliza el contenedor de slides-->
 
-        <!-- Finaliza el contenedor de iconos-->
+        <!-- Inicia contenedor de imagen principal-->
+        <div class = "big-photo">
+            <img src="images/prueba.jpg">
+        </div>
+        <!-- fin contenedor de imagen principal-->
 
-    </section>
+    </section>   
 
-<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN SLIDER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+   
+
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN PROMO GRID ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO CATALOGO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
-
-   <section class = "seccion-filtros">
-
+ 
+    <main>
         <!-- ♪:;;;:♪:;;;:♪:;;Inicio Filtros ;:♪:;;;:♪:;;;:♪:;;;: -->
 
-        <aside>
-            <div class = "contenedor-aside">
+        <section class = "filters-container">
+             <aside>
+                
+                <!-- inicia Header Filtro -->
+                <div filters-heading-container>
 
-                <div class = "contenedor-filtro">
-
-                    <div class = "t-principal">
-                        <p>FILTROS</p>
+                    <div class = "filters-title">
+                        <h2>FILTROS</h2>
                     </div>
 
-                    <div class= "contenedor-boton-tachito">
-                        <button type="button" class="boton-tachito">
-                            <i class="fas fa-trash-alt i-tachito"></i> 
-                            <p class = "t-limpiar">Limpiar</p>
-                          </button> 
+                    <div class= "filters-clear-btn-container">
+                        <button type="button" class="clear-btn">
+                            <i class="fas fa-trash-alt"></i> 
+                            <p class = "clear-title">Limpiar</p>
+                        </button> 
                     </div>
 
                 </div>
+                <!-- fin Header Filtro -->
 
-                <div class = "contenedor-busqueda">
+                <!-- Inicia Busqueda -->
+                <div class = "filters-search-container"> 
 
-                    <div class= "t-subtitulo">
-                        <p>BUSQUEDA</p> 
+                    <div>
+                        <h3>BUSQUEDA</h3> 
                     </div>
 
-                    <div class ="contenedor-input-serch" >
+                    <div class ="input-search-container" >
                         <input type = "text"
-                         id = "input-busqueda"
+                         id = "input-search"
                          placeholder = "¿Qué estás buscando?">
                         <i class="fas fa-search"></i>
                     </div>
                       
                 </div>
+                <!-- fin Busqueda -->
 
+                <!-- Inicio Filtro category -->
+                <div class = "filters-category-container">
 
-                <div class = "contenedor-categoria">
-
-                    <div class= "t-subtitulo">
-                        <p>CATEGORIA</p> 
+                    <div>
+                        <h3>category</h3> 
                     </div>
 
-                    <div class ="contenedor-checkbox">
+                    <div class ="checkboxes-container">
 
-                        <label for ="categoria">
+                        <label for ="category"
+                               class = "input-category-container">
 
-                            <div class = "contenedor-input-categoria categoria">
-                                <label class = "input-categoria">
-                                    <input type = "checkbox" 
-                                    class="checkbox-filtro filtro-categoria"
-                                    name = "categoria"
-                                    value = "sentidos">
+                            <label class = "input-category">
+                                <input type = "checkbox" 
+                                class=" filter filter-category"
+                                name = "category"
+                                value = "senses">
                                 </input>
-                                <p class = "t-categoria">fivE</p>
-                                </label>
-                                <label class = "input-categoria">
-                                    <input type = "checkbox"
-                                     class="checkbox-filtro filtro-categoria"
-                                     name = "categoria"
-                                     value = "inmuno">
-                                    </input>
-                                    <p  class = "t-categoria">inMUNO</p>
-                                </label>
-                                <label class = "input-categoria">
-                                    <input type = "checkbox"
-                                     class="checkbox-filtro filtro-categoria"
-                                     name = "categoria"
-                                     value = "learn">
-                                     </input>
-                                     <p  class = "t-categoria">to LEARN</p>
-                                </label>
-                                <label class = "input-categoria">
-                                    <input type = "checkbox"
-                                     class="checkbox-filtro filtro-categoria"
-                                     name = "categoria" 
-                                     value = "metabolismo">
-                                    </input>
-                                    <p  class = "t-categoria">metaBOLIC</p>
-                                </label>
-                                <label class = "input-categoria">
-                                    <input type = "checkbox" 
-                                    class="checkbox-filtro filtro-categoria" 
-                                    name = "categoria" 
-                                    value = "snc">
+                                <p>FIVE</p>
+                            </label>
+
+                            <label class = "input-category">
+                                <input type = "checkbox"
+                                class="filter filter-category"
+                                name = "category"
+                                value = "inmuno">
                                 </input>
-                                <p  class = "t-categoria">net BRAIN</p>
-                                </label> 
-                            </div>
+                                <p>INMUNO</p>
+                            </label>
+
+                            <label class = "input-category">
+                                <input type = "checkbox"
+                                class="filter filter-category"
+                                name = "category"
+                                value = "learn">
+                                </input>
+                                <p>LEARN</p>
+                            </label>
+
+                            <label class = "input-category">
+                                <input type = "checkbox"
+                                class="filter filter-category"
+                                name = "category" 
+                                value = "metabolic">
+                                </input>
+                                <p>METABOLIC</p>
+                            </label>
+
+                            <label class = "input-category">
+                                <input type = "checkbox" 
+                                class="filter filter-category" 
+                                name = "category" 
+                                value = "brain">
+                            </input>                            
+                            <p>NET BRAIN</p>
+                            </label> 
 
                         </label>
-
                     </div>
                 </div>
+                <!-- fin Filtro categoria -->
 
-                <div class = "contenedor-puntaje">
+                <!-- Inicio Filtro review -->
 
-                    <div class= "t-subtitulo">
-                        <p>PUNTAJE</p> 
+                <div class = "filters-review-container">
+
+                    <div>
+                        <h3>review</h3> 
                     </div>
 
-                    <div class = "subcontenedor-puntajes">
+                    <div class = "filters-review">
 
-                        <label class = "contenedor-estrellas">
+                        <label class = "input-review">
                             <input type = "checkbox"
-                             name = "puntaje"
-                             class="checkbox-filtro filtro-estrella"
+                             name = "review"
+                             class="filter filter-review"
                              value="5">
                                 <i class = "fas fa-star"></i>
                                 <i class = "fas fa-star"></i>
@@ -243,10 +248,10 @@
                             </input>
                         </label>
                         
-                        <label class = "contenedor-estrellas">
+                        <label class = "input-review">
                             <input type = "checkbox"
-                             name = "puntaje"
-                             class="checkbox-filtro filtro-estrella"
+                             name = "review"
+                             class="filter filter-review"
                              value="4">
                                 <i class = "fas fa-star"></i>
                                 <i class = "fas fa-star"></i>
@@ -257,10 +262,10 @@
                             </input>
                         </label>
 
-                        <label class = "contenedor-estrellas">
+                        <label class = "input-review">
                             <input type = "checkbox"
-                             name = "puntaje"
-                             class="checkbox-filtro filtro-estrella"
+                             name = "review"
+                             class="filter filter-review"
                              value="3">
                                 <i class = "fas fa-star"></i>
                                 <i class = "fas fa-star"></i>
@@ -268,14 +273,13 @@
                                 <i class = "far fa-star"></i>
                                 <i class = "far fa-star"></i>
                                 <p>(3)</p>
-                            </input>
-                            
+                            </input>    
                         </label>
 
-                        <label class = "contenedor-estrellas">
+                        <label class = "input-review">
                             <input type = "checkbox"
-                             name = "puntaje"
-                             class="checkbox-filtro filtro-estrella"
+                             name = "review"
+                             class="filter filter-review"
                              value="2">
                                 <i class = "fas fa-star"></i>
                                 <i class = "fas fa-star"></i>
@@ -284,13 +288,12 @@
                                 <i class = "far fa-star"></i>
                                 <p>(2)</p>
                             </input>
-
                         </label>
 
-                        <label class = "contenedor-estrellas">
+                        <label class = "input-review">
                             <input type = "checkbox"
-                             name = "puntaje"
-                             class="checkbox-filtro filtro-estrella"
+                             name = "review"
+                             class="filter filter-review"
                              value="1">
                                 <i class = "fas fa-star"></i>
                                 <i class = "far fa-star"></i>
@@ -299,347 +302,325 @@
                                 <i class = "far fa-star"></i>
                                 <p>(1)</p>
                             </input>
-                        </label>    
-                    </div>
-                </div>
-            </div>
+                        </label>   
 
-        </aside>
+                    </div>
+                    <!-- Fin Filtro review -->
+                </div>
+            </aside>
         <!-- ♪:;;;:♪:;;;:♪:;; Fin Filtros ;:♪:;;;:♪:;;;:♪:;;;: -->
 
-        <!-- ♪:;;;:♪:;;;:♪:;; Inicio Productos ;:♪:;;;:♪:;;;:♪:;;;: -->
+        <!-- ♪:;;;:♪:;;;:♪:;; Inicio Catalogo de Productos ;:♪:;;;:♪:;;;:♪:;;;: -->
 
-        <div class = "contenedor-catalogo ">
-            <div class = "encabezado-catalogo ">
-                <div class = "t-mostrando">
-                    <p id = "nro-productos">Mostrando 12 producto(s) de 12</p>
+        <section class = "products-container ">
+
+            <!--  Inicia header de productos  -->
+            <header class = "products-header ">
+                <div>
+                    <p id = "products-qty">Mostrando 12 producto(s) de 12</p>
                 </div>
-                <div class = "filtro-catalogo">
-                    <div class ="t-verComo">
+                <div class = "view-buttons-container">
+                    <div>
                         <p>Ver como</p>
                     </div>
-                    <div id = "i-flex">
+                    <div id = "view-button-grid">
                         <button type ="button">
                              <i class="fas fa-th"></i>
                         </button>
                     </div>
-                    <div id = "i-list">
+                    <div id = "view-button-list">
                         <button type ="button">
                             <i class="fas fa-list" aria-hidden="true"></i>
                         </button>
                     </div>
                 </div>
-            </div>
+            </header>
+            <!--  fin header de productos  -->
 
-            <div class = "contenedor-tarjetas">
+            <!--  Inicia listado Productos  -->
 
-                <article class = "tarjeta"
-                data-nombre="metabolic balance"
-                data-rating="4"
-                data-categoria = "metabolismo">
+            <div class = "products-list">
 
-                    <div class = "contenedor-imagen">
+                <article class = "product"
+                         data-nombre="metabolic balance"
+                         data-rating="4"
+                         data-category = "metabolic">
+                    <div class = "product-img">
                         <img src = "images/pizza.jpg">
                     </div>
-                    <div class = "contenedor-titulo">
-                        <p class = "t-producto">METABOLIC BALANCE</p>
+                    <div class = "product-title">
+                        <p>METABOLIC BALANCE</p>
                     </div>
-                    <div>
-                        <p class = "t-precio"> B 4.000.000 </p>
+                    <div class = "product-price">
+                        <p> B 4.000.000 </p>
                     </div>
-                    <div class = "contenedor-estrellas-tarjeta">
+                    <div class = "review-product">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "far fa-star"></i>
                     </div>
-                    <div class ="boton-comprar">
-                        <button type="button" class ="add-to-card">COMPRAR</button>
-                    </div>
+                    <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "tarjeta"
-                data-nombre="wake up darling"
-                data-rating="3"
-                data-categoria = "snc">
-                    <div class = "contenedor-imagen">
+                <article class = "product"
+                         data-nombre="wake up darling"
+                         data-rating="3"
+                         data-category = "brain">
+                    <div class = "product-img">
                         <img src = "images/gallo.jpg">
                     </div>
-                    <div class = "contenedor-titulo">
-                        <p class = "t-producto">WAKE UP DARLING</p>
+                    <div class = "product-title">
+                        <p>WAKE UP DARLING</p>
                     </div>
-                    <div>
-                        <p class = "t-precio"> B 3.700.000 </p>
+                    <div class = "product-price">
+                        <p> B 3.700.000 </p>
                     </div>
-                    <div class = "contenedor-estrellas-tarjeta">
+                    <div class = "review-product">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
                     </div>
-                    <div class ="boton-comprar">
-                        <button type="button" class ="add-to-card">COMPRAR</button>
-                    </div>
+                    <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
                 
-                <article class = "tarjeta"
-                data-nombre="karateca tonge"
-                data-rating="3"
-                data-categoria = "learn">
-
-                    <div class = "contenedor-imagen">
+                <article class = "product"
+                    data-nombre="karateca tonge"
+                    data-rating="3"
+                    data-category = "learn">
+                    <div class = "product-img">
                         <img src = "images/chino.jpg">
                     </div>
-                    <div class = "contenedor-titulo">
-                        <p class = "t-producto">KARATECA TONGE</p>
+                    <div class = "product-title">
+                        <p>KARATECA TONGE</p>
                     </div>
-                    <div>
-                        <p class = "t-precio"> B 1.750.000 </p>
+                    <div class = "product-price">
+                        <p> B 1.750.000 </p>
                     </div>
-                    <div class = "contenedor-estrellas-tarjeta">
+                    <div class = "review-product">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
                     </div>
-                    <div class ="boton-comprar">
-                        <button type="button" class ="add-to-card">COMPRAR</button>
-                    </div>
+                    <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "tarjeta"
-                data-nombre="tell me a story"
-                data-rating="1"
-                data-categoria = "learn">
-                    <div class = "contenedor-imagen">
+                <article class = "product"
+                         data-nombre="tell me a story"
+                         data-rating="1"
+                         data-category = "learn">
+                    <div class = "product-img">
                         <img src = "images/libro.jpg">
                     </div>
-                    <div class = "contenedor-titulo">
-                        <p class = "t-producto">TELL ME A STORY</p>
+                    <div class = "product-title">
+                        <p>TELL ME A STORY</p>
                     </div>
-                    <div>
-                        <p class = "t-precio"> B 850.000 </p>
+                    <div class = "product-price">
+                        <p> B 850.000 </p>
                     </div>
-                    <div class = "contenedor-estrellas-tarjeta">
+                    <div class = "review-product">
                         <i class = "fas fa-star"></i>
                         <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
                     </div>
-                    <div class ="boton-comprar">
-                        <button type="button" class ="add-to-card">COMPRAR</button>
-                    </div>
+                    <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "tarjeta"
-                data-nombre="don´t stop dancing"
-                data-rating="4"
-                data-categoria = "learn">
-                    <div class = "contenedor-imagen">
+                <article class = "product"
+                         data-nombre="don´t stop dancing"
+                         data-rating="4"
+                         data-category = "learn">
+                    <div class = "product-img">
                         <img src = "images/dance.jpg">
                     </div>
-                    <div class = "contenedor-titulo">
-                        <p class = "t-producto">DON´T STOP DANCING</p>
+                    <div class = "product-title">
+                        <p>DON´T STOP DANCING</p>
                     </div>
-                    <div>
-                        <p class = "t-precio"> B 1.280.000 </p>
+                    <div class = "product-price">
+                        <p> B 1.280.000 </p>
                     </div>
-                    <div class = "contenedor-estrellas-tarjeta">
+                    <div class = "review-product">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "far fa-star"></i>
                     </div>
-                    <div class ="boton-comprar">
-                        <button type="button" class ="add-to-card">COMPRAR</button>
-                    </div>
+                    <button type="button" class ="button-add-to-card">COMPRAR</button>  
                 </article>
                 
-                <article class = "tarjeta"
-                data-nombre="motor skill"
-                data-rating="3"
-                data-categoria = "learn">
-                    <div class = "contenedor-imagen">
+                <article class = "product"
+                         data-nombre="motor skill"
+                         data-rating="3"
+                         data-category = "learn">
+                    <div class = "product-img">
                         <img src = "images/motor.jpg">
                     </div>
-                    <div class = "contenedor-titulo">
-                        <p class = "t-producto">MOTOR SKILL</p>
+                    <div class = "product-title">
+                        <p>MOTOR SKILL</p>
                     </div>
-                    <div>
-                        <p class = "t-precio"> B 850.000</p>
+                    <div class = "product-price">
+                        <p> B 850.000</p>
                     </div>
-                    <div class = "contenedor-estrellas-tarjeta">
+                    <div class = "review-product">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
                     </div>
-                    <div class ="boton-comprar">
-                        <button type="button" class ="add-to-card">COMPRAR</button>
-                    </div>
+                    <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "tarjeta"
-                data-nombre="route 66"
-                data-rating="2"
-                data-categoria = "learn">
-                    <div class = "contenedor-imagen">
+                <article class = "product"
+                         data-nombre="route 66"
+                         data-rating="2"
+                         data-category = "learn">
+                    <div class = "product-img">
                         <img src = "images/auto.jpg">
                     </div>
-                    <div class = "contenedor-titulo">
-                        <p class = "t-producto">ROUTE 66</p>
+                    <div class = "product-title">
+                        <p>ROUTE 66</p>
                     </div>
                     <div>
-                        <p class = "t-precio"> B 680.000</p>
+                        <p class = "product-price"> B 680.000</p>
                     </div>
-                    <div class = "contenedor-estrellas-tarjeta">
+                    <div class = "review-product">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
                     </div>
-                    <div class ="boton-comprar">
-                        <button type="button" class ="add-to-card">COMPRAR</button>
-                    </div>
+                    <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "tarjeta"
-                data-nombre="hibernate"
-                data-rating="4"
-                data-categoria = "snc">
-                    <div class = "contenedor-imagen">
+                <article class = "product"
+                         data-nombre="hibernate"
+                         data-rating="4"
+                         data-category = "brain">
+                    <div class = "product-img">
                         <img src = "images/ternurita.jpg">
                     </div>
-                    <div class = "contenedor-titulo">
-                        <p class = "t-producto">HIBERNATE</p>
+                    <div class = "product-title">
+                        <p>HIBERNATE</p>
                     </div>
-                    <div>
-                        <p class = "t-precio">B 3.600.000 </p>
+                    <div class = "product-price">
+                        <p>B 3.600.000 </p>
                     </div>
-                    <div class = "contenedor-estrellas-tarjeta">
+                    <div class = "review-product">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "far fa-star"></i>
                     </div>
-                    <div class ="boton-comprar">
-                        <button type="button" class ="add-to-card">COMPRAR</button>
-                    </div>
+                    <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
                 
-                <article class = "tarjeta"
-                data-nombre="good memories "
-                data-rating="5"
-                data-categoria = "snc">
-                    <div class = "contenedor-imagen">
+                <article class = "product"
+                         data-nombre="good memories "
+                         data-rating="5"
+                         data-category = "brain">
+                    <div class = "product-img">
                         <img src = "images/foto.jpg">
                     </div>
-                    <div class = "contenedor-titulo">
-                        <p class = "t-producto">GOOD MEMORIES</p>
+                    <div class = "product-title">
+                        <p>GOOD MEMORIES</p>
                     </div>
-                    <div>
-                        <p class = "t-precio">B 7.900.000 </p>
+                    <div class = "product-price">
+                        <p>B 7.900.000 </p>
                     </div>
-                    <div class = "contenedor-estrellas-tarjeta">
+                    <div class = "review-product">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                     </div>
-                    <div class ="boton-comprar">
-                        <button type="button" class ="add-to-card">COMPRAR</button>
-                    </div>
+                   <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "tarjeta"
-                data-nombre="net brain "
-                data-rating="5"
-                data-categoria = "snc">
-                    <div class = "contenedor-imagen">
+                <article class = "product"
+                         data-nombre="net brain "
+                         data-rating="5"
+                         data-category = "brain">
+                    <div class = "product-img">
                         <img src = "images/brain.jpg">
                     </div>
-                    <div class = "contenedor-titulo">
-                        <p class = "t-producto">NET-BRAIN</p>
+                    <div class = "product-title">
+                        <p>NET-BRAIN</p>
                     </div>
-                    <div>
-                        <p class = "t-precio"> B 15.000.000.000</p>
+                    <div  class = "product-price">
+                        <p> B 15.000.000.000</p>
                     </div>
-                    <div class = "contenedor-estrellas-tarjeta">
+                    <div class = "review-product">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                     </div>
-                    <div class ="boton-comprar">
-                        <button type="button" class ="add-to-card">COMPRAR</button>
-                    </div>
+                    <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "tarjeta"
-                data-nombre="inmune warriors"
-                data-rating="5"
-                data-categoria = "inmuno">
-                    <div class = "contenedor-imagen">
+                <article class = "product"
+                         data-nombre="inmune warriors"
+                         data-rating="5"
+                         data-category = "inmuno">
+                    <div class = "product-img">
                         <img src = "images/germen.jpg">
                     </div>
-                    <div class = "contenedor-titulo">
-                        <p class = "t-producto">IMMUNE WARRIORS</p>
+                    <div class = "product-title">
+                        <p>IMMUNE WARRIORS</p>
                     </div>
-                    <div>
-                        <p class = "t-precio"> B 30.000.000 </p>
+                    <div class = "product-price">
+                        <p> B 30.000.000 </p>
                     </div>
-                    <div class = "contenedor-estrellas-tarjeta">
+                    <div class = "review-product">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                     </div>
-                    <div class ="boton-comprar">
-                        <button type="button" class ="add-to-card">COMPRAR</button>
-                    </div>
+                    <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
                 
-                <article class = "tarjeta"
-                data-nombre="bionic eye"
-                data-rating="2"
-                data-categoria = "sentidos">
-                    <div class = "contenedor-imagen">
+                <article class = "product"
+                         data-nombre="bionic eye"
+                         data-rating="2"
+                         data-category = "senses">
+                    <div class = "product-img">
                         <img src = "images/ojo.jpg">
                     </div>
-                    <div class = "contenedor-titulo">
-                        <p class = "t-producto">BIONIC EYE</p>
+                    <div class = "product-title">
+                        <p>BIONIC EYE</p>
                     </div>
-                    <div>
-                        <p class = "t-precio">B 7.000.000</p>
+                    <div class = "product-price">
+                        <p>B 7.000.000</p>
                     </div>
-                    <div class = "contenedor-estrellas-tarjeta">
+                    <div class = "review-product">
                         <i class = "fas fa-star"></i>
                         <i class = "fas fa-star"></i>
                         <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
                         <i class = "far fa-star"></i>
                     </div>
-                    <div class ="boton-comprar">
-                        <button type="button" class ="add-to-card">COMPRAR</button>
-                    </div>
+                    <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
-                <!-- ♪:;;;:♪:;;;:♪:; Fin Productos ;:♪:;;;:♪:;;;:♪:;;;: -->
-
             </div>
+            <!--  fin listado Productos  --> 
+        </section>
 
-        </div>
- </section>
+    </main>
 
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN CATALOGO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
