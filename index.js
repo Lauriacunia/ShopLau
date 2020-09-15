@@ -103,12 +103,12 @@ const actualizarProductosFiltrados = () => {
 
   for (const producto of productos) {
 
-    producto.classList.add('hidden'); //Escondo todas las products para empezar 
+    producto.classList.add('is-hidden'); //Escondo todas las products para empezar 
    
     if (pasaFiltros(producto)) {
-      producto.classList.remove('hidden')
+      producto.classList.remove('is-hidden')
     } else {
-      producto.classList.add('hidden')
+      producto.classList.add('is-hidden')
     }
   }
 }
@@ -137,7 +137,7 @@ const limpiarCheckboxes = () => {
 
 const mostrarproducts = () => {
   for (let producto of productos) {
-    producto.classList.remove('hidden')
+    producto.classList.remove('is-hidden')
   }
 }
 
@@ -163,4 +163,56 @@ botonLimpiar.onclick = () => {
   limpiarBusqueda();   // borro form de busqueda
   mostrarproducts();  // vuelvo a mostrar todas las products
   actualizarCantidadProductosFiltrados(); // actualiza el conteo de productos que muestra
+}
+
+
+/******************💛💛💛 OVERLAY HEADER 💛💛💛***************/
+
+const botonAbrirMenu = document.querySelector(".btn-cart")
+const botonCerrarMenu = document.getElementById("cerrar-menu")
+
+const menu = document.getElementById("menu")
+
+const overlay = document.getElementById("overlay")
+
+
+
+botonAbrirMenu.onclick = () => {
+
+  mostrarOverlay()
+  bodySinScroll()
+  mostrarCarrito() 
+}
+
+botonCerrarMenu.onclick = () => {
+
+  ocultarOverlay()
+  bodyConScroll()
+  ocultarCarrito()
+}
+
+
+const mostrarOverlay = () => {
+  overlay.classList.remove("is-hidden")
+}
+
+const ocultarOverlay = () => {
+  overlay.classList.add("is-hidden")
+ 
+}
+
+const bodySinScroll = () => {
+  document.body.classList.add("no-scroll")
+}
+
+const bodyConScroll = () => {
+  document.body.classList.remove("no-scroll")
+}
+
+const mostrarCarrito = () => {
+  menu.classList.add("show-cart")
+}
+
+const ocultarCarrito = () => {
+  menu.classList.remove("show-cart")
 }

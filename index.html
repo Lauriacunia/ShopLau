@@ -28,7 +28,7 @@
                 <li class= "header-menu-item">sucursales</li>
                 <li class= "header-menu-item">
                     <div class = "header-logo">
-                        <img class ="logo" src="https://img.icons8.com/cotton/64/000000/brain-3.png"/>
+                        <img class ="logo" src="https://img.icons8.com/windows/32/ffffff/brain-3.png"/>
                     </div>
                 </li>
                 <li class= "header-menu-item">productos</li>
@@ -41,7 +41,7 @@
         <!-- inicia boton cart-->
 
         <div>
-            <button  type = "button">
+            <button  type = "button" class = "btn-cart">
                 <div class = "cart-icon">
                     <img src="https://img.icons8.com/windows/32/000000/shopping-cart.png"/>
                 </div>
@@ -59,9 +59,12 @@
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO BANNER  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
     <section class = "banner theme-maiz">
-        <div class = "banner-title ">
-            <h1>TECH LIFE</h1>
+        <div class = "box-behind-title theme-pachamama" >
+            <div class = "banner-title-container theme-simple ">
+                <h1 class= "banner-title">TECH LIFE</h1>
+            </div>
         </div>
+       
     </section>
 
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN BANNER  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
@@ -125,8 +128,8 @@
     <main>
         <!-- ♪:;;;:♪:;;;:♪:;;Inicio Filtros ;:♪:;;;:♪:;;;:♪:;;;: -->
 
-        <section class = "filters-container">
-             <aside class= "theme-sand">
+        <section class = "filters-container .theme-sun">
+             <aside>
                 
                 <!-- inicia Header Filtro -->
                 <div class ="filters-heading-container">
@@ -341,7 +344,7 @@
 
             <div class = "products-list">
 
-                <article class = "product theme-sun"
+                <article class = "product theme-pachamama"
                          data-nombre="metabolic balance"
                          data-rating="4"
                          data-category = "metabolic">
@@ -364,7 +367,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-sun-border"
+                <article class = "product theme-storm"
                          data-nombre="wake up darling"
                          data-rating="3"
                          data-category = "brain">
@@ -410,7 +413,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-sun-border"
+                <article class = "product theme-pachamama"
                          data-nombre="tell me a story"
                          data-rating="1"
                          data-category = "learn">
@@ -433,7 +436,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-sun"
+                <article class = "product theme-storm"
                          data-nombre="don´t stop dancing"
                          data-rating="4"
                          data-category = "learn">
@@ -456,7 +459,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>  
                 </article>
                 
-                <article class = "product theme-sun-border"
+                <article class = "product theme-sun"
                          data-nombre="motor skill"
                          data-rating="3"
                          data-category = "learn">
@@ -479,7 +482,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-sun"
+                <article class = "product theme-pachamama"
                          data-nombre="route 66"
                          data-rating="2"
                          data-category = "learn">
@@ -502,7 +505,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-sun-border"
+                <article class = "product theme-storm"
                          data-nombre="hibernate"
                          data-rating="4"
                          data-category = "brain">
@@ -548,7 +551,7 @@
                    <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-sun-border"
+                <article class = "product theme-pachamama"
                          data-nombre="net brain "
                          data-rating="5"
                          data-category = "brain">
@@ -571,7 +574,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-sun"
+                <article class = "product theme-storm"
                          data-nombre="inmune warriors"
                          data-rating="5"
                          data-category = "inmuno">
@@ -594,7 +597,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
                 
-                <article class = "product theme-sun-border"
+                <article class = "product theme-sun"
                          data-nombre="bionic eye"
                          data-rating="2"
                          data-category = "senses">
@@ -653,7 +656,20 @@
     </footer>
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN FOOTER★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  INICIO OVERLAY HEADER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+    <div class="overlay is-hidden" id="overlay"></div>
+      
+        <div id="menu" class="menu">
+          <ul>
+            <li>Inicio</li>
+            <li>Contacto</li>
+            <li>Mis proyectos</li>
+            <li>Hola</li>
+          </ul>
+          <button id="cerrar-menu">Cerrar menu</button>
+        </div>
 
+<!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  FIN OVERLAY HEADER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 <script src="index.js"></script>
                  
 </body>

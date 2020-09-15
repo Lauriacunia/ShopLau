@@ -42,6 +42,7 @@ li {
 body {
     font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
     background-color: #EBECEC;
+    overflow-x: hidden; /*Esconde lo que rebalza en eje X*/
   }
 
 h1 {
@@ -56,6 +57,8 @@ h3 {
 p {
     font-size: 1vw;
 }
+
+
   /***************👇👇👇 THEMES 👇👇👇************/ 
 .theme-maiz{
     background-color: #E8B623;
@@ -81,12 +84,21 @@ p {
     background-color:#957951;
     color: white;
 }
+.theme-sand-ligth {
+    background-color: #CBBAA5;
+    color: white;
+}
 .theme-storm {
     background-color:#718C85;
     color: white;
 }
 .theme-sky {
     background-color: #9AD1CE;
+    color: black;
+}
+
+.theme-simple {
+    background-color: white;
     color: black;
 }
  /***************👇👇👇 COMPONENTES 👇👇👇************/ 
@@ -135,7 +147,6 @@ header {
 }
 
 .header-logo {
-
     width: 40px;
     height: auto;
 }
@@ -157,9 +168,33 @@ header {
     height: 300px;
 
 }
+.box-behind-title {
+    display: flex;
+    flex-basis: 400px;
+    height: 100px;
+    position: relative;
+    top: 150px;
+}
+.banner-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    min-width: 400px;
+    height: 100px;
+    position: absolute;
+    left: 15px;
+    top:15px;
 
-
-
+}
+.banner-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:100%;
+    border: 2px solid #DC5D32;
+}
 /**********👇👇👇  SECCION ABOUT US 👇👇👇************/
 .promo-grid {
     display:flex;
@@ -303,6 +338,7 @@ aside {
 
 .filters-review {
     margin-top: 20px;
+    color:#E8B623;
 }
 .input-review{
     display:flex;
@@ -360,7 +396,6 @@ aside {
     align-items: center;
     flex-basis: 300px;
     border-radius: 5px;
-   
     margin: 5px;
 }
 .product-img {
@@ -393,9 +428,7 @@ aside {
     
 }
 
-.hidden {
-    display: none;
-  }
+
 
 
 /* ********* 👇👇👇 SUSCRIBETE 👇👇👇**********/
@@ -442,4 +475,40 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100px;
+}
+
+/************ OVERLAY HEADER ********/
+
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .menu {
+    width: 200px;
+    height: 100vh;
+    background-color: darkblue;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(200px);
+    transition: 2s;
+  }
+
+  .show-cart {
+    transform: translate(0);
+}
+
+
+.is-hidden {
+    display: none;
+}
+.no-scroll {
+    overflow: hidden;
 }
