@@ -41,7 +41,7 @@ li {
 
 body {
     font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
-    background-color: #f5f5f5;
+    background-color: #EBECEC;
   }
 
 h1 {
@@ -57,8 +57,38 @@ p {
     font-size: 1vw;
 }
   /***************👇👇👇 THEMES 👇👇👇************/ 
-
-
+.theme-maiz{
+    background-color: #E8B623;
+    color: black;
+}
+.theme-sun {
+    background-color: #EBD92F;
+    color: white;
+}
+.theme-sun-border {
+    border: 1px solid  #EBD92F;
+    color: #847F3B;
+}
+.theme-pachamama {
+    background-color:#DC5D32;
+    color: white;
+}
+.theme-forest {
+    background-color:#847F3B;
+    color: white;
+}
+.theme-sand {
+    background-color:#957951;
+    color: white;
+}
+.theme-storm {
+    background-color:#718C85;
+    color: white;
+}
+.theme-sky {
+    background-color: #9AD1CE;
+    color: black;
+}
  /***************👇👇👇 COMPONENTES 👇👇👇************/ 
  /*-----------botones--------------*/
  button {
@@ -79,8 +109,7 @@ p {
 
 /***************👇👇👇 HEADER 👇👇👇************/
 
-header {
-    background-color: blueviolet;   
+header {  
     display: flex;
     align-items: center; 
     justify-content: space-between; 
@@ -106,14 +135,14 @@ header {
 }
 
 .header-logo {
-    background-color: brown;
+
     width: 40px;
     height: auto;
 }
 
 .cart-icon {
     flex-basis: 30px;
-    background-color: brown;    
+
 }
 .cart-title {
     margin-left: 10px;
@@ -126,12 +155,10 @@ header {
     justify-content: center;
     align-items: center;
     height: 300px;
-    background-color: red;
+
 }
 
-.banner-title {
-    background-color: green;
-}
+
 
 /**********👇👇👇  SECCION ABOUT US 👇👇👇************/
 .promo-grid {
@@ -144,12 +171,11 @@ header {
     justify-content: center;
     align-items: center;
     flex-basis: 650px;
-    background-color: deeppink;
+
 
 }
 .display-slides-container {
 
-    background-color: rgb(28, 255, 20);
     min-width: 300px;
     min-height: 300px;
 
@@ -184,13 +210,13 @@ header {
 /************👇👇👇 SECCION CATALOGO  👇👇👇***********/
 .main-container {
     display:flex;
-    background-color: blue;
+  
 }
 
 /* ---- FILTROS----*/
 
 aside {
-    background-color: crimson;
+  
     flex:1;
     display:flex;
     flex-direction: column;
@@ -299,7 +325,7 @@ aside {
 .products-container {
     display:flex;
     flex-direction: column;
-    background-color: aqua;
+    
     margin: 10px;
     flex:4;
     
@@ -326,7 +352,7 @@ aside {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: chartreuse;
+  
 }
 .product {
     display:flex;
@@ -334,7 +360,7 @@ aside {
     align-items: center;
     flex-basis: 300px;
     border-radius: 5px;
-    background-color: rgb(228, 10, 144);
+   
     margin: 5px;
 }
 .product-img {
@@ -375,7 +401,7 @@ aside {
 /* ********* 👇👇👇 SUSCRIBETE 👇👇👇**********/
 
 .seccion-suscribete {
-    background-color: aqua;
+   
     display:flex;
     justify-content: center;
 }
@@ -384,7 +410,7 @@ aside {
     flex-direction: column;
     margin-top:30px;
     margin-bottom: 30px;
-    background-color: blue;
+    
 }
 
 .t-suscribete {
@@ -407,7 +433,7 @@ aside {
     font-weight: bold;
     text-decoration: underline;
     line-height: 1.3em;
-    background-color: red;
+  
     
 }
 /*********** 👇👇👇  FOOTER  👇👇👇************** */
