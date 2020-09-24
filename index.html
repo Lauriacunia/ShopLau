@@ -6,13 +6,15 @@
     <title>MyeShop</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/main2.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/main3.css'>
 </head>
 <body>
 
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  INICIO HEADER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-    <header class= "theme-storm">
+    <header class= "theme-storm in-line">
         <!-- inicia marca del header -->
         <div class= "header-branding">
             <h1 class = "branding">neuroclick</h1>
@@ -23,16 +25,24 @@
         <!-- inicia menu de navegacion header -->
 
         <nav class = "header-menu">
-            <ul class= "header-menu-list">
-                <li class= "header-menu-item">quienes somos</li>
-                <li class= "header-menu-item">sucursales</li>
+            <ul class= " in-line">
+                <li class= "header-menu-item">
+                    <a>QUIENES SOMOS</a>
+                </li>
+                <li class= "header-menu-item">
+                    <a>SUCURSALES</a>
+                </li>
                 <li class= "header-menu-item">
                     <div class = "header-logo">
                         <img class ="logo" src="https://img.icons8.com/windows/32/ffffff/brain-3.png"/>
                     </div>
                 </li>
-                <li class= "header-menu-item">productos</li>
-                <li class= "header-menu-item">promociones</li>
+                <li class= "header-menu-item">
+                    <a>PRODUCTOS</a>
+                </li>
+                <li class= "header-menu-item">
+                    <a>PROMOCIONES</a>
+                </li>
             </ul>
         </nav>
 
@@ -40,14 +50,10 @@
 
         <!-- inicia boton cart-->
 
-        <div>
-            <button  type = "button" class = "btn-cart">
-                <div class = "cart-icon">
-                    <img src="https://img.icons8.com/windows/32/000000/shopping-cart.png"/>
-                </div>
-                <div class = "cart-title">
-                    <h3>Carrito(<span class ="count">0</span> ítems) </h3>
-                </div>
+        <div>            
+            <button type = "button" class = "button btn-cart in-line button--nina button--round-l button--text-thick
+             button--inverted" data-text = "carrito">            
+                <span>C</span><span>a</span><span>r</span><span>r</span><span>i</span><span>t</span><span>o</span><span>(</span><span>0</span><span>-</span><span>Í</span><span>t</span><span>e</span><span>m</span><span>s</span><span>)</span>
             </button>
         </div>
         
@@ -58,10 +64,10 @@
 
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO BANNER  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-    <section class = "banner theme-maiz">
-        <div class = "box-behind-title theme-pachamama" >
-            <div class = "banner-title-container theme-simple ">
-                <h1 class= "banner-title">TECH LIFE</h1>
+    <section class = "banner theme-maiz in-line">
+        <div class = "box-behind-title in-line theme-pachamama" >
+            <div class = "banner-title-container in-line theme-simple ">
+                <h1 class= "banner-title in-line">TECH LIFE</h1>
             </div>
         </div>
        
@@ -71,10 +77,10 @@
 
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO PROMO GRID ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-    <section class= "promo-grid theme-pachamama">
+    <section class= "promo-grid in-line theme-pachamama">
     
         <!-- Inicia contenedor de slides -->
-        <div class = "display theme-sky">
+        <div class = "display in-stack theme-sky">
             <div class = "display-slides-container">
                 <ul class ="slides-list">
                     <li id ="slide-1">
@@ -90,7 +96,7 @@
             </div>
         
             <div class= "display-icons-container">
-                <ul class = "icons-list">
+                <ul class = "icons-list in-line">
                     <li>
                         <a href="#slide-1">
                             <i class="fas fa-circle"></i>
@@ -128,18 +134,18 @@
     <main>
         <!-- ♪:;;;:♪:;;;:♪:;;Inicio Filtros ;:♪:;;;:♪:;;;:♪:;;;: -->
 
-        <section class = "filters-container .theme-sun">
+        <section class = "filters-container in-line">
              <aside>
                 
-                <!-- inicia Header Filtro -->
-                <div class ="filters-heading-container">
+                <!--inicia Header Filtro-->
+                <div class = "filters-heading-container in-line">
 
                     <div class = "filters-title">
                         <h2>FILTROS</h2>
                     </div>
 
                     <div class= "filters-clear-btn-container">
-                        <button type="button" class="clear-btn">
+                        <button type="button" class="clear-btn in-line">
                             <i class="fas fa-trash-alt"></i> 
                             <p class = "clear-title">Limpiar</p>
                         </button> 
@@ -155,7 +161,7 @@
                         <h3>BUSQUEDA</h3> 
                     </div>
 
-                    <div class ="input-search-container" >
+                    <div class ="input-search-container in-line" >
                         <input type = "text"
                          id = "input-search"
                          placeholder = "¿Qué estás buscando?">
@@ -166,7 +172,7 @@
                 <!-- fin Busqueda -->
 
                 <!-- Inicio Filtro category -->
-                <div class = "filters-category-container">
+                <div class = "filters-category-container ">
 
                     <div>
                         <h3>CATEGORIA</h3> 
@@ -175,9 +181,9 @@
                     <div class ="checkboxes-container">
 
                         <label for ="category"
-                               class = "input-category-container">
+                               class = "input-category-container ">
 
-                            <label class = "input-category">
+                            <label class = "input-category in-line">
                                 <input type = "checkbox" 
                                 class=" filter filter-category"
                                 name = "category"
@@ -186,7 +192,7 @@
                                 <p>FIVE</p>
                             </label>
 
-                            <label class = "input-category">
+                            <label class = "input-category in-line">
                                 <input type = "checkbox"
                                 class="filter filter-category"
                                 name = "category"
@@ -195,7 +201,7 @@
                                 <p>INMUNO</p>
                             </label>
 
-                            <label class = "input-category">
+                            <label class = "input-category in-line">
                                 <input type = "checkbox"
                                 class="filter filter-category"
                                 name = "category"
@@ -204,7 +210,7 @@
                                 <p>LEARN</p>
                             </label>
 
-                            <label class = "input-category">
+                            <label class = "input-category in-line">
                                 <input type = "checkbox"
                                 class="filter filter-category"
                                 name = "category" 
@@ -213,7 +219,7 @@
                                 <p>METABOLIC</p>
                             </label>
 
-                            <label class = "input-category">
+                            <label class = "input-category in-line">
                                 <input type = "checkbox" 
                                 class="filter filter-category" 
                                 name = "category" 
@@ -237,7 +243,7 @@
 
                     <div class = "filters-review">
 
-                        <label class = "input-review">
+                        <label class = "input-review in-line">
                             <input type = "checkbox"
                              name = "review"
                              class="filter filter-review"
@@ -251,7 +257,7 @@
                             </input>
                         </label>
                         
-                        <label class = "input-review">
+                        <label class = "input-review in-line">
                             <input type = "checkbox"
                              name = "review"
                              class="filter filter-review"
@@ -265,7 +271,7 @@
                             </input>
                         </label>
 
-                        <label class = "input-review">
+                        <label class = "input-review in-line">
                             <input type = "checkbox"
                              name = "review"
                              class="filter filter-review"
@@ -279,7 +285,7 @@
                             </input>    
                         </label>
 
-                        <label class = "input-review">
+                        <label class = "input-review in-line">
                             <input type = "checkbox"
                              name = "review"
                              class="filter filter-review"
@@ -293,7 +299,7 @@
                             </input>
                         </label>
 
-                        <label class = "input-review">
+                        <label class = "input-review in-line">
                             <input type = "checkbox"
                              name = "review"
                              class="filter filter-review"
@@ -318,11 +324,11 @@
         <section class = "products-container ">
 
             <!--  Inicia header de productos  -->
-            <header class = "products-header theme-forest">
+            <header class = "products-header in-line theme-forest">
                 <div>
                     <p id = "products-qty">Mostrando 12 producto(s) de 12</p>
                 </div>
-                <div class = "view-buttons-container">
+                <div class = "view-buttons-container in-line ">
                     <div>
                         <p>Ver como</p>
                     </div>
@@ -342,9 +348,9 @@
 
             <!--  Inicia listado Productos  -->
 
-            <div class = "products-list">
+            <div class = "products-list in-grid">
 
-                <article class = "product theme-pachamama"
+                <article class = "product in-stack theme-pachamama"
                          data-nombre="metabolic balance"
                          data-rating="4"
                          data-category = "metabolic">
@@ -367,7 +373,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-storm"
+                <article class = "product in-stack theme-storm"
                          data-nombre="wake up darling"
                          data-rating="3"
                          data-category = "brain">
@@ -390,7 +396,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
                 
-                <article class = "product theme-sun"
+                <article class = "product in-stack theme-sun"
                     data-nombre="karateca tonge"
                     data-rating="3"
                     data-category = "learn">
@@ -413,7 +419,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-pachamama"
+                <article class = "product in-stack theme-forest"
                          data-nombre="tell me a story"
                          data-rating="1"
                          data-category = "learn">
@@ -436,7 +442,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-storm"
+                <article class = "product in-stack theme-sky"
                          data-nombre="don´t stop dancing"
                          data-rating="4"
                          data-category = "learn">
@@ -459,7 +465,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>  
                 </article>
                 
-                <article class = "product theme-sun"
+                <article class = "product in-stack theme-pachamama"
                          data-nombre="motor skill"
                          data-rating="3"
                          data-category = "learn">
@@ -482,7 +488,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-pachamama"
+                <article class = "product in-stack theme-storm"
                          data-nombre="route 66"
                          data-rating="2"
                          data-category = "learn">
@@ -505,7 +511,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-storm"
+                <article class = "product in-stack theme-sun"
                          data-nombre="hibernate"
                          data-rating="4"
                          data-category = "brain">
@@ -528,7 +534,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
                 
-                <article class = "product theme-sun"
+                <article class = "product in-stack theme-forest"
                          data-nombre="good memories "
                          data-rating="5"
                          data-category = "brain">
@@ -551,7 +557,7 @@
                    <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-pachamama"
+                <article class = "product in-stack theme-sky"
                          data-nombre="net brain "
                          data-rating="5"
                          data-category = "brain">
@@ -574,7 +580,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
 
-                <article class = "product theme-storm"
+                <article class = "product in-stack theme-pachamama"
                          data-nombre="inmune warriors"
                          data-rating="5"
                          data-category = "inmuno">
@@ -597,7 +603,7 @@
                     <button type="button" class ="button-add-to-card">COMPRAR</button>
                 </article>
                 
-                <article class = "product theme-sun"
+                <article class = "product in-stack theme-storm"
                          data-nombre="bionic eye"
                          data-rating="2"
                          data-category = "senses">
@@ -651,7 +657,7 @@
     <footer class ="theme-pachamama">
         <div class="logo-container">
             <img>
-            <p>ADA SHOP - Gracias por visitarnos 💚</p>
+            <p> Gracias por visitarnos 💚</p>
         </div>
     </footer>
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN FOOTER★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
@@ -659,13 +665,11 @@
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  INICIO OVERLAY HEADER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
     <div class="overlay is-hidden" id="overlay"></div>
       
-        <div id="menu" class="menu">
-          <ul>
-            <li>Inicio</li>
-            <li>Contacto</li>
-            <li>Mis proyectos</li>
-            <li>Hola</li>
-          </ul>
+        <div id="header-menu-add-to-card" class="header-menu-add-to-card">
+            <div></div>
+            <h3>CARRITO</h3>
+
+            
           <button id="cerrar-menu">Cerrar menu</button>
         </div>
 
