@@ -307,8 +307,10 @@ footer {
 }
 
 .header-menu-add-to-card {
-	width: 600px;
-	height: 800px;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 500px;
+	height: 500px;
 	background-color: #dc5d32;
 	opacity: 0.8;
 	color: #fff;
@@ -318,10 +320,15 @@ footer {
 	transition: 2s;
 }
 
-.show-cart {
-	transform: translate(0);
+.products-add-to-card {
+	height: 300px;
+	width: 300px;
+	overflow-y: scroll;
 }
 
+.menu-add-to-card-hidde {
+	transform: translateX(500px);
+}
 .is-hidden {
 	display: none;
 }

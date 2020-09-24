@@ -166,26 +166,24 @@ botonLimpiar.onclick = () => {
 }
 
 
-/******************💛💛💛 OVERLAY HEADER 💛💛💛***************/
+/******************💛💛💛 OVERLAY ADD-TO-CART 💛💛💛***************/
 
-const botonAbrirMenu = document.querySelector(".btn-cart")
-const botonCerrarMenu = document.getElementById("cerrar-menu")
+const btnOpenCart = document.querySelector(".btn-cart")
+console.log(btnOpenCart)
+const btnCloseCart = document.querySelector(".btn-close")
+console.log(btnCloseCart)
 
-const menu = document.getElementById("menu")
-
-const overlay = document.getElementById("overlay")
-
+const cart = document.querySelector(".header-menu-add-to-card")
+const overlay = document.querySelector(".overlay")
 
 
-botonAbrirMenu.onclick = () => {
-
+btnOpenCart.onclick = () => {
   mostrarOverlay()
   bodySinScroll()
   mostrarCarrito() 
 }
 
-botonCerrarMenu.onclick = () => {
-
+btnCloseCart.onclick = () => {
   ocultarOverlay()
   bodyConScroll()
   ocultarCarrito()
@@ -210,9 +208,9 @@ const bodyConScroll = () => {
 }
 
 const mostrarCarrito = () => {
-  menu.classList.add("show-cart")
+  cart.classList.remove("menu-add-to-card-hidde")
 }
 
 const ocultarCarrito = () => {
-  menu.classList.remove("show-cart")
+  cart.classList.add("menu-add-to-card-hidde")
 }
