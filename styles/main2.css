@@ -178,7 +178,7 @@ aside {
 
 .filters-review {
 	margin-top: 20px;
-	color: #e8b623;
+	color: #8A5559;
 }
 .input-review {
 	justify-content: flex-start;
@@ -295,7 +295,7 @@ footer {
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin FOOTER   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 
-/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Overlay Header  .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.  Inicio  Overlay  .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 .overlay {
 	width: 100vw;
@@ -305,18 +305,19 @@ footer {
 	top: 0;
 	bottom: 0;
 }
+/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:. Fin   Overlay  .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+
+/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio MENU CARRITO .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 .header-menu-add-to-card {
 	justify-content: space-between;
 	align-items: flex-start;
 	width: 500px;
 	height: 500px;
-	background-color: #dc5d32;
 	opacity: 0.8;
-	color: #fff;
 	position: absolute;
 	right: 0;
-	top: 65px;
+	top: 68px;
 	transition: 2s;
 }
 
@@ -329,6 +330,17 @@ footer {
 .menu-add-to-card-hidde {
 	transform: translateX(500px);
 }
+
+/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin MENU CARRITO .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+
+/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio CONFIRMACION DE COMPRA .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+
+
+
+
+
+
+/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin CONFIRMACION DE COMPRA .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 .is-hidden {
 	display: none;
 }
