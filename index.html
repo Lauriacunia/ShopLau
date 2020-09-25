@@ -711,18 +711,14 @@
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  FIN MENU CARRITO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
 <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  INICIO CONFIRMACION DE COMPRA★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
-<div
-        class="modal checkout hidden"
-        aria-role="dialog"
-        aria-modal="true"
-        aria-hidden="true"
-      >
-        <h2 class="modal-title">Checkout</h2>
+<div class="menu-checkout checkout-is-hidden" >
+
+        <h2>Checkout</h2>
         <div class="flex-container">
-          <form class="checkout-info" id="checkout-form">
+          <form class="checkout-info">
             <div class="checkout-personal-info">
               <h3>Datos Personales</h3>
-              <div class="checkout-section-container">
+              <div class="in-line">
                 <div class="checkout-personal-info-inputs">
                   <label>
                     Nombre y apellido *
@@ -749,7 +745,7 @@
             <div class="checkout-payment">
               <h3>Opciones de pago</h3>
               <div class="checkout-section-container">
-                <div class="checkout-payment-options">
+                <div>
                   <label>
                     <input
                       type="radio"
@@ -799,13 +795,13 @@
           <!-- *** [ Fin Subtotales ] *** -->
         </div>
         <footer class="modal-actions">
-          <button type="button" class="button button-default cancel-buy-btn">
+          <button type="button"
+           class="btn-cancel-buy button ">
             Seguir comprando
           </button>
           <button
-            type="submit"
-            class="button button-success finish-buy-btn"
-            form="checkout-form"
+            type="button"
+            class="btn-finish-buy button"
           >
             Finalizar
           </button>

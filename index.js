@@ -214,3 +214,48 @@ const mostrarCarrito = () => {
 const ocultarCarrito = () => {
   cart.classList.add("menu-add-to-card-hidde")
 }
+
+/******************💛💛💛 OVERLAY CHECKOUT 💛💛💛***************/
+
+const btnOpenCheckout = document.querySelector(".btn-buy")
+console.log(btnOpenCheckout)
+
+const btnFinishBuy = document.querySelector(".btn-finish-buy")
+console.log(btnFinishBuy)
+
+const btnCancelBuy = document.querySelector(".btn-cancel-buy")
+console.log(btnCancelBuy)
+
+const menuCheckout = document.querySelector(".menu-checkout")
+console.log(menuCheckout)
+
+
+const mostrarCheckout = () => {
+  menuCheckout.classList.remove("checkout-is-hidden")
+}
+
+const ocultarCheckout = () => {
+  menuCheckout.classList.add("checkout-is-hidden")
+}
+
+btnOpenCheckout.onclick = () => {
+  console.log("hiciste click en btn open checkout")
+  mostrarOverlay()
+  bodySinScroll()
+  mostrarCheckout() 
+}
+
+btnFinishBuy.onclic = () => {
+  console.log("hiciste click en btn finish buy")
+  ocultarOverlay()
+  bodyConScroll()
+  ocultarCheckout()
+}
+
+btnCancelBuy.onclic = () => {
+  console.log("hiciste click en btn cancel buy")
+  ocultarOverlay()
+  bodyConScroll()
+  ocultarCheckout()
+}
+
