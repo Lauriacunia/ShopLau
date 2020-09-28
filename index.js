@@ -245,17 +245,19 @@ btnOpenCheckout.onclick = () => {
   mostrarCheckout() 
 }
 
-btnFinishBuy.onclic = () => {
+btnFinishBuy.onclick = () => {
   console.log("hiciste click en btn finish buy")
   ocultarOverlay()
   bodyConScroll()
   ocultarCheckout()
+  ocultarCarrito()
 }
 
-btnCancelBuy.onclic = () => {
+btnCancelBuy.onclick = () => {
   console.log("hiciste click en btn cancel buy")
   ocultarOverlay()
   bodyConScroll()
   ocultarCheckout()
+  ocultarCarrito()
 }
 
