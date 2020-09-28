@@ -39,8 +39,8 @@ li {
 	font-weight: 600;
 	font-size: 0.8vw;
 	text-transform: uppercase;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 body {
@@ -100,7 +100,7 @@ p {
 }
 
 .theme-maia {
-	background-color: #cbbaa5;
+	background-color: #1d130e;
 	color: white;
 }
 
@@ -321,6 +321,7 @@ p {
 header {
 	justify-content: space-between;
 	padding: 5px 10px;
+	background-image: linear-gradient(to bottom right,#cbbaa5, #1d130e);
 }
 .header-branding {
 	flex: 1;
@@ -328,15 +329,17 @@ header {
 .branding {
 	font-family: 'Chonburi', cursive;
 	letter-spacing: 5px;
-	font-size: 1vw;
+	font-size: 20px;
+	font-weight: normal;
 	color: #1d130e;
+	margin-left: 10px;
 }
 .header-menu {
 	flex: 4;
 }
 
 .header-logo {
-	width: 40px;
+	width: 80px;
 	height: auto;
 }
 
@@ -352,20 +355,21 @@ header {
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio BANNER    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 .banner-images-container {
-	width: 1300px;
+	width: 100%;
 	height: 500px;
 	background-size: 100% 100%;
-	animation: banner 20s infinite;
+	animation: banner 30s infinite;
 	animation-direction: alternate;
 }
 .box-behind-title {
 	background-color: #988574;
 	position: relative;
-	bottom: 100px;
+	bottom: 50px;
+	left:250px;
 }
 .banner-title-container {
-	min-width: 700px;
-	height: 150px;
+	min-width: 500px;
+	height: 650px;
 	background-color: #1d130e;
 	color: white;
 	margin: 20px;
@@ -374,45 +378,33 @@ header {
 	font-family: 'Lato', sans-serif;
 	font-size: 25px;
 	letter-spacing: 10px;
+	width: 150px;
 }
 
 @keyframes banner {
-	0%,	15% {
-		background-image: url(/images/banner.png);
-		opacity:1;
-	}
-	16%, 19% {
-		opacity:0.1;
-	}
-	20%, 35% {
-		background-image: url(/images/banner1.png);
-		opacity:1;
+	0% {
+		background-image: url(images/banner.png);
 	}
 
-	36%, 39% {
-		opacity:0.1;
+	20% {
+		background-image: url(images/banner1.png);
 	}
-	40%, 55% {
-		background-image: url(/images/banner2.png);
-		opacity:1;
+
+	40% {
+		background-image: url(images/banner2.png);
 	}
-	56%, 59% {
-		opacity:0.1;
+
+	60% {
+		background-image: url(images/banner3.png);
 	}
-	60%, 75% {
-		background-image: url(/images/banner3.png);
-		opacity:1;
+
+	80% {
+		background-image: url(images/banner4.png);
 	}
-	76%, 79% {
-		opacity:0.1;
+	100% {
+		background-image: url(images/banner.png);
 	}
-	80%, 95% {
-		background-image: url(/images/banner4.png);
-		opacity:1;
-	}
-	96%, 100% {
-		opacity:0.1;
-	}
+
 }
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin BANNER   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
