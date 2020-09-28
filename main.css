@@ -47,8 +47,13 @@ body {
 	font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 	background-color: #ebecec;
 	overflow-x: hidden; /*Esconde lo que rebalza en eje X*/
+
 }
 
+h1, h2, h3 {
+	font-weight: normal;
+	font-family: 'Chonburi', cursive;
+}
 h1 {
 	font-size: 3vw;
 }
@@ -86,7 +91,7 @@ p {
 /*～●～●～●～●～  THEMES  ●～●～●～●～●～●～*/
 
 .theme-wine {
-	background-color: #8a5559;
+	background-color: #802930;
 	color: white;
 }
 .theme-wine-ligth {
@@ -159,7 +164,7 @@ p {
 }
 
 .button-wine-solid {
-	background-color: black;
+	background-color: #802930;
 	color: white;
 	border: none;
 	box-shadow: none;
@@ -167,7 +172,7 @@ p {
 .button-wine-empty {
 	background-color: transparent;
 	color: white;
-	border: 1px solid #8a5559;
+	border: 1px solid  #802930;
 	box-shadow: none;
 }
 .button-forest-solid {
@@ -296,7 +301,7 @@ p {
 
 /* PSEUDOCLASES Y PASEUDOLELEMENTOS DE BOTONES*/
 .button-wine-empty:hover {
-	background-color: #8a5559;
+	background-color: #802930;
 }
 .button-forest-solid:hover {
 	background-color: #4f574c;
@@ -361,25 +366,7 @@ header {
 	animation: banner 30s infinite;
 	animation-direction: alternate;
 }
-.box-behind-title {
-	background-color: #988574;
-	position: relative;
-	bottom: 50px;
-	left:250px;
-}
-.banner-title-container {
-	min-width: 500px;
-	height: 650px;
-	background-color: #1d130e;
-	color: white;
-	margin: 20px;
-}
-.banner-title {
-	font-family: 'Lato', sans-serif;
-	font-size: 25px;
-	letter-spacing: 10px;
-	width: 150px;
-}
+
 
 @keyframes banner {
 	0% {
@@ -408,6 +395,56 @@ header {
 }
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin BANNER   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
+/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio HISTORIA   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+
+
+/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin HISTORIA   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+.history {
+	justify-content: space-around;
+}
+.box-behind-title {
+	background-color: #988574;
+	position: relative;
+	bottom: 50px;
+	/*left: 250px;*/
+	
+}
+.history-container {
+	flex-basis: 400px;
+	line-height : 30px;
+	text-align: justify;
+	
+}
+.history-container p {
+	font-size: 13px;
+	letter-spacing: 3px;
+	margin: 10px 0px;
+}
+.history-container h2 {
+	margin: 25px 0px;
+}
+.history-title-container {
+	
+	min-width: 450px;
+	height: 550px;
+	background-color: #1d130e;
+	color: white;
+	margin: 25px;
+}
+.decorative-line{
+	width: 450px;
+	height: auto;
+}
+.history-title {
+	padding:15px;
+	font-family: 'Chonburi', cursive;
+}
+.history-title h2 {	
+	letter-spacing: 15px;
+	font-size: 15px;
+	font-weight: normal;
+	margin-bottom:10px;
+}
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio ABOUT US    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 .promo-grid {
 	justify-content: space-around;
@@ -631,12 +668,13 @@ aside {
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio FOOTER   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 footer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100px;
+	
+	height: 400px;
 }
-
+.logo-container{
+	width: 150px;
+	height: auto;
+}
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin FOOTER   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.  Inicio  Overlay  .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
