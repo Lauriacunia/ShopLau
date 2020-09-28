@@ -62,7 +62,6 @@ p {
 	font-size: 1vw;
 }
 
-
 /*～●～●～●～●～  DISPLAY ●～●～●～●～●～●～*/
 
 .in-line {
@@ -84,11 +83,10 @@ p {
 	align-items: center;
 }
 
-
 /*～●～●～●～●～  THEMES  ●～●～●～●～●～●～*/
 
 .theme-wine {
-	background-color: #8A5559;
+	background-color: #8a5559;
 	color: white;
 }
 .theme-wine-ligth {
@@ -102,10 +100,9 @@ p {
 }
 
 .theme-maia {
-	background-color:#cbbaa5;
+	background-color: #cbbaa5;
 	color: white;
 }
-
 
 .theme-sun-border {
 	border: 1px solid #ebd92f;
@@ -119,7 +116,6 @@ p {
 	background-color: #dc5d32;
 	color: white;
 }
-
 
 .theme-sand-ligth {
 	background-color: #cbbaa5;
@@ -138,17 +134,16 @@ p {
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.  Fin GENERALES    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
-
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio COMPONENTES   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
-/*～●～●～●～●～  BOTONES  ●～●～●～●～●～●～*/ 
+/*～●～●～●～●～  BOTONES  ●～●～●～●～●～●～*/
 
 .button {
 	font-family: 'Lato', sans-serif;
 	letter-spacing: 2px;
 	font-size: 0.8vw;
-	text-transform: uppercase;	
-	cursor: pointer;	
+	text-transform: uppercase;
+	cursor: pointer;
 	min-width: 150px;
 	max-width: 250px;
 	font-weight: 600;
@@ -166,19 +161,19 @@ p {
 .button-wine-solid {
 	background-color: black;
 	color: white;
-	border:none;
+	border: none;
 	box-shadow: none;
 }
 .button-wine-empty {
 	background-color: transparent;
 	color: white;
-	border: 1px solid #8A5559;
+	border: 1px solid #8a5559;
 	box-shadow: none;
 }
 .button-forest-solid {
 	background-color: #847f3b;
 	color: white;
-	border:none;
+	border: none;
 	box-shadow: none;
 }
 .button-forest-empty {
@@ -187,7 +182,6 @@ p {
 	border: 1px solid #847f3b;
 	box-shadow: none;
 }
-
 
 /*～●～●～●～●～  BOTON - ANIMACION  ●～●～●～●～●～●～*/
 
@@ -198,14 +192,13 @@ p {
 	transition: background-color 0.3s;
 }
 
-
 /*Animacion del boton */
 
 .button-animated > span {
 	display: inline-block;
 	padding: 1em 0;
 	opacity: 0;
-	color: #fff;	
+	color: #fff;
 	-webkit-transform: translate3d(0, -10px, 0);
 	transform: translate3d(0, -10px, 0);
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
@@ -302,11 +295,11 @@ p {
 }
 
 /* PSEUDOCLASES Y PASEUDOLELEMENTOS DE BOTONES*/
-.button-wine-empty:hover{
-	background-color: #8A5559;
+.button-wine-empty:hover {
+	background-color: #8a5559;
 }
 .button-forest-solid:hover {
-	background-color: #4f574C;
+	background-color: #4f574c;
 }
 .button-forest-empty:hover {
 	background-color: rgb(173, 169, 169);
@@ -317,23 +310,11 @@ p {
 }
 /*～●～●～●～●～  CHECBOXES ●～●～●～●～●～●～*/
 
-
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin COMPONENTES   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
-
-
-
-
-
-
-
-
-
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*
                                             DISEÑO DESKTOP
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
-
-
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio HEADER    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
@@ -370,23 +351,23 @@ header {
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio BANNER    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
-.banner-img {
+.banner-images-container {
+	width: 100vw;
 	height: 500px;
-
+	background-size: 100% 100%;
+	animation: banner 20s infinite;
 }
-.box-behind-title{
+.box-behind-title {
 	background-color: #988574;
 	position: relative;
 	bottom: 100px;
 }
 .banner-title-container {
-	
 	min-width: 700px;
 	height: 150px;
 	background-color: #1d130e;
-	color:white;
-	margin:20px;
-	
+	color: white;
+	margin: 20px;
 }
 .banner-title {
 	font-family: 'Lato', sans-serif;
@@ -394,8 +375,50 @@ header {
 	letter-spacing: 10px;
 }
 
-/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin BANNER   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+@keyframes banner {
+	0%,
+	15% {
+		background-image: url("/images/banner.png");
+	}
+	16%,
+	19% {
+		background-color: #cbbaa5;
+	}
+	20%,
+	35% {
+		background-image: url("/images/banner1.png");
+	}
 
+	36%,
+	39% {
+		background-color: #cbbaa5;
+	}
+	40%,
+	55% {
+		background-image: url("/images/banner2.png");
+	}
+	56%,
+	59% {
+		background-color: #cbbaa5;
+	}
+	60%,
+	75% {
+		background-image: url("/images/banner3.png");
+	}
+	76%,
+	79% {
+		background-color: #cbbaa5;
+	}
+	80%,
+	95% {
+		background-image: url("/images/banner4.png");
+	}
+	96%,
+	100% {
+		background-color: #cbbaa5;
+	}
+}
+/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin BANNER   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio ABOUT US    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 .promo-grid {
@@ -512,7 +535,7 @@ aside {
 
 .filters-review {
 	margin-top: 20px;
-	color: #8A5559;
+	color: #8a5559;
 }
 .input-review {
 	justify-content: flex-start;
@@ -628,7 +651,6 @@ footer {
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin FOOTER   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
-
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.  Inicio  Overlay  .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 .overlay {
@@ -675,83 +697,69 @@ footer {
 	top: 0px;
 	left: 25vw;
 	width: 100%;
-    background-color: #fff;
-    padding: 40px 30px;
-    max-width: 500px;
-  }
+	background-color: #fff;
+	padding: 40px 30px;
+	max-width: 500px;
+}
 
+.checkout-info {
+	width: 100%;
+	padding-right: 30px;
+}
 
-  .checkout-info {
-    width: 100%;
-    padding-right: 30px;
-  }
+.checkout-personal-info {
+	padding: 20px 20px 40px;
+}
 
-  .checkout-personal-info {
-    padding: 20px 20px 40px;
-  }
-  
-  .checkout-personal-info-inputs {
-    width: 100%;
-  }
-  .checkout-payment {
-    padding: 20px 20px 40px;
-    border-top: 1px solid #e0e0e0;
-  }
+.checkout-personal-info-inputs {
+	width: 100%;
+}
+.checkout-payment {
+	padding: 20px 20px 40px;
+	border-top: 1px solid #e0e0e0;
+}
 
-  
-  .cart-totals {
-    min-width: 300px;
-    background: #f5f5f5;
-    border-radius: 5px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .cart-totals-title {
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-  .cart-discount {
-    color: #23b120;
-  }
-  .modal-actions {
-    margin-top: 40px;
-    display: flex;
-    justify-content: flex-end;
-  }
+.cart-totals {
+	min-width: 300px;
+	background: #f5f5f5;
+	border-radius: 5px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.cart-totals-title {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+.cart-discount {
+	color: #23b120;
+}
+.modal-actions {
+	margin-top: 40px;
+	display: flex;
+	justify-content: flex-end;
+}
 
-  .checkout-is-hidden {
+.checkout-is-hidden {
 	transform: translateX(1000px);
-  }
+}
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin CONFIRMACION DE COMPRA .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 .is-hidden {
 	display: none;
 }
 .no-scroll {
-	overflow: hidden;/* todo lo que escapa a esta tarjeta ocultalo*/
+	overflow: hidden; /* todo lo que escapa a esta tarjeta ocultalo*/
 }
-
-
-
-
-
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*
                                      DISEÑO RESPONSIVE 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
-
-
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio TABLET   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
-
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin TABLET    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
-
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio SMARTPHONE   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
-
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin SMARTPHONE   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
-
-
