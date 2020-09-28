@@ -352,10 +352,11 @@ header {
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio BANNER    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 .banner-images-container {
-	width: 100vw;
+	width: 1300px;
 	height: 500px;
 	background-size: 100% 100%;
 	animation: banner 20s infinite;
+	animation-direction: alternate;
 }
 .box-behind-title {
 	background-color: #988574;
@@ -376,46 +377,41 @@ header {
 }
 
 @keyframes banner {
-	0%,
-	15% {
-		background-image: url("/images/banner.png");
+	0%,	15% {
+		background-image: url(/images/banner.png);
+		opacity:1;
 	}
-	16%,
-	19% {
-		background-color: #cbbaa5;
+	16%, 19% {
+		opacity:0.1;
 	}
-	20%,
-	35% {
-		background-image: url("/images/banner1.png");
+	20%, 35% {
+		background-image: url(/images/banner1.png);
+		opacity:1;
 	}
 
-	36%,
-	39% {
-		background-color: #cbbaa5;
+	36%, 39% {
+		opacity:0.1;
 	}
-	40%,
-	55% {
-		background-image: url("/images/banner2.png");
+	40%, 55% {
+		background-image: url(/images/banner2.png);
+		opacity:1;
 	}
-	56%,
-	59% {
-		background-color: #cbbaa5;
+	56%, 59% {
+		opacity:0.1;
 	}
-	60%,
-	75% {
-		background-image: url("/images/banner3.png");
+	60%, 75% {
+		background-image: url(/images/banner3.png);
+		opacity:1;
 	}
-	76%,
-	79% {
-		background-color: #cbbaa5;
+	76%, 79% {
+		opacity:0.1;
 	}
-	80%,
-	95% {
-		background-image: url("/images/banner4.png");
+	80%, 95% {
+		background-image: url(/images/banner4.png);
+		opacity:1;
 	}
-	96%,
-	100% {
-		background-color: #cbbaa5;
+	96%, 100% {
+		opacity:0.1;
 	}
 }
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin BANNER   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
