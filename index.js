@@ -56,14 +56,14 @@ const pasaFiltrocategory = (producto) => {
 }
 
 const pasaFiltroRating = (producto) => {
-  const rating = producto.dataset.rating
+  const rating = producto.dataset.review
   const filtroRating = document.querySelector(`.filter-review[value="${rating}"]`)
 
   return filtroRating.checked
 }
 
 const pasaFiltroBusqueda = (producto) => {
-  const nombre = producto.dataset.nombre
+  const nombre = producto.dataset.name
 
   return nombre.toLowerCase().includes(filtroBusqueda.value.toLowerCase())
 }
