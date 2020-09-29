@@ -13,6 +13,10 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+html {
+	scroll-behavior: smooth;
+}
+
 img {
 	width: 100%;
 	height: auto;
@@ -65,6 +69,14 @@ h3 {
 }
 p {
 	font-size: 1vw;
+}
+/*～●～●～●～●～  PSEUDOCLASES Y PSEUDOELEMENTOS ●～●～●～●～●～●～*/
+a:link,
+a:visited {
+	color: #130817;
+}
+button {
+	outline-style:none;
 }
 
 /*～●～●～●～●～  DISPLAY ●～●～●～●～●～●～*/
@@ -172,7 +184,7 @@ p {
 .button-wine-empty {
 	background-color: transparent;
 	color: white;
-	border: 1px solid  #802930;
+	border: 1px solid  #834146;
 	box-shadow: none;
 }
 .button-forest-solid {
@@ -358,7 +370,9 @@ header {
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin HEADER    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio BANNER    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
-
+.banner {
+	box-shadow: 5px  0px 10px  #412b20;
+}
 .banner-images-container {
 	width: 100%;
 	height: 500px;
@@ -407,6 +421,7 @@ header {
 	position: relative;
 	bottom: 50px;
 	/*left: 250px;*/
+	box-shadow: 10px 10px 10px  #412b20;
 	
 }
 .history-container {
@@ -430,6 +445,7 @@ header {
 	background-color: #1d130e;
 	color: white;
 	margin: 25px;
+	box-shadow: 10px 10px 10px  #412b20;
 }
 .decorative-line{
 	width: 450px;
@@ -446,23 +462,31 @@ header {
 	margin-bottom:10px;
 }
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio ABOUT US    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
-.promo-grid {
-	justify-content: space-around;
-}
 .display {
-	flex-basis: 650px;
+	margin: 150px 0px;
 }
-.display-slides-container {
-	min-width: 300px;
-	min-height: 300px;
+.display-container {
+	width: 850px;
+	height: 450px;
+	box-shadow: 10px 10px 10px  #412b20;
+	background-color:#1d130e;
+	
+}
+.display-slides {
+	width: 100%;
+	height: 100%;
+	box-shadow: 10px 10px 10px  #412b20;
+	margin:25px;
 }
 .slides-list {
 	position: relative;
+	
 }
 .slides-list li {
 	position: absolute;
 	opacity: 0; /*todos se ocultan*/
 	transition: opacity 0.5s;
+	margin:0px;
 }
 .slides-list li:first-child {
 	opacity: 1; /*muestra el primero de la lista*/

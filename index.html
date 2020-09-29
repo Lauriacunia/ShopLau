@@ -15,7 +15,7 @@
 
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  INICIO HEADER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-    <header class="theme-maia in-line">
+    <header class="theme-maia in-line" id= "header">
         <!-- inicia marca del header -->
         <div class="header-branding">
             <h1 class="branding">BARROCO</h1>
@@ -28,10 +28,10 @@
         <nav class="header-menu">
             <ul class=" in-line">
                 <li class="header-menu-item">
-                    <a>INICIO</a>
+                    <a href ="#header">INICIO</a>
                 </li>
                 <li class="header-menu-item">
-                    <a>HISTORIA</a>
+                    <a href ="#history">HISTORIA</a>
                 </li>
                 <li class="header-menu-item">
                     <div class="header-logo">
@@ -221,10 +221,10 @@
                     </div>
                 </li>
                 <li class="header-menu-item">
-                    <a>SHOP</a>
+                    <a href ="#shop">SHOP</a>
                 </li>
                 <li class="header-menu-item">
-                    <a>CONTACTO</a>
+                    <a href ="#footer">CONTACTO</a>
                 </li>
             </ul>
         </nav>
@@ -255,7 +255,7 @@
 
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO HISTORIA  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-    <section class="history  in-line">
+    <section class="history  in-line" id= "history">
 
         <div class= "history-container in-stack">
             
@@ -296,63 +296,43 @@
 
 
 
-    <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO PROMO GRID ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+    <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO PROMO  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-    <section class="promo-grid in-line ">
+    <section class="display in-line ">
 
         <!-- Inicia contenedor de slides -->
-        <div class="display in-stack ">
-            <div class="display-slides-container">
+        <div class="display-container in-line ">
+            <div class="display-slides">
                 <ul class="slides-list">
                     <li id="slide-1">
-                        <img src="images/ternurita.jpg">
+                        <img src="images/slide1.jpg">
                     </li>
                     <li id="slide-2">
-                        <img src="images/libro.jpg">
+                        <img src="images/slide2.jpg">
                     </li>
                     <li id="slide-3">
-                        <img src="images/pizza.jpg">
+                        <img src="images/slide3.jpg">
                     </li>
+                    <li id="slide-4">
+                        <img src="images/slide4.jpg">
+                    </li>
+                  
                 </ul>
             </div>
 
-            <div class="display-icons-container">
-                <ul class="icons-list in-line">
-                    <li>
-                        <a href="#slide-1">
-                            <i class="fas fa-circle"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#slide-2">
-                            <i class="far fa-circle"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#slide-3">
-                            <i class="far fa-circle"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
         <!-- Finaliza el contenedor de slides-->
 
-        <!-- Inicia contenedor de imagen principal-->
-        <div class="big-photo">
-            <img src="images/prueba.jpg">
-        </div>
-        <!-- fin contenedor de imagen principal-->
 
     </section>
 
 
 
-    <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN PROMO GRID ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+    <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN PROMO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO CATALOGO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-    <main>
+    <main id= "shop">
         <!-- ♪:;;;:♪:;;;:♪:;;Inicio Filtros ;:♪:;;;:♪:;;;:♪:;;;: -->
 
         <section class="filters-container in-line">
@@ -541,7 +521,7 @@
 
                 <!--  Inicia listado Productos  -->
 
-                <div class="products-list in-grid">
+                <div class="products-list in-grid" >
 
                     <article class="product in-stack theme-pachamama" data-nombre="metabolic balance" data-rating="4"
                         data-category="metabolic">
@@ -802,28 +782,10 @@
 
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN CATALOGO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-    <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO FORM SUSCRIBE ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
-
-    <section class="seccion-suscribete theme-maia">
-
-        <div class="contenedor-suscribete">
-            <div class="t-suscribete">
-                <p>Suscribete ahora a nuestro newsletter y consigue un descuento del 15% en tu próxima compra</p>
-            </div>
-            <div class="input-suscribete">
-                <form>
-                    <input type="button" placeholder="Ingresa tu e-mail" </input>
-                </form>
-
-            </div>
-        </div>
-
-    </section>
-
-    <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN FORM SUSCRIBE ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+  
 
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO FOOTER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
-    <footer class="theme-wine-ligth in-line">
+    <footer class="theme-wine-ligth in-line" id="footer">
         <div class="logo-container">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 960 824.108"
@@ -1121,7 +1083,7 @@
             </section>
             <!-- *** [ Fin Subtotales ] *** -->
         </div>
-        <footer class="modal-actions">
+        <footer class="modal-actions" >
             <button type="button" class="btn-cancel-buy button ">
                 Seguir comprando
             </button>
