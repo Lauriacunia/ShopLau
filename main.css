@@ -32,6 +32,7 @@ body {
 }
 button {
 	outline-style:none;
+	border:none;
 	cursor: pointer;
 }
 
@@ -100,12 +101,16 @@ a:visited {
 /*～●～●～●～●～  THEMES  ●～●～●～●～●～●～*/
 
 .theme-simple {
-	background-color: #43628B ;
+	background-color:#43628B;
 	color: #5fecc8 ;
 }
 .theme-sky {
 	background-color:  #43628B;
 	color:white;
+}
+.theme-sky-dark {
+	background-color: #080817;
+	color: white;
 }
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.  Fin GENERALES    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
@@ -410,17 +415,17 @@ footer {
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio MENU CARRITO .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 .header-menu-add-to-card {
+	
 	justify-content: space-between;
-	align-items: flex-start;
-	flex-basis: 500px;
-	height: 100vh;
-	opacity: 0.8;
 	position: absolute;
 	right: 0;
 	top: 0px;
 	padding:40px 25px;
 	transition: 2s;
 	z-index:1;
+}
+.cart-full{
+align-items: flex-start;
 }
 .cart-title-container {
 	width: 100%;
@@ -430,17 +435,25 @@ footer {
 .btn-close {
 	color:white;
 	font-size: 20px;
-}
-.products-add-to-card {
-	height: 300px;
-	width: 300px;
-	overflow-y: scroll;
+
 }
 
+.products-add-to-card {
+	height: 250px;
+	width: 350px;
+	overflow-y: scroll;
+}
+.add-to-card-buttons{
+	width: 100%;
+
+}
 .menu-add-to-card-hidde {
 	transform: translateX(500px);
 }
+.cart-empty-msg {
+	max-width: 300px;
 
+}
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin MENU CARRITO .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio CONFIRMACION DE COMPRA .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/

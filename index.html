@@ -563,33 +563,40 @@
 
     <div class="overlay is-hidden" id="overlay"></div>
 
-    <div class="header-menu-add-to-card in-stack menu-add-to-card-hidde theme-sky">
-        <div class="cart-title-container in-line">
-            <h2>CARRITO</h2>
-            <button type="button" class="btn-close">
-                <i class="far fa-window-close"></i>
-            </button>
-        </div>
-        <div class="in-line">
-            <p><span>3</span> producto(s) agregado(s)</p>
-        </div>
-        <div class="products-add-to-card">
-
-        </div>
-        <div class="in-line">
-            <p> Subtotal $ <span>3.000</span></p>
-        </div>
-        <div class="in-stack">
-            <button type="button" class="btn-buy  in-line button
-             button-simple-solid-reverse">
-                COMPRAR
-            </button>
-            <div>
-                <button type="button" class="btn-out in-line button
-                 button-simple-empty ">
-                   VACIAR
+    <div class="header-menu-add-to-card in-stack menu-add-to-card-hidde theme-sky-dark">
+        <div class = "cart-full in-stack">
+            <div class="cart-title-container in-line">
+                <h2>CARRITO</h2>
+                <button type="button" class="btn-close">
+                    <i class="far fa-window-close"></i>
                 </button>
             </div>
+            <div class="in-line">
+                <p><span>3</span> producto(s) agregado(s)</p>
+            </div>
+            <div class="products-add-to-card">
+
+            </div>
+            <div class="in-line">
+                <p> Subtotal $ <span id="subtotal">3.000</span></p>
+            </div>
+            <div class=" add-to-card-buttons in-stack">
+                <button type="button" class="btn-buy  in-line button
+                button-simple-solid-reverse">
+                    COMPRAR
+                </button>
+                <div>
+                    <button type="button" class="btn-out in-line button
+                    button-simple-empty ">
+                    VACIAR
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="cart-empty">
+            <p class="cart-empty-msg">
+              No tienes productos en el carrito, ¡Agrega algunos!
+            </p>
         </div>
 
     </div>
