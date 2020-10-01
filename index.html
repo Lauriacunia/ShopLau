@@ -21,7 +21,7 @@
 
         <div class="in-line">
             <img class= "branding-logo" src="images/iso_blanco.svg" />
-            <h1 class="branding">ADA SHOP</h1>
+            <p class="branding">ADA SHOP</p>
         </div>
 
         <!-- finaliza marca del header-->
@@ -42,11 +42,11 @@
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO BANNER  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
     <section class="banner in-stack">
-        <div class="banner-img">
-            <img src="images/banner.png" />
+        <div>
+            <img class="banner-img"src="images/banner.png" />
         </div>
-        <div class="banner-title">
-            <h1 class="category-name">ELECTRÓNICA</h1>
+        <div>
+            <h1 class="banner-title">ELECTRÓNICA</h1>
         </div>
     </section>
 
@@ -71,7 +71,7 @@
                     <div class="filters-clear-btn-container">
                         <button type="button" class="clear-btn in-line">
                             <i class="fas fa-trash-alt"></i>
-                            <p class="clear-title">LIMPIAR</p>
+                            <h3 class="clear-title">Limpiar</h3>
                         </button>
                     </div>
 
@@ -87,7 +87,7 @@
 
                     <div class="input-search-container in-line">
                         <input type="text" id="input-search" placeholder="¿Qué estás buscando?">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-search search-icon"></i>
                     </div>
 
                 </div>
@@ -107,31 +107,31 @@
                             <label class="input-category in-line">
                                 <input type="checkbox" class=" filter filter-category" name="category" value="consolas">
                                 </input>
-                                <p>CONSOLAS</p>
+                                <h4>CONSOLAS</h4>
                             </label>
 
                             <label class="input-category in-line">
                                 <input type="checkbox" class="filter filter-category" name="category" value="notebooks">
                                 </input>
-                                <p>NOTEBOOKS</p>
+                                <h4>NOTEBOOKS</h4>
                             </label>
 
                             <label class="input-category in-line">
                                 <input type="checkbox" class="filter filter-category" name="category" value="camaras">
                                 </input>
-                                <p>CÁMARAS</p>
+                                <h4>CÁMARAS</h4>
                             </label>
 
                             <label class="input-category in-line">
                                 <input type="checkbox" class="filter filter-category" name="category" value="celulares">
                                 </input>
-                                <p>CELULARES</p>
+                                <h4>CELULARES</h4>
                             </label>
 
                             <label class="input-category in-line">
                                 <input type="checkbox" class="filter filter-category" name="category" value="accesorios">
                                 </input>
-                                <p>ACCESORIOS</p>
+                                <h4>ACCESORIOS</h4>
                             </label>
                             
                         </label>
@@ -156,7 +156,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <p>(5)</p>
+                            <h4>(5)</h4>
                             </input>
                         </label>
 
@@ -167,7 +167,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
-                            <p>(4)</p>
+                            <h4>(4)</h4>
                             </input>
                         </label>
 
@@ -178,7 +178,7 @@
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
-                            <p>(3)</p>
+                            <h4>(3)</h4>
                             </input>
                         </label>
 
@@ -189,7 +189,7 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
-                            <p>(2)</p>
+                            <h4>(2)</h4>
                             </input>
                         </label>
 
@@ -200,7 +200,7 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
-                            <p>(1)</p>
+                            <h4>(1)</h>
                             </input>
                         </label>
 
@@ -242,293 +242,299 @@
                 <div class="products-list in-grid">
 
                    
-                    <article class="product in-stack" data-id="0" data-name="Celular Xiaomi" data-category="celulares"
-                        data-price="22499" data-image="images/xiaomi.jpg" data-review="3">
-                        <div class="product-img-container">
+                    <article class="product in-stack"
+                             data-id="0" 
+                             data-name="Celular Xiaomi"
+                             data-category="celulares"
+                             data-price="22499"
+                             data-image="images/xiaomi.jpg"
+                             data-review="3">
+
+                        <div class="product-img-container in-line">
                             <img src="images/xiaomi.jpg" alt="" class="product-img" />
                         </div>
-                        <div class="product-body">
-                            <div class="product-content">
-                                <h3 class="product-name">Celular Xiaomi</h3>
-                                <p class="product-price">$ 22499</p>
-                                <div class="review">
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="product-actions">
-                                <button type="button" class="button button-simple button-add-to-cart">
-                                    Comprar
-                                </button>
-                            </div>
+                       
+                        <div class="product-content in-stack">
+                            <h3 class="product-name">Celular Xiaomi</h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="review filters-review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
                         </div>
+                        <div>
+                            <button type="button" class="button button-simple-solid button-add-to-cart">
+                                Comprar
+                            </button>
+                        </div>
+
                     </article>
-                    <article class="produc in-stackt" data-id="1" data-name="PlayStation 4" data-category="consolas"
+
+                    <article class="product in-stack" data-id="1" data-name="PlayStation 4" data-category="consolas"
                         data-price="59999" data-image="images/ps4.jpg" data-review="5">
-                        <div class="product-img-container">
+                        <div class="product-img-container in-line">
                             <img src="images/ps4.jpg" alt="" class="product-img" />
                         </div>
-                        <div class="product-body">
-                            <div class="product-content">
-                                <h3 class="product-name">PlayStation 4</h3>
-                                <p class="product-price">$ 59999</p>
-                                <div class="review">
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="product-actions">
-                                <button type="button" class="button button-simple button-add-to-cart">
-                                    Comprar
-                                </button>
+                        
+                        <div class="product-content in-stack">
+                            <h3 class="product-name">PlayStation 4</h3>
+                            <p class="product-price">$ 59999</p>
+                            <div class="review filters-review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
                         </div>
+                        <div>
+                            <button type="button" class="button button-simple-solid  button-add-to-cart">
+                                Comprar
+                            </button>
+                        </div>
+                        
                     </article>
                     <article class="product in-stack" data-id="2" data-name="Cámara Nikon" data-category="camaras"
                         data-price="54999" data-image="images/nikon.jpg" data-review="2">
-                        <div class="product-img-container">
+                        <div class="product-img-container in-line">
                             <img src="images/nikon.jpg" alt="" class="product-img" />
                         </div>
-                        <div class="product-body">
-                            <div class="product-content">
-                                <h3 class="product-name">Cámara Nikon</h3>
-                                <p class="product-price">$ 54999</p>
-                                <div class="review">
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="product-actions">
-                                <button type="button" class="button button-simple button-add-to-cart">
-                                    Comprar
-                                </button>
-                            </div>
+                        
+                        <div class="product-content in-stack">
+                            <h3 class="product-name">Cámara Nikon</h3>
+                            <p class="product-price">$ 54999</p>
+                            <div class="review filters-review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
                         </div>
+                        
+                        <div>
+                            <button type="button" class="button button-simple-solid button-add-to-cart">
+                                Comprar
+                            </button>
+                        </div>
+                        
                     </article>
                     <article class="product in-stack" data-id="3" data-name="Headphones Sony" data-category="accesorios"
                         data-price="24999" data-image="images/sony.png" data-review="3">
-                        <div class="product-img-container">
+                        <div class="product-img-container in-line">
                             <img src="images/sony.png" alt="" class="product-img" />
                         </div>
-                        <div class="product-body">
-                            <div class="product-content">
-                                <h3 class="product-name">Headphones Sony</h3>
-                                <p class="product-price">$ 24999</p>
-                                <div class="review">
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                </div>
+                    
+                        <div class="product-content in-stack">
+                            <h3 class="product-name">Headphones Sony</h3>
+                            <p class="product-price">$ 24999</p>
+                            <div class="review filters-review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
                             </div>
-                            <div class="product-actions">
-                                <button type="button" class="button button-simple button-add-to-cart">
-                                    Comprar
-                                </button>
-                            </div>
+                        
+                        <div>
+                            <button type="button" class= "button button-simple-solid button-add-to-cart">
+                                Comprar
+                            </button>
                         </div>
+                        
                     </article>
                     <article class="product in-stack" data-id="4" data-name="Nintendo Switch" data-category="consolas"
                         data-price="46999" data-image="images/switch.jpg" data-review="5">
-                        <div class="product-img-container">
+                        <div class="product-img-container in-line">
                             <img src="images/switch.jpg" alt="" class="product-img" />
                         </div>
-                        <div class="product-body">
-                            <div class="product-content">
-                                <h3 class="product-name">Nintendo Switch</h3>
-                                <p class="product-price">$ 46999</p>
-                                <div class="review">
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                </div>
+                        
+                        <div class="product-content in-stack">
+                            <h3 class="product-name">Nintendo Switch</h3>
+                            <p class="product-price">$ 46999</p>
+                            <div class="review filters-review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
-                            <div class="product-actions">
-                                <button type="button" class="button button-simple button-add-to-cart">
-                                    Comprar
-                                </button>
-                            </div>
+                        
+                        <div>
+                            <button type="button" class="button button-simple-solid button-add-to-cart">
+                                Comprar
+                            </button>
                         </div>
+                        
                     </article>
                     <article class="product in-stack" data-id="5" data-name="Notebook Asus" data-category="notebooks"
                         data-price="32999" data-image="images/asus.png" data-review="1">
-                        <div class="product-img-container">
+                        <div class="product-img-container in-line">
                             <img src="images/asus.png" alt="" class="product-img" />
                         </div>
-                        <div class="product-body">
-                            <div class="product-content">
-                                <h3 class="product-name">Notebook Asus</h3>
-                                <p class="product-price">$ 32999</p>
-                                <div class="review">
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="product-actions">
-                                <button type="button" class="button button-simple button-add-to-cart">
-                                    Comprar
-                                </button>
-                            </div>
+                        
+                        <div class="product-content in-stack">
+                            <h3 class="product-name">Notebook Asus</h3>
+                            <p class="product-price">$ 32999</p>
+                            <div class="review filters-review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
                         </div>
+                        
+                        <div>
+                            <button type="button" class="button button-simple-solid button-add-to-cart">
+                                Comprar
+                            </button>
+                        </div>
+                        
                     </article>
                     <article class="product in-stack" data-id="6" data-name="Notebook MSI" data-category="notebooks"
                         data-price="37999" data-image="images/msi.png" data-review="3">
-                        <div class="product-img-container">
+                        <div class="product-img-container in-line">
                             <img src="images/msi.png" alt="" class="product-img" />
                         </div>
-                        <div class="product-body">
-                            <div class="product-content">
-                                <h3 class="product-name">Notebook MSI</h3>
-                                <p class="product-price">$ 37999</p>
-                                <div class="review">
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                </div>
+                        
+                        <div class="product-content in-stack">
+                            <h3 class="product-name">Notebook MSI</h3>
+                            <p class="product-price">$ 37999</p>
+                            <div class="review filters-review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
                             </div>
-                            <div class="product-actions">
-                                <button type="button" class="button button-simple button-add-to-cart">
-                                    Comprar
-                                </button>
-                            </div>
+                        
+                        <div>
+                            <button type="button" class="button button-simple-solid button-add-to-cart">
+                                Comprar
+                            </button>
                         </div>
+                        
                     </article>
                     <article class="product in-stack" data-id="7" data-name="Headphones Philips" data-category="accesorios"
                         data-price="11999" data-image="images/headphones.png" data-review="2">
-                        <div class="product-img-container">
+                        <div class="product-img-container in-line">
                             <img src="images/headphones.png" alt="" class="product-img" />
                         </div>
-                        <div class="product-body">
-                            <div class="product-content">
-                                <h3 class="product-name">Headphones Philips</h3>
-                                <p class="product-price">$ 11999</p>
-                                <div class="review">
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                </div>
+                        
+                        <div class="product-content in-stack">
+                            <h3 class="product-name">Headphones Philips</h3>
+                            <p class="product-price">$ 11999</p>
+                            <div class="review filters-review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
                             </div>
-                            <div class="product-actions">
-                                <button type="button" class="button button-simple button-add-to-cart">
-                                    Comprar
-                                </button>
-                            </div>
+                        
+                        <div>
+                            <button type="button" class="button button-simple-solid button-add-to-cart">
+                                Comprar
+                            </button>
                         </div>
+                        
                     </article>
                     <article class="product in-stack" data-id="8" data-name="Macbook" data-category="notebooks"
                         data-price="119999" data-image="images/macbook.png" data-review="4">
-                        <div class="product-img-container">
+                        <div class="product-img-container in-line">
                             <img src="images/macbook.png" alt="" class="product-img" />
                         </div>
-                        <div class="product-body">
-                            <div class="product-content">
-                                <h3 class="product-name">Macbook</h3>
-                                <p class="product-price">$ 119999</p>
-                                <div class="review">
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                </div>
+                       
+                        <div class="product-content in-stack">
+                            <h3 class="product-name">Macbook</h3>
+                            <p class="product-price">$ 119999</p>
+                            <div class="review filters-review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
                             </div>
-                            <div class="product-actions">
-                                <button type="button" class="button button-simple button-add-to-cart">
-                                    Comprar
-                                </button>
-                            </div>
+                        
+                        <div>
+                            <button type="button" class="button button-simple-solid button-add-to-cart">
+                                Comprar
+                            </button>
                         </div>
+                        
                     </article>
                     <article class="product in-stack" data-id="9" data-name="iPhone" data-category="celulares" data-price="79999"
                         data-image="images/iphone.jpeg" data-review="3">
-                        <div class="product-img-container">
+                        <div class="product-img-container in-line">
                             <img src="images/iphone.jpeg" alt="" class="product-img" />
                         </div>
-                        <div class="product-body">
-                            <div class="product-content">
-                                <h3 class="product-name">iPhone</h3>
-                                <p class="product-price">$ 79999</p>
-                                <div class="review">
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                </div>
+                        
+                        <div class="product-content in-stack">
+                            <h3 class="product-name">iPhone</h3>
+                            <p class="product-price">$ 79999</p>
+                            <div class="review filters-review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
                             </div>
-                            <div class="product-actions">
-                                <button type="button" class="button button-simple button-add-to-cart">
-                                    Comprar
-                                </button>
-                            </div>
+                        
+                        <div>
+                            <button type="button" class="button button-simple-solid button-add-to-cart">
+                                Comprar
+                            </button>
                         </div>
+                        
                     </article>
                     <article class="product in-stack" data-id="10" data-name="Xbox One" data-category="consolas"
                         data-price="69999" data-image="images/xbox.jpg" data-review="4">
-                        <div class="product-img-container">
+                        <div class="product-img-container in-line">
                             <img src="images/xbox.jpg" alt="" class="product-img" />
                         </div>
-                        <div class="product-body">
-                            <div class="product-content">
-                                <h3 class="product-name">Xbox One</h3>
-                                <p class="product-price">$ 69999</p>
-                                <div class="review">
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="far fa-star" aria-hidden="true"></i>
-                                </div>
+                        
+                        <div class="product-content in-stack">
+                            <h3 class="product-name">Xbox One</h3>
+                            <p class="product-price">$ 69999</p>
+                            <div class="review filters-review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="far fa-star" aria-hidden="true"></i>
                             </div>
-                            <div class="product-actions">
-                                <button type="button" class="button button-simple button-add-to-cart">
-                                    Comprar
-                                </button>
-                            </div>
+                        
+                        <div>
+                            <button type="button" class="button button-simple-solid button-add-to-cart">
+                                Comprar
+                            </button>
                         </div>
+                       
                     </article>
                     <article class="product in-stack" data-id="11" data-name="Mouse Gamer" data-category="accesorios"
                         data-price="4999" data-image="images/mouse.jpg" data-review="5">
-                        <div class="product-img-container">
+                        <div class="product-img-container in-line">
                             <img src="images/mouse.jpg" alt="" class="product-img" />
                         </div>
-                        <div class="product-body">
-                            <div class="product-content">
-                                <h3 class="product-name">Mouse Gamer</h3>
-                                <p class="product-price">$ 4999</p>
-                                <div class="review">
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                    <i class="fas fa-star" aria-hidden="true"></i>
-                                </div>
+                        
+                        <div class="product-content in-stack">
+                            <h3 class="product-name">Mouse Gamer</h3>
+                            <p class="product-price">$ 4999</p>
+                            <div class="review filters-review">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
                             </div>
-                            <div class="product-actions">
-                                <button type="button" class="button button-simple button-add-to-cart">
-                                    Comprar
-                                </button>
-                            </div>
+                        
+                        <div>
+                            <button type="button" class="button button-simple-solid button-add-to-cart">
+                                Comprar
+                            </button>
                         </div>
+                        
                     </article>
                     <!--  fin listado Productos  -->
             </section>

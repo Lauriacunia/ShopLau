@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*
                          DISEÑO GENERAL, FONTS, LAYOUT, COMPONENTES Y TEMAS.
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
@@ -24,7 +26,7 @@ a {
 
 body {
 	font-family: 'Montserrat', sans-serif;
-	background-color: #ebecec;
+	background-color:  #cbd7e6 ;
 	overflow-x: hidden; 
 
 }
@@ -33,13 +35,47 @@ button {
 	cursor: pointer;
 }
 
+
+h1 {
+	font-size: 2.3vw;
+}
+h2 {
+	font-size: 1.3vw;
+}
+h3 {
+	font-size: 1vw;
+}
+h4 {
+	font-size: 0.85vw;
+}
+p {
+	font-size: 1.2vw;
+}
+
 /*～●～●～●～●～  PSEUDOCLASES Y PSEUDOELEMENTOS ●～●～●～●～●～●～*/
 a:link,
 a:visited {
 	color: #130817;
 }
-
-
+.product:hover {
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+.product-img-container:hover img {
+	transform: scale(1.5);
+	opacity: 0.7;
+}
+.btn-cart:hover {
+	background-color:  #43628B;
+}
+.banner::before {
+    content: '';
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(70, 70, 70, 0.5);
+}
 /*～●～●～●～●～  DISPLAY ●～●～●～●～●～●～*/
 
 .in-line {
@@ -101,9 +137,13 @@ a:visited {
 	border: 1px solid   #5fecc8;
 	box-shadow: none;
 }
-/*～●～●～●～●～  CHECBOXES ●～●～●～●～●～●～*/
+
+
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin COMPONENTES   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+
+
+
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*
                                             DISEÑO DESKTOP
@@ -116,7 +156,7 @@ a:visited {
 	padding: 5px 10px;
 }
 .branding-logo {
-	width: 40px;
+	width: 25px;
 	height: auto;
 	color:white;
 }
@@ -125,6 +165,7 @@ a:visited {
 }
 .btn-cart {
 	color:white;
+	transition: background-color 0.5s;
 }
 .cart-icon {
 	font-size: 15px;
@@ -135,7 +176,8 @@ a:visited {
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio BANNER    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 .banner{
 	position:relative;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
+	box-shadow: 10px 5px 10px rgb(134, 134, 134);
 	
 	
 }
@@ -144,8 +186,10 @@ a:visited {
 	position:absolute;
 	left:50%;
 	top: 50%;
-	margin-left: -65px;
-	margin-top: -15px;
+	margin-left: -100px;
+	margin-top: -20px;
+	color:white;
+	font-weight: bold;
 }
 
 
@@ -158,9 +202,9 @@ a:visited {
 /* ---- FILTROS----*/
 
 aside {
-	flex: 1;
-	margin: 10px;
-	padding: 10px;
+	padding: 35px;
+	font-weight: 600;
+	max-width: 270px;
 }
 .filters-container {
 	align-items: flex-start;
@@ -178,6 +222,7 @@ aside {
 	background: transparent;
 	padding: 10px;
 	align-items: center;
+	color:#43628B;
 }
 
 .clear-title {
@@ -189,6 +234,7 @@ aside {
 }
 .input-search-container {
 	margin-top: 10px;
+	justify-content: flex-start;
 }
 .filter-container {
 	margin-top: 10px;
@@ -199,13 +245,19 @@ aside {
 	width: 200px;
 	line-height: 40px;
 	padding: 0 20px;
-	border: 0;
+	border: 0px;
+	border-bottom: 2px solid #43628B;
 	background-color: transparent;
+	position:relative;
 
 }
+.search-icon {
+	position: absolute;
+	left:200px;
 
+}
 .checkboxes-container {
-	margin-top: 10px;
+	margin-top: 20px;
 }
 
 .input-category-container {
@@ -216,41 +268,54 @@ aside {
 
 .input-category {
 	justify-content: flex-start;
-
 	margin-top: 10px;
-
 	cursor: pointer;
 }
 
 .filters-review-container {
 	margin-top: 30px;
 }
-
+.filter{
+	margin: 0px 10px;
+}
 .filters-review {
 	margin-top: 20px;
-	color:  #5fecc8 ;
+	color:  #43628B;
+	
 }
 .input-review {
 	justify-content: flex-start;
-	margin-top: 10px;
+	margin: 5px 0px;
 	cursor: pointer;
-	max-width: 100px; /*no se si es la manera correcta */
+
 }
 .fa-star {
 	font-size: 12px;
-	margin-right: 5px;
-	margin-left: 5px;
+	margin: 0px 2px;
+
+
 }
 
 /* ----products ----*/
 
 .products-container {
 	margin: 10px;
+ 
 	flex: 4;
 }
 .products-header {
 	justify-content: space-between;
+	padding: 30px 15px;
+	margin:10px;
+	border-radius: 5px;
+	background-color:  #43628B;
 }
+.products-list{
+	flex-grow: 1;
+	align-items: flex-start;	
+}
+
+	
 
 #view-button-grid,
 #view-button-list {
@@ -262,22 +327,28 @@ aside {
 	font-size: 30px;
 }
 
-.product {
-	flex-basis: 300px;
+.product {  
+    width: calc(100% / 3 - 10px * 2);/*3 x fila*/
+    padding: 30px 25px;
+    margin: 10px;
+	background-color: white;
 	border-radius: 5px;
-	margin: 5px;
+	overflow: hidden;
+	transition: box-shadow 0.5s;
+}
+.product-img-container{
+	height: 250px;
+    overflow: hidden;
 }
 .product-img {
-	width: 80%;
-	height: auto;
-	margin-bottom: 20px;
-	margin-top: 40px;
-	overflow: hidden;
+    height: 100%;
+    transition: 0.2s;
+    opacity: 1;
 }
-.product-img:hover img {
-	transform: scale(1.5);
-	opacity: 0.7;
+.product-content {
+margin-top: 15px;
 }
+
 
 .product-name {
 	margin-top: 15px;
@@ -290,10 +361,8 @@ aside {
 	display: flex;
 }
 .button-add-to-cart {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin: 20px;
 	border: 0;
-	background: transparent;
 }
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin CATALOGO   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
