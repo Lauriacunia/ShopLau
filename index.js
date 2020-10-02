@@ -246,6 +246,10 @@ btnList.onclick = () => {
  * 3- Ir a la funcion Mostrar Carrito u Ocular arrito 
  * segun corresponda.
  * Cuando se abre carrito mostrar overlay y evitar scroll en screen.
+ * 4- Inicializar evento en Botones Comprar y en contador de 
+ * productos del carrito
+ * 5-Agregar Funcionalidades: contar productos del carrito y calcular
+ * subtotal de la compra
  */
 
 /******************💛💛💛 1-SELECCIONAR ELEMENTOS  💛💛💛***************/
@@ -254,15 +258,18 @@ const btnCloseCart = document.querySelector(".btn-close")
 const cart = document.querySelector(".header-menu-add-to-card")
 const overlay = document.querySelector(".overlay")
 
+const allBtnAddToCart = document.querySelectorAll(".button-add-to-cart")
+const counterProducts = document.querySelectorAll(".cart-qty")
 
 /******************💛💛💛 3-MOSTRAR U OCULTAR CARRITO Y OVERLAY 💛💛💛***************/
 const showOverlay = () => {
   overlay.classList.remove("is-hidden")
+  console.log("se muestra overlay")
 }
 
 const hiddeOverlay = () => {
   overlay.classList.add("is-hidden")
- 
+  console.log("se oculto overlay")
 }
 
 const bodyNoScroll = () => {
@@ -280,6 +287,23 @@ const showCart = () => {
 const hiddeCart = () => {
   cart.classList.add("menu-add-to-card-hidde")
 }
+/******************💛💛💛 5-FUNCIONALIDADES DE SUMAR SUBTOTAL Y
+ *                                CAMBIAR CONTADOR DE PRODUCTOS  💛💛💛***************/ 
+addCounterCart =()=>{
+ for(let c of counterProducts){
+   console.log("queres sumar productos")
+   let counterNumber = Number(c.innerText);
+   counterNumber++;
+   console.log(counterNumber)
+
+   c.innerText = counterNumber;
+ }
+
+}
+
+addPriceToSubtotal = () => {
+  console.log("aca vamos a sumar el subtotal")
+}
 
 /******************💛💛💛 3-INICIALIZAR EVENTO MOSTRAR CARRITO 💛💛💛***************/
 
@@ -294,31 +318,50 @@ btnCloseCart.onclick = () => {
   bodyScroll()
   hiddeCart()
 }
+/******************💛💛💛 4-INICIALIZAR EVENTO SUMAR PRODUCTOS 💛💛💛***************/
+
+for(btnAddToCart of allBtnAddToCart) {
+  btnAddToCart.onclick = () => {
+    addPriceToSubtotal()
+    addCounterCart()
+  }
+}
+
+/*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
+                             MODALES CARRITO
+💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
+
+
+
+
+
+
+
 
 
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                              CHECKOUT
 💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
 
-
+/**    Algoritmo
+ * 1- Seleccionar todos los elementos
+ * 2- Crear funcionalidad de abrir y cerrar Menu Checkout
+ * 3- Crear funcionalidad de Descuentos y Recargos para 
+ * calcular el total de la compra
+ */
 const btnOpenCheckout = document.querySelector(".btn-buy")
-console.log(btnOpenCheckout)
-
 const btnFinishBuy = document.querySelector(".btn-finish-buy")
-console.log(btnFinishBuy)
-
 const btnCancelBuy = document.querySelector(".btn-cancel-buy")
-console.log(btnCancelBuy)
-
 const menuCheckout = document.querySelector(".menu-checkout")
-console.log(menuCheckout)
 
 
-const mostrarCheckout = () => {
+/******************💛💛💛 2- ABRIR Y CERRAR CHECKOUT 💛💛💛***************/
+
+const showCheckout = () => {
   menuCheckout.classList.remove("checkout-is-hidden")
 }
 
-const ocultarCheckout = () => {
+const hiddeCheckout = () => {
   menuCheckout.classList.add("checkout-is-hidden")
 }
 
@@ -326,22 +369,22 @@ btnOpenCheckout.onclick = () => {
   console.log("hiciste click en btn open checkout")
   showOverlay()
   bodyNoScroll()
-  mostrarCheckout() 
+  showCheckout() 
 }
 
 btnFinishBuy.onclick = () => {
   console.log("hiciste click en btn finish buy")
   hiddeOverlay()
   bodyScroll()
-  ocultarCheckout()
-  ocultarCarrito()
+  hiddeCheckout()
+  hiddeCart()
 }
 
 btnCancelBuy.onclick = () => {
   console.log("hiciste click en btn cancel buy")
   hiddeOverlay()
   bodyScroll()
-  ocultarCheckout()
-  ocultarCarrito()
+  hiddeCheckout()
+  hiddeCart()
 }
 
