@@ -256,51 +256,50 @@ const overlay = document.querySelector(".overlay")
 
 
 /******************💛💛💛 3-MOSTRAR U OCULTAR CARRITO Y OVERLAY 💛💛💛***************/
-const mostrarOverlay = () => {
+const showOverlay = () => {
   overlay.classList.remove("is-hidden")
 }
 
-const ocultarOverlay = () => {
+const hiddeOverlay = () => {
   overlay.classList.add("is-hidden")
  
 }
 
-const bodySinScroll = () => {
+const bodyNoScroll = () => {
   document.body.classList.add("no-scroll")
 }
 
-const bodyConScroll = () => {
+const bodyScroll = () => {
   document.body.classList.remove("no-scroll")
 }
 
-const mostrarCarrito = () => {
+const showCart = () => {
   cart.classList.remove("menu-add-to-card-hidde")
 }
 
-const ocultarCarrito = () => {
+const hiddeCart = () => {
   cart.classList.add("menu-add-to-card-hidde")
 }
 
 /******************💛💛💛 3-INICIALIZAR EVENTO MOSTRAR CARRITO 💛💛💛***************/
 
 btnOpenCart.onclick = () => {
-  mostrarOverlay()
-  bodySinScroll()
-  mostrarCarrito() 
+  showOverlay()
+  bodyNoScroll()
+  showCart() 
 }
 
 btnCloseCart.onclick = () => {
-  ocultarOverlay()
-  bodyConScroll()
-  ocultarCarrito()
+  hiddeOverlay()
+  bodyScroll()
+  hiddeCart()
 }
 
 
+/*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
+                             CHECKOUT
+💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
 
-
-
-
-/******************💛💛💛 OVERLAY CHECKOUT 💛💛💛***************/
 
 const btnOpenCheckout = document.querySelector(".btn-buy")
 console.log(btnOpenCheckout)
@@ -325,23 +324,23 @@ const ocultarCheckout = () => {
 
 btnOpenCheckout.onclick = () => {
   console.log("hiciste click en btn open checkout")
-  mostrarOverlay()
-  bodySinScroll()
+  showOverlay()
+  bodyNoScroll()
   mostrarCheckout() 
 }
 
 btnFinishBuy.onclick = () => {
   console.log("hiciste click en btn finish buy")
-  ocultarOverlay()
-  bodyConScroll()
+  hiddeOverlay()
+  bodyScroll()
   ocultarCheckout()
   ocultarCarrito()
 }
 
 btnCancelBuy.onclick = () => {
   console.log("hiciste click en btn cancel buy")
-  ocultarOverlay()
-  bodyConScroll()
+  hiddeOverlay()
+  bodyScroll()
   ocultarCheckout()
   ocultarCarrito()
 }
