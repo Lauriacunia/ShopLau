@@ -666,17 +666,18 @@
     <div class="overlay is-hidden" id="overlay"></div>
 
     <div class="header-menu-add-to-card in-stack menu-add-to-card-hidde theme-sky-dark">
-        <div class="cart-full in-stack">
+        <div class="in-stack cart-container ">
             <div class="cart-title-container in-line">
                 <h2>CARRITO</h2>
                 <button type="button" class="btn-close">
                     <i class="far fa-window-close"></i>
                 </button>
             </div>
-            <div class="in-line">
+            <div class= "cart-full"> 
+                <div class="in-line">
                 <p><span class="cart-qty">0</span> producto(s) agregado(s)</p>
             </div>
-            <div class="products-add-to-card">
+            <div class="cart-products-added">
 
             </div>
             <div class="in-line">
@@ -694,9 +695,11 @@
                     </button>
                 </div>
             </div>
+            </div>
+            
         </div>
-        <div class="cart-empty">
-            <p class="cart-empty-msg is-hidden">
+        <div class="cart-empty is-hidden">
+            <p class="cart-empty-msg ">
                 No tienes productos en el carrito, ¡Agrega algunos!
             </p>
         </div>

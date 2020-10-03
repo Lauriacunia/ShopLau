@@ -243,6 +243,9 @@ const overlay = document.querySelector(".overlay")
 const cartSubtotalOutput = document.querySelectorAll(".cart-subtotal-value")
 const allBtnAddToCart = document.querySelectorAll(".button-add-to-cart")
 const counterProducts = document.querySelectorAll(".cart-qty")
+const cartFullMsg = document.querySelector(".cart-full");
+const cartEmptyMsg = document.querySelector(".cart-empty")
+const carrito = document.querySelector('.cart-products-added')
 
 let subtotalProductsAdded = 0; // empiezo con $0 de compra
 
@@ -262,9 +265,17 @@ const bodyScroll = () => {
 }
 const showCart = () => {
   cart.classList.remove("menu-add-to-card-hidde")
+  for(let c of counterProducts) {
+    if(c.innerText == 0){
+      hide(cartFullMsg)
+      show(cartEmptyMsg)
+    }
+  }
 }
 const hiddeCart = () => {
   cart.classList.add("menu-add-to-card-hidde")
+  show(cartFullMsg)
+  hide(cartEmptyMsg)
 }
 
 /******************💛💛💛 5-FUNCIONALIDADES DE SUMAR SUBTOTAL Y
@@ -311,6 +322,38 @@ addPriceToSubtotal = (btnAddToCart) => {
   addSubtotal(subtotal)
 }
 
+const obtenerPlantillaProductoAgregado = (id, nombre, precio, imagen) => {
+  return `<article class="cart-product-added" data-id="${id}" data-qty="1" data-price=${precio}>
+    <img src="${imagen}" alt="" class="cart-product-img" />
+    <div class="cart-product-details">
+      <div class="cart-product-info">
+        <h3 class="cart-product-name">${nombre}</h3>
+        <button type="button" class="remove-from-cart-btn"><i class="far fa-trash-alt"></i></button>
+      </div>
+      <div class="cart-product-price-qty">
+        <label>
+          <input type="number" min="0" value="1" class="cart-product-qty" />
+          unidades
+        </label>
+        <p class="cart-product-price">x $${precio}</p>
+      </div>
+    </div>
+  </article>`
+}
+
+
+showProductOnCart = (btnAddToCart) => {
+  
+  let productAdded = knowProduct(btnAddToCart);
+
+  const plantilla = obtenerPlantillaProductoAgregado(
+    productAdded.dataset.id,
+    productAdded.dataset.name,
+    productAdded.dataset.price,
+    productAdded.dataset.image
+  )
+  carrito.innerHTML += plantilla
+}
 /******************💛💛💛 3-INICIALIZAR EVENTO MOSTRAR CARRITO 💛💛💛***************/
 
 btnOpenCart.onclick = () => {
@@ -330,6 +373,7 @@ for(let btnAddToCart of allBtnAddToCart) {
   btnAddToCart.onclick = () => {
     addCounterCart()
     addPriceToSubtotal(btnAddToCart) 
+    showProductOnCart(btnAddToCart)
   }
 }
 

@@ -426,17 +426,22 @@ margin-top: 15px;
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio MENU CARRITO .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 .header-menu-add-to-card {
-	height: 100%;
-	justify-content: space-between;
-	position: absolute;
+	width: 100%;
+    height: 100%;
+    max-width: 400px;
+	position: fixed;
 	right: 0;
 	top: 0px;
 	padding:40px 25px;
-	transition: 2s;
+	transition: 1s;
 	z-index:2;
 }
+
+.cart-container {
+  align-items: flex-start;
+}
 .cart-full{
-align-items: flex-start;
+	align-items: flex-start;
 }
 .cart-title-container {
 	width: 100%;
@@ -448,11 +453,48 @@ align-items: flex-start;
 	font-size: 20px;
 
 }
+.cart-products-added {
+    flex-grow: 1;
+    overflow: scroll;
+}
 
-.products-add-to-card {
-	height: 250px;
-	width: 350px;
-	overflow-y: scroll;
+.cart-product-added {
+	padding: 10px 0;
+    display: flex;
+    border-bottom: 1px solid #dedede;
+
+}
+.cart-product-img {
+    max-width: 80px;
+    width: 100%;
+    height: auto;
+    margin-right: 25px;
+  }
+  .cart-product-details {
+    flex-grow: 1;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.cart-product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cart-product-price-qty {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart-product-qty {
+    width: 50px;
+    height: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+.cart-product-price {
+    margin-left: 20px;
 }
 .add-to-card-buttons{
 	width: 100%;
@@ -479,6 +521,7 @@ align-items: flex-start;
 	background-color: #fff;
 	padding: 40px 30px;
 	max-width: 500px;
+	transition: all 2s;
 	z-index: 4;
 }
 
