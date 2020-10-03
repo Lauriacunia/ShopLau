@@ -1,3 +1,13 @@
+/*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
+                          FUNCIONES GLOBALES
+💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
+
+const hide = (element) => {
+  return element.classList.add("is-hidden")
+}
+const show = (element) => {
+  return element.classList.remove("is-hidden")
+}
 
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                               FILTROS
@@ -17,17 +27,11 @@ LImpiar Filtros
 /************** 💛💛💛 1- SELECCIONAR ELEMENTOS 💛💛💛*********** */ 
 
 const inputSearch = document.querySelector('#input-search');
-console.log(inputSearch)
 const products = document.getElementsByClassName('product'); /*LISTA DE products*/
-console.log(products)
 const reviewFilters = document.getElementsByClassName('filter-review'); /*LISTA DE REVIEWS*/
-console.log(reviewFilters)
 const categoryFilters = document.getElementsByClassName('filter-category'); /* LISTA DE CATEGORIAS*/
-console.log(categoryFilters)
 const checkboxes = document.querySelectorAll(".filter")  /*LISTA DE CHECKBOXES*/
-console.log(checkboxes)
 const clearBtn = document.querySelector('.clear-btn');
-console.log(clearBtn)
 
 
 /************** 💛💛💛 3- FILTRAR products 💛💛💛*********** */
@@ -35,7 +39,6 @@ console.log(clearBtn)
 /*----Chequea si hay checkbox chequeados ON */
 
 const searchOn = () => {
-
   if(inputSearch.value.length !== 0){
     return true
   }else {
@@ -44,13 +47,11 @@ const searchOn = () => {
 }
 
 const categoryOn = () => {
-
   for (const filtro of categoryFilters) {
     if (filtro.checked) {
       return true
     }
   }
-
   return false
 }
 
@@ -61,7 +62,6 @@ const reviewOn = () => {
       return true
     }
   }
-
   return false
 }
 /* --------- Pasa Filtros por separado -----------*/
@@ -69,20 +69,18 @@ const passCategoryFilter = (product) => {
   const category = product.dataset.category
   //selecciona UN solo filtro que coincide con la product y lo pone chequeado !!
   const categoryFilter = document.querySelector(`.filter-category[value="${category}"]`)
-  
   return categoryFilter.checked 
 }
 
 const passReviewFilter = (product) => {
   const review = product.dataset.review
   const reviewFilter = document.querySelector(`.filter-review[value="${review}"]`)
-
   return reviewFilter.checked
 }
 
 const passInputSearch = (product) => {
   const name = product.dataset.name
- //intente hacer una regex para que me tome acentos pero no lo logre. Como se haria?
+ //intente hacer una regex para que me tome acentos pero no lo logre.
   return name.toLowerCase().includes(inputSearch.value.toLowerCase())
 }
 
@@ -102,31 +100,24 @@ const passAllFilters = (product) => {
 
 const updateQtyProducts = () => {
   let contador = 0
-
   for (const product of products) {
     if (passAllFilters(product)) {
       contador++
     }
   }
-
   let productsQty = document.getElementById('products-qty')
-
   productsQty.innerText = `Mostrando ${contador} product(s) de ${products.length}`
 }
 
 /* -------- Mostrar products que pasen los filtros -------------*/
 
-
 const showProducts = () => {
-
   for (const product of products) {
-
-    product.classList.add('is-hidden'); //Escondo todas las products para empezar 
-   
-    if (passAllFilters(product)) {
-      product.classList.remove('is-hidden')
+       hide(product); //Escondo todas las products para empezar 
+     if (passAllFilters(product)) {
+        show(product)
     } else {
-      product.classList.add('is-hidden')
+        hide(product)
     }
   }
 }
@@ -138,10 +129,7 @@ const filterProducts = () => {
   updateQtyProducts()
 }
 
-
-
 /******************💛💛💛 4- LIMPIAR FILTROS 💛💛💛********************* */
-
 
 const clearSearchInput = () => inputSearch.value = "";
 const clearCheckboxesChequed = () => {
@@ -150,19 +138,17 @@ const clearCheckboxesChequed = () => {
       checkbox.checked = false
     }
   }
-
 }
 
 const showAllProducts = () => {
   for (let product of products) {
-    product.classList.remove('is-hidden')
+     show(product);
   }
 }
 
-
 /************** 💛💛💛 2- INICIALIZAR FILTROS 💛💛💛*********** */
 
-// Si hace click en un checkbox o inicia una busqueda-> Filtrar products
+// Si hace click en un checkbox o inicia una busqueda-> Filtrar productos
 
 for (let checkbox of checkboxes) {
   checkbox.onclick = () => {
@@ -175,7 +161,6 @@ inputSearch.oninput = () =>{
     filterProducts();
 }
 
-
 clearBtn.onclick = () => { 
   clearCheckboxesChequed();  //destildo todos los checkboxes
   clearSearchInput();   // borro form de busqueda
@@ -186,7 +171,7 @@ clearBtn.onclick = () => {
 
 
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
-                              LISTA DE PRODUCTOS
+                      LISTA DE PRODUCTOS:GRID o LIST
 💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
 /** Algoritmo
  * 1- Seleccionar los botones de grid y list, y contenedor de productos
@@ -201,7 +186,6 @@ const btnList = document.querySelector('#view-button-list');
 const productsListContainer = document.querySelector('.products-list');
 const productsDescriptions = document.querySelectorAll('.product-description');//todas las descripciones de los productos
 
-
 /******************💛💛💛 2-MODIFICAR LAYOUT CONTENEDOR DE PRODUCTOS 💛💛💛***************/
 
 showGrid = () =>{
@@ -211,7 +195,7 @@ showGrid = () =>{
     p.classList.remove("in-line-product");
   }
   for(let d of productsDescriptions){
-    d.classList.add("is-hidden")
+    hide(d);
   }
 }
 
@@ -222,7 +206,7 @@ showList = () =>{
     p.classList.add("in-line-product");
   }
   for(let d of productsDescriptions){
-    d.classList.remove("is-hidden")
+    show(d);
   }
 }
 /******************💛💛💛 3-INICIALIZAR EVENTO DE BOTONES GRID O LINE 💛💛💛***************/
@@ -233,7 +217,6 @@ btnGrid.onclick = () =>{
 btnList.onclick = () => {
   showList();
 }
-
 
 
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
@@ -257,52 +240,75 @@ const btnOpenCart = document.querySelector(".btn-cart")
 const btnCloseCart = document.querySelector(".btn-close")
 const cart = document.querySelector(".header-menu-add-to-card")
 const overlay = document.querySelector(".overlay")
-
+const cartSubtotalOutput = document.querySelectorAll(".cart-subtotal-value")
 const allBtnAddToCart = document.querySelectorAll(".button-add-to-cart")
 const counterProducts = document.querySelectorAll(".cart-qty")
 
+let subtotalProductsAdded = 0; // empiezo con $0 de compra
+
 /******************💛💛💛 3-MOSTRAR U OCULTAR CARRITO Y OVERLAY 💛💛💛***************/
+
 const showOverlay = () => {
-  overlay.classList.remove("is-hidden")
-  console.log("se muestra overlay")
+  show(overlay)
 }
-
 const hiddeOverlay = () => {
-  overlay.classList.add("is-hidden")
-  console.log("se oculto overlay")
+  hide(overlay)
 }
-
 const bodyNoScroll = () => {
   document.body.classList.add("no-scroll")
 }
-
 const bodyScroll = () => {
   document.body.classList.remove("no-scroll")
 }
-
 const showCart = () => {
   cart.classList.remove("menu-add-to-card-hidde")
 }
-
 const hiddeCart = () => {
   cart.classList.add("menu-add-to-card-hidde")
 }
+
 /******************💛💛💛 5-FUNCIONALIDADES DE SUMAR SUBTOTAL Y
  *                                CAMBIAR CONTADOR DE PRODUCTOS  💛💛💛***************/ 
 addCounterCart =()=>{
  for(let c of counterProducts){
-   console.log("queres sumar productos")
    let counterNumber = Number(c.innerText);
    counterNumber++;
-   console.log(counterNumber)
-
    c.innerText = counterNumber;
- }
-
+  }
 }
 
-addPriceToSubtotal = () => {
-  console.log("aca vamos a sumar el subtotal")
+/** Saber cual es el producto que compraron
+ * comparando id del boton con id del producto */
+knowProduct = (btnAddToCart) => {
+  for(let p of products)
+  if(p.dataset.id === btnAddToCart.getAttribute("id")){
+    return p
+  }
+}
+/** Ir sumando cada producto comprado al valor de Subtotal (de todos los comprados)
+ * para usarlo en el checkout (y calcular descuentos y recargos)
+ */
+addSubtotal = (subtotal) => {
+  //variable acumuladora de subtotales(precio de cada producto)
+  subtotalProductsAdded = subtotalProductsAdded + Number(subtotal);
+// para mostrarlo en pantalla
+  for(let c of cartSubtotalOutput){
+    c.innerText = subtotalProductsAdded
+  }
+}
+
+addPriceToSubtotal = (btnAddToCart) => {
+  /** Algoritmo
+   * 1- Recibir el boton para saber su id 
+   * 2- Buscar que id de tarjeta coincide con el id del boton
+   * 3- saber el precio del producto y sumarlo al subtotal
+   * 4- Identificar con una clase el producto agregado
+   *   (para seleccionalos y mostrarlos en el carrito)
+   */
+
+  let productAdded = knowProduct(btnAddToCart);
+  let subtotal = productAdded.dataset.price;
+  addSubtotal(subtotal)
 }
 
 /******************💛💛💛 3-INICIALIZAR EVENTO MOSTRAR CARRITO 💛💛💛***************/
@@ -320,10 +326,10 @@ btnCloseCart.onclick = () => {
 }
 /******************💛💛💛 4-INICIALIZAR EVENTO SUMAR PRODUCTOS 💛💛💛***************/
 
-for(btnAddToCart of allBtnAddToCart) {
+for(let btnAddToCart of allBtnAddToCart) {
   btnAddToCart.onclick = () => {
-    addPriceToSubtotal()
     addCounterCart()
+    addPriceToSubtotal(btnAddToCart) 
   }
 }
 
@@ -366,23 +372,23 @@ const hiddeCheckout = () => {
 }
 
 btnOpenCheckout.onclick = () => {
-  console.log("hiciste click en btn open checkout")
   showOverlay()
+  overlay.style.zIndex = "3";
   bodyNoScroll()
   showCheckout() 
 }
 
 btnFinishBuy.onclick = () => {
-  console.log("hiciste click en btn finish buy")
   hiddeOverlay()
+  overlay.style.zIndex = "1";
   bodyScroll()
   hiddeCheckout()
   hiddeCart()
 }
 
 btnCancelBuy.onclick = () => {
-  console.log("hiciste click en btn cancel buy")
   hiddeOverlay()
+  overlay.style.zIndex = "1";
   bodyScroll()
   hiddeCheckout()
   hiddeCart()
