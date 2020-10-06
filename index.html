@@ -22,6 +22,7 @@
         <div class="in-line">
             <img class="branding-logo"
                  src="images/iso_blanco.svg"
+                 alt ="logotipo de Ada Shops"
                  aria-hidden="true" />
             <p class="branding"
                aria-label="Bienvenido a nuestra tienda online:">ADA SHOP</p>
@@ -50,7 +51,11 @@
 
     <section class="banner in-stack">
         <div>
-            <img class="banner-img" src="images/banner.png"
+            <img class="banner-img" 
+                 src="images/banner.png"
+                 alt= "escritorio con productos de la 
+                       categoria electronica: notebook, 
+                       smartphone y cámara fotográfica"
                  aria-hidden="true" />
         </div>
         <div>
@@ -92,176 +97,185 @@
                 <!-- fin Header Filtro -->
 
                 <!-- Inicia Busqueda -->
-                <div class="filters-search-container">
-
-                    <div>
-                        <h3>BUSQUEDA</h3>
+                <form>
+                    <div class="filters-search-container">
+                        <div>
+                            <h3>BUSQUEDA</h3>
+                        </div>
+                        <label for="input-search" 
+                            class="input-search-container in-line">
+                            <input type="text"
+                                id="input-search"
+                                placeholder="¿Qué estás buscando?"
+                                aria-label="Escriba el nombre del producto que busca">
+                            </input>
+                            <i class="fas fa-search search-icon"
+                            aria-hidden="true">
+                            </i>
+                        </label>
                     </div>
-
-                    <label class="input-search-container in-line">
-                        <input type="text"
-                               id="input-search"
-                               placeholder="¿Qué estás buscando?"
-                               aria-label="Escriba el nombre del producto que busca">
-                        <i class="fas fa-search search-icon"
-                           aria-hidden="true"></i>
-                    </label>
-
-                </div>
                 <!-- fin Busqueda -->
 
                 <!-- Inicio Filtro category -->
-                <div class="filters-category-container ">
+                    <div class="filters-category-container ">
+                        <div>
+                            <h3 aria-label="Filtre los productos 
+                                por la categoria a la que pertenecen">
+                                CATEGORIA
+                            </h3>
+                        </div>
 
-                    <div>
-                        <h3>CATEGORIA</h3>
-                    </div>
-
-                    <div class="checkboxes-container">
-
-                        <label for="category" class="input-category-container "
-                               aria-label="Seleccione que tipo de producto está buscando">
-
-                            <label class="input-category in-line">
+                        <div class="checkboxes-container input-category-container">
+                            <label for= "consolas" class="input-category in-line">
                                 <input type="checkbox"
-                                       class=" filter filter-category"
-                                       name="category"
-                                       value="consolas">
+                                    class=" filter filter-category"
+                                    name="category"
+                                    value="consolas"
+                                    id= "consolas">
                                 </input>
                                 <h4>CONSOLAS</h4>
                             </label>
 
-                            <label class="input-category in-line">
+                            <label for= "notebooks" class="input-category in-line">
                                 <input type="checkbox"
-                                       class="filter filter-category"
-                                       name="category" 
-                                       value="notebooks">
+                                    class="filter filter-category"
+                                    name="category" 
+                                    value="notebooks"
+                                    id= "notebooks">
                                 </input>
                                 <h4>NOTEBOOKS</h4>
                             </label>
 
-                            <label class="input-category in-line">
+                            <label for= "camaras" class="input-category in-line">
                                 <input type="checkbox"
-                                       class="filter filter-category"
-                                       name="category"
-                                       value="camaras">
+                                    class="filter filter-category"
+                                    name="category"
+                                    value="camaras"
+                                    id= "camaras">
                                 </input>
                                 <h4>CÁMARAS</h4>
                             </label>
 
-                            <label class="input-category in-line">
+                            <label for ="celulares" class="input-category in-line">
                                 <input type="checkbox"
-                                       class="filter filter-category"
-                                       name="category"
-                                       value="celulares">
+                                    class="filter filter-category"
+                                    name="category"
+                                    value="celulares"
+                                    id= "celulares">
                                 </input>
                                 <h4>CELULARES</h4>
                             </label>
 
-                            <label class="input-category in-line">
+                            <label for= "accesorios" class="input-category in-line">
                                 <input type="checkbox"
-                                       class="filter filter-category"
-                                       name="category"
-                                       value="accesorios">
+                                    class="filter filter-category"
+                                    name="category"
+                                    value="accesorios"
+                                    id= "accesorios">
                                 </input>
                                 <h4>ACCESORIOS</h4>
-                            </label>
-
-                        </label>
-                    </div>
-                </div>
+                            </label>                 
+                        </div>
                 <!-- fin Filtro categoria -->
 
                 <!-- Inicio Filtro review -->
 
-                <div class="filters-review-container">
+                    <div class="filters-review-container">
+                        <div>
+                            <h3 aria-label="Filtre los productos
+                            por su cantidad de estrellas de una a cinco">
+                            PUNTAJE
+                            </h3>
+                        </div>
 
-                    <div>
-                        <h3>PUNTAJE</h3>
-                    </div>
-
-                    <div class="filters-review">
-
-                        <label class="input-review in-line"
-                            aria-label="Seleccione una opción para mostrar 
-                                       productos por su puntuación">
-                            <input type="checkbox"
-                                   name="review"
-                                   class="filter filter-review"
-                                   value="5"
-                                   aria-label="Cantidad de estrellas:">
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <h4>(5)</h4>
-                            </input>
-                        </label>
-
-                        <label class="input-review in-line">
-                            <input type="checkbox"
-                                   name="review" 
-                                   class="filter filter-review"
-                                   value="4"
-                                   aria-label="Cantidad de estrellas:">
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="far fa-star"  aria-hidden="true"></i>
-                            <h4>(4)</h4>
-                            </input>
-                        </label>
-
-                        <label class="input-review in-line">
-                            <input type="checkbox"
-                                   name="review"
-                                   class="filter filter-review"
-                                   value="3"
-                                   aria-label="Cantidad de estrellas:">
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="far fa-star"  aria-hidden="true"></i>
-                            <i class="far fa-star"  aria-hidden="true"></i>
-                            <h4>(3)</h4>
-                            </input>
-                        </label>
-
-                        <label class="input-review in-line">
-                            <input type="checkbox"
-                                   name="review"
-                                   class="filter filter-review"
-                                   value="2"
-                                   aria-label="Cantidad de estrellas:">
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="far fa-star"  aria-hidden="true"></i>
-                            <i class="far fa-star"  aria-hidden="true"></i>
-                            <i class="far fa-star"  aria-hidden="true"></i>
-                            <h4>(2)</h4>
-                            </input>
-                        </label>
-
-                        <label class="input-review in-line">
-                            <input type="checkbox"
-                                   name="review"
-                                   class="filter filter-review" 
-                                   value="1"
-                                   aria-label="Cantidad de estrellas:">
-                            <i class="fas fa-star"  aria-hidden="true"></i>
-                            <i class="far fa-star"  aria-hidden="true"></i>
-                            <i class="far fa-star"  aria-hidden="true"></i>
-                            <i class="far fa-star"  aria-hidden="true"></i>
-                            <i class="far fa-star"  aria-hidden="true"></i>
-                            <h4>(1)</h>
+                        <div class="filters-review">
+                            <label for="cinco" 
+                                   class="input-review in-line">
+                                <input type="checkbox"
+                                    name="review"
+                                    class="filter filter-review"
+                                    value="5"
+                                    id="cinco"
+                                    aria-label="Cantidad de estrellas:">
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <h4>(5)</h4>
                                 </input>
-                        </label>
+                            </label>
 
+                            <label for="cuatro" 
+                                   class="input-review in-line">
+                                <input type="checkbox"
+                                    name="review" 
+                                    class="filter filter-review"
+                                    value="4"
+                                    id="cuatro"
+                                    aria-label="Cantidad de estrellas:">
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="far fa-star"  aria-hidden="true"></i>
+                                <h4>(4)</h4>
+                                </input>
+                            </label>
+
+                            <label for= "tres"
+                                   class="input-review in-line">
+                                <input type="checkbox"
+                                    name="review"
+                                    class="filter filter-review"
+                                    value="3"
+                                    id="tres"
+                                    aria-label="Cantidad de estrellas:">
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="far fa-star"  aria-hidden="true"></i>
+                                <i class="far fa-star"  aria-hidden="true"></i>
+                                <h4>(3)</h4>
+                                </input>
+                            </label>
+
+                            <label for="dos"
+                                   class="input-review in-line">
+                                <input type="checkbox"
+                                    name="review"
+                                    class="filter filter-review"
+                                    value="2"
+                                    id="dos"
+                                    aria-label="Cantidad de estrellas:">
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="far fa-star"  aria-hidden="true"></i>
+                                <i class="far fa-star"  aria-hidden="true"></i>
+                                <i class="far fa-star"  aria-hidden="true"></i>
+                                <h4>(2)</h4>
+                                </input>
+                            </label>
+
+                            <label for="uno" class="input-review in-line">
+                                <input type="checkbox"
+                                    name="review"
+                                    class="filter filter-review" 
+                                    value="1"
+                                    id="uno"
+                                    aria-label="Cantidad de estrellas:">
+                                <i class="fas fa-star"  aria-hidden="true"></i>
+                                <i class="far fa-star"  aria-hidden="true"></i>
+                                <i class="far fa-star"  aria-hidden="true"></i>
+                                <i class="far fa-star"  aria-hidden="true"></i>
+                                <i class="far fa-star"  aria-hidden="true"></i>
+                                <h4>(1)</h>
+                                    </input>
+                            </label>
+
+                        </div>
+                        <!-- Fin Filtro review -->
                     </div>
-                    <!-- Fin Filtro review -->
-                </div>
             </aside>
             <!-- ♪:;;;:♪:;;;:♪:;; Fin Filtros ;:♪:;;;:♪:;;;:♪:;;;: -->
 
@@ -852,7 +866,9 @@
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ INICIO FOOTER ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
     <footer class="footer-main in-line theme-sky-dark">
         <div class="logo-container in-line">
-            <img src="images/iso_blanco.svg" class="logo" />
+            <img src="images/iso_blanco.svg" 
+                 alt ="logotipo de Ada Shops"
+                 class="logo" />
             <p>ADA SHOP - Gracias por visitarnos 💙</p>
         </div>
     </footer>
