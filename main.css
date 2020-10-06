@@ -40,19 +40,19 @@ fieldset {
 }
 
 h1 {
-	font-size: 5vw;
+	font-size: 4vw;
 }
 h2 {
-	font-size: 2vw;
+	font-size: 1.8vw;
 }
 h3 {
-	font-size: 1.8vw;
+	font-size: 1.6vw;
 }
 h4 {
 	font-size: 1.4vw;
 }
 p {
-	font-size: 1.6vw;
+	font-size: 1.3vw;
 }
 
 /*～●～●～●～●～  PSEUDOCLASES Y PSEUDOELEMENTOS ●～●～●～●～●～●～*/
@@ -124,7 +124,6 @@ a:visited {
 	min-width: 150px;
 	max-width: 350px;
 	font-weight: 600;
-	display: block;
 	margin: 1em;
 	padding: 1em 2em;
 	border-radius: 40px;
@@ -181,9 +180,12 @@ a:visited {
 	transition: background-color 0.5s;
 }
 .cart-icon {
-	font-size: 15px;
+	font-size: 25px;
+	margin: 0px 5px;
 }
-
+.cart-qty {
+	margin: 0 5px;
+}
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin HEADER    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio BANNER    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
@@ -200,8 +202,8 @@ a:visited {
 	letter-spacing: 4px;
 	left:50%;
 	top: 50%;
-	margin-left: -230px;
-	margin-top: -40px;
+	margin-left: -170px;
+	margin-top: -32px;
 	color:#080817;
 	font-weight: bold;
 }
@@ -216,7 +218,7 @@ a:visited {
 /* ---- FILTROS----*/
 
 aside {
-	padding: 25px;	
+	padding: 20px;	
 }
 .filters-container {
 	align-items: flex-start;
@@ -505,6 +507,16 @@ margin-top: 15px;
 
 }
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin MENU CARRITO .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+
+/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio MODAL VACIAR .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+
+.modal-empty-cart {
+   position: absolute;
+   top: 250px;
+   left: 250px;
+}
+
+/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin MODAL VACIAR .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio CONFIRMACION DE COMPRA .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 

@@ -383,15 +383,64 @@ for(let btnAddToCart of allBtnAddToCart) {
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                              MODALES CARRITO
 💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
+/** Algoritmo
+ * 1- Seleccionar elementos
+ * 2-Inicializar eventos de boton vaciar carrito para
+ * abrir modal
+ * 3-Agregar Funcionalidad de vaciar carrito con boton
+ * aceptar del modal
+ */
+
+/******************💛💛💛 1- SELECCIONAR ELEMENTOS 💛💛💛***************/
+
+const btnEmptyCart = document.querySelector(".btn-empty-cart")
+const modalEmptyCart = document.querySelector (".modal-empty-cart")
+const btnConfirmEmptyCart = document.querySelector(".confirm-cart-empty-btn")
+const btnCancelEmptyCart = document.querySelector(".cancel-empty-cart-btn")
+
+/******************💛💛💛 3- FUNCIONALIDAD DE VACIAR CARRITO 💛💛💛***************/
 
 
+resetCounterCart = () => {
+  for(let c of counterProducts){
+    c.innerText = "0";
+   }
+}
+
+resetPriceToSubtotal = () => {
+  subtotalProductsAdded = 0;
+  for(let c of cartSubtotalOutput){
+    c.innerText = subtotalProductsAdded
+  }
+}
+
+hideAllProductsOnCart = () => {
+  carrito.innerHTML = ""
+}
 
 
+const emptyCart = () => {
+show(modalEmptyCart)
+}
 
+const emptyCartConfirm = () => {
+  resetCounterCart()
+  resetPriceToSubtotal()
+  hideAllProductsOnCart()
+  showCart()
+  hide(modalEmptyCart)
+}
+/******************💛💛💛 2- INICIALIZAR EVENTO BTN VACIAR 💛💛💛***************/
 
-
-
-
+btnEmptyCart.onclick = () => {
+  emptyCart()
+}
+btnConfirmEmptyCart.onclick = () => {
+  emptyCartConfirm()
+}
+btnCancelEmptyCart.onclick =() => {
+  hide(modalEmptyCart)
+}
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                              CHECKOUT
 💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
