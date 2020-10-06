@@ -22,7 +22,13 @@
 - [x] https://www.tawdis.net/
 - [x] https://wave.webaim.org/
 - [x] http://www.rgblind.se/url
+
+## Testeo de contrastes realizado con...
 - [x] https://webaim.org/resources/contrastchecker/
+-  Background: #43628B color: white. Contrast Ratio 5.99:1
+-  Background: #080817 color: white. Contrast Ratio 19.02:1
+-  Background: #080817 color: #5fecc8. Contrast Ratio      
+-  Background: #5fecc8 color: #080817. Contrast Ratio 13.54:1 
 
 ## Construído con…
 - [x] HTML 5

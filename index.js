@@ -1,5 +1,5 @@
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
-                          FUNCIONES GLOBALES
+                          FUNCIONES GENERALES
 💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
 
 const hide = (element) => {
@@ -13,13 +13,19 @@ const normalize = (str) => {
   str= str.toLowerCase();
   return str
 }
+const showOverlay = () => {
+  show(overlay)
+}
+const hiddeOverlay = () => {
+  hide(overlay)
+}
+const bodyNoScroll = () => {
+  document.body.classList.add("no-scroll")
+}
+const bodyScroll = () => {
+  document.body.classList.remove("no-scroll")
+}
 
-const findElementById = (element, list) =>{
-for(e of list){
-  if(element.id === e.getAttribute("id"))
-  return e
-}
-}
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                               FILTROS
 💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
@@ -56,7 +62,6 @@ const searchOn = () => {
     return false
   }
 }
-
 const categoryOn = () => {
   for (const filtro of categoryFilters) {
     if (filtro.checked) {
@@ -65,7 +70,6 @@ const categoryOn = () => {
   }
   return false
 }
-
 const reviewOn = () => {
 
   for (const filtro of reviewFilters) {
@@ -82,30 +86,22 @@ const passCategoryFilter = (product) => {
   const categoryFilter = document.querySelector(`.filter-category[value="${category}"]`)
   return categoryFilter.checked 
 }
-
 const passReviewFilter = (product) => {
   const review = product.dataset.review
   const reviewFilter = document.querySelector(`.filter-review[value="${review}"]`)
   return reviewFilter.checked
 }
-
 const passInputSearch = (product) => {
   let name = product.dataset.name
-  console.log(name)
   let nameStandard = normalize(name)
-  console.log(nameStandard)
   let inputSearchStandard = inputSearch.value
-  console.log(inputSearchStandard)
   inputSearchStandard = normalize(inputSearchStandard)
-  console.log(inputSearchStandard)
-  console.log(nameStandard.includes(inputSearchStandard))
   return nameStandard.includes(inputSearchStandard)
 }
 
 /* ------ Filtrado de cada Checkbox -------*/
 
 const passAllFilters = (product) => {
-
   return ( // condicion: si pasa filtro o no esta chequeado-incluyendo a todos
     (passCategoryFilter(product) || !categoryOn()) &&
     (passReviewFilter(product) || !reviewOn()) &&
@@ -269,18 +265,7 @@ let subtotalProductsAdded = 0; // empiezo con $0 de compra
 
 /******************💛💛💛 3-MOSTRAR U OCULTAR CARRITO Y OVERLAY 💛💛💛***************/
 
-const showOverlay = () => {
-  show(overlay)
-}
-const hiddeOverlay = () => {
-  hide(overlay)
-}
-const bodyNoScroll = () => {
-  document.body.classList.add("no-scroll")
-}
-const bodyScroll = () => {
-  document.body.classList.remove("no-scroll")
-}
+
 const showCart = () => {
   cart.classList.remove("menu-add-to-card-hidde")
   for(let c of counterProducts) {

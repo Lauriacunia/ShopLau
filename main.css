@@ -38,19 +38,19 @@ button {
 
 
 h1 {
-	font-size: 2.3vw;
+	font-size: 5vw;
 }
 h2 {
-	font-size: 1.3vw;
+	font-size: 2vw;
 }
 h3 {
-	font-size: 1vw;
+	font-size: 1.8vw;
 }
 h4 {
-	font-size: 0.85vw;
+	font-size: 1.4vw;
 }
 p {
-	font-size: 1.2vw;
+	font-size: 1.6vw;
 }
 
 /*～●～●～●～●～  PSEUDOCLASES Y PSEUDOELEMENTOS ●～●～●～●～●～●～*/
@@ -100,10 +100,6 @@ a:visited {
 
 /*～●～●～●～●～  THEMES  ●～●～●～●～●～●～*/
 
-.theme-simple {
-	background-color:#43628B;
-	color: #5fecc8 ;
-}
 .theme-sky {
 	background-color:  #43628B;
 	color:white;
@@ -120,11 +116,11 @@ a:visited {
 
 .button {
 	font-family: 'Lato', sans-serif;
-	letter-spacing: 2px;
-	font-size: 0.8vw;
+	letter-spacing: 3px;
+	font-size: 1.2vw;
 	text-transform: uppercase;	
 	min-width: 150px;
-	max-width: 250px;
+	max-width: 350px;
 	font-weight: 600;
 	display: block;
 	margin: 1em;
@@ -134,14 +130,14 @@ a:visited {
 }
 
 .button-simple-solid {
-	background-color: #43628B ;
-	color: #5fecc8 ;
+	background-color: #080817;
+	color:#5fecc8 ;
 	border: none;
 	box-shadow: none;
 }
 .button-simple-solid-reverse {
 	background-color: #5fecc8  ;
-	color:#43628B ;
+	color:#080817 ;
 	border: none;
 	box-shadow: none;
 }
@@ -176,6 +172,7 @@ a:visited {
 }
 .branding {
 	margin-left: 10px;
+	
 }
 .btn-cart {
 	color:white;
@@ -198,11 +195,12 @@ a:visited {
 
 .banner-title {
 	position:absolute;
+	letter-spacing: 4px;
 	left:50%;
 	top: 50%;
-	margin-left: -100px;
-	margin-top: -20px;
-	color:white;
+	margin-left: -230px;
+	margin-top: -40px;
+	color:#080817;
 	font-weight: bold;
 }
 
@@ -216,9 +214,7 @@ a:visited {
 /* ---- FILTROS----*/
 
 aside {
-	padding: 35px;
-	
-	max-width: 270px;
+	padding: 25px;	
 }
 .filters-container {
 	align-items: flex-start;
@@ -326,10 +322,7 @@ aside {
 	
 	
 }
-.products-header p {
-	font-size: 1vw;
-	font-weight: 0;
-}
+
 .products-list{
 	flex-grow: 1;
 	align-items: flex-start;	
@@ -454,7 +447,8 @@ margin-top: 15px;
 
 }
 .cart-products-added {
-    flex-grow: 1;
+	flex-grow: 1;
+	height: 200px;
     overflow: scroll;
 }
 
