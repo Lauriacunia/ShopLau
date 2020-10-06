@@ -54,8 +54,7 @@
             <img class="banner-img" 
                  src="images/banner.png"
                  alt= "escritorio con productos de la 
-                       categoria electronica: notebook, 
-                       smartphone y cámara fotográfica"
+                       categoria electronica."
                  aria-hidden="true" />
         </div>
         <div>
@@ -106,7 +105,7 @@
                             class="input-search-container in-line">
                             <input type="text"
                                 id="input-search"
-                                placeholder="¿Qué estás buscando?"
+                                placeholder="¿Qué está buscando?"
                                 aria-label="Escriba el nombre del producto que busca">
                             </input>
                             <i class="fas fa-search search-icon"
@@ -117,13 +116,13 @@
                 <!-- fin Busqueda -->
 
                 <!-- Inicio Filtro category -->
-                    <div class="filters-category-container ">
-                        <div>
+                    <fieldset class="filters-category-container ">
+                        <legend>
                             <h3 aria-label="Filtre los productos 
                                 por la categoria a la que pertenecen">
                                 CATEGORIA
                             </h3>
-                        </div>
+                        </legend>
 
                         <div class="checkboxes-container input-category-container">
                             <label for= "consolas" class="input-category in-line">
@@ -175,18 +174,18 @@
                                 </input>
                                 <h4>ACCESORIOS</h4>
                             </label>                 
-                        </div>
+                        </fieldset>
                 <!-- fin Filtro categoria -->
 
                 <!-- Inicio Filtro review -->
 
-                    <div class="filters-review-container">
-                        <div>
+                    <fieldset class="filters-review-container">
+                        <legend>
                             <h3 aria-label="Filtre los productos
                             por su cantidad de estrellas de una a cinco">
                             PUNTAJE
                             </h3>
-                        </div>
+                        <legend>
 
                         <div class="filters-review">
                             <label for="cinco" 
@@ -272,8 +271,7 @@
                                 <h4>(1)</h>
                                     </input>
                             </label>
-
-                        </div>
+                        </fieldset>
                         <!-- Fin Filtro review -->
                     </div>
             </aside>
