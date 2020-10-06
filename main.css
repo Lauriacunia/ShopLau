@@ -235,7 +235,7 @@ aside {
 	background: transparent;
 	padding: 10px;
 	align-items: center;
-	color:#43628B;
+	color: #080817;
 }
 
 .clear-title {
@@ -293,9 +293,10 @@ aside {
 }
 .filters-review {
 	margin-top: 20px;
-	color:  #43628B;
+	color:  #080817;
 	
 }
+
 .input-review {
 	justify-content: flex-start;
 	margin: 5px 0px;
