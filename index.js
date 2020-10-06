@@ -8,7 +8,18 @@ const hide = (element) => {
 const show = (element) => {
   return element.classList.remove("is-hidden")
 }
+const normalize = (str) => { 
+  str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  str= str.toLowerCase();
+  return str
+}
 
+const findElementById = (element, list) =>{
+for(e of list){
+  if(element.id === e.getAttribute("id"))
+  return e
+}
+}
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                               FILTROS
 💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
@@ -79,9 +90,16 @@ const passReviewFilter = (product) => {
 }
 
 const passInputSearch = (product) => {
-  const name = product.dataset.name
- //intente hacer una regex para que me tome acentos pero no lo logre.
-  return name.toLowerCase().includes(inputSearch.value.toLowerCase())
+  let name = product.dataset.name
+  console.log(name)
+  let nameStandard = normalize(name)
+  console.log(nameStandard)
+  let inputSearchStandard = inputSearch.value
+  console.log(inputSearchStandard)
+  inputSearchStandard = normalize(inputSearchStandard)
+  console.log(inputSearchStandard)
+  console.log(nameStandard.includes(inputSearchStandard))
+  return nameStandard.includes(inputSearchStandard)
 }
 
 /* ------ Filtrado de cada Checkbox -------*/

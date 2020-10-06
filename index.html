@@ -20,8 +20,11 @@
         <!-- inicia marca del header -->
 
         <div class="in-line">
-            <img class="branding-logo" src="images/iso_blanco.svg" />
-            <p class="branding">ADA SHOP</p>
+            <img class="branding-logo"
+                 src="images/iso_blanco.svg"
+                 aria-hidden="true" />
+            <p class="branding"
+               aria-label="Bienvenido a nuestra tienda online:">ADA SHOP</p>
         </div>
 
         <!-- finaliza marca del header-->
@@ -29,8 +32,12 @@
         <!-- inicia boton cart-->
 
         <div>
-            <button type="button" class=" btn-cart in-line button button-simple-empty">
-                <i class="fas fa-shopping-cart cart-icon"></i>
+            <button type="button"
+                    class=" btn-cart in-line button button-simple-empty"
+                    aria-label="Mostrar productos agregados al carrito">
+                <i class="fas fa-shopping-cart cart-icon"
+                   aria-hidden="true"
+                   aria-live="polite"></i>
                 Carrito (<span class="cart-qty">0</span> ítems)
             </button>
         </div>
@@ -43,7 +50,8 @@
 
     <section class="banner in-stack">
         <div>
-            <img class="banner-img" src="images/banner.png" />
+            <img class="banner-img" src="images/banner.png"
+                 aria-hidden="true" />
         </div>
         <div>
             <h1 class="banner-title">ELECTRÓNICA</h1>
@@ -58,20 +66,25 @@
     <main id="shop">
         <!-- ♪:;;;:♪:;;;:♪:;;Inicio Filtros ;:♪:;;;:♪:;;;:♪:;;;: -->
 
-        <section class="filters-container in-line">
+        <section class="filters-container in-line"
+                 aria-labelledby="filters-title">
             <aside>
 
                 <!--inicia Header Filtro-->
                 <div class="filters-heading-container in-line">
 
                     <div class="filters-title">
-                        <h2>FILTROS</h2>
+                        <h2 aria-label= "Agilice la búsqueda del producto utilizando:">
+                            FILTROS</h2>
                     </div>
 
                     <div class="filters-clear-btn-container">
-                        <button type="button" class="clear-btn in-line">
-                            <i class="fas fa-trash-alt"></i>
-                            <h3 class="clear-title">Limpiar</h3>
+                        <button type="button" class="clear-btn in-line"
+                                aria-label="¿Desea quitar los filtros seleccionados?">
+                            <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                            <h3 class="clear-title">
+                                Limpiar
+                            </h3>
                         </button>
                     </div>
 
@@ -85,10 +98,14 @@
                         <h3>BUSQUEDA</h3>
                     </div>
 
-                    <div class="input-search-container in-line">
-                        <input type="text" id="input-search" placeholder="¿Qué estás buscando?">
-                        <i class="fas fa-search search-icon"></i>
-                    </div>
+                    <label class="input-search-container in-line">
+                        <input type="text"
+                               id="input-search"
+                               placeholder="¿Qué estás buscando?"
+                               aria-label="Escriba el nombre del producto que busca">
+                        <i class="fas fa-search search-icon"
+                           aria-hidden="true"></i>
+                    </label>
 
                 </div>
                 <!-- fin Busqueda -->
@@ -102,35 +119,50 @@
 
                     <div class="checkboxes-container">
 
-                        <label for="category" class="input-category-container ">
+                        <label for="category" class="input-category-container "
+                               aria-label="Seleccione que tipo de producto está buscando">
 
                             <label class="input-category in-line">
-                                <input type="checkbox" class=" filter filter-category" name="category" value="consolas">
+                                <input type="checkbox"
+                                       class=" filter filter-category"
+                                       name="category"
+                                       value="consolas">
                                 </input>
                                 <h4>CONSOLAS</h4>
                             </label>
 
                             <label class="input-category in-line">
-                                <input type="checkbox" class="filter filter-category" name="category" value="notebooks">
+                                <input type="checkbox"
+                                       class="filter filter-category"
+                                       name="category" 
+                                       value="notebooks">
                                 </input>
                                 <h4>NOTEBOOKS</h4>
                             </label>
 
                             <label class="input-category in-line">
-                                <input type="checkbox" class="filter filter-category" name="category" value="camaras">
+                                <input type="checkbox"
+                                       class="filter filter-category"
+                                       name="category"
+                                       value="camaras">
                                 </input>
                                 <h4>CÁMARAS</h4>
                             </label>
 
                             <label class="input-category in-line">
-                                <input type="checkbox" class="filter filter-category" name="category" value="celulares">
+                                <input type="checkbox"
+                                       class="filter filter-category"
+                                       name="category"
+                                       value="celulares">
                                 </input>
                                 <h4>CELULARES</h4>
                             </label>
 
                             <label class="input-category in-line">
-                                <input type="checkbox" class="filter filter-category" name="category"
-                                    value="accesorios">
+                                <input type="checkbox"
+                                       class="filter filter-category"
+                                       name="category"
+                                       value="accesorios">
                                 </input>
                                 <h4>ACCESORIOS</h4>
                             </label>
@@ -150,57 +182,79 @@
 
                     <div class="filters-review">
 
-                        <label class="input-review in-line">
-                            <input type="checkbox" name="review" class="filter filter-review" value="5">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        <label class="input-review in-line"
+                            aria-label="Seleccione una opción para mostrar 
+                                       productos por su puntuación">
+                            <input type="checkbox"
+                                   name="review"
+                                   class="filter filter-review"
+                                   value="5"
+                                   aria-label="Cantidad de estrellas:">
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="fas fa-star"  aria-hidden="true"></i>
                             <h4>(5)</h4>
                             </input>
                         </label>
 
                         <label class="input-review in-line">
-                            <input type="checkbox" name="review" class="filter filter-review" value="4">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <input type="checkbox"
+                                   name="review" 
+                                   class="filter filter-review"
+                                   value="4"
+                                   aria-label="Cantidad de estrellas:">
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="far fa-star"  aria-hidden="true"></i>
                             <h4>(4)</h4>
                             </input>
                         </label>
 
                         <label class="input-review in-line">
-                            <input type="checkbox" name="review" class="filter filter-review" value="3">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <input type="checkbox"
+                                   name="review"
+                                   class="filter filter-review"
+                                   value="3"
+                                   aria-label="Cantidad de estrellas:">
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="far fa-star"  aria-hidden="true"></i>
+                            <i class="far fa-star"  aria-hidden="true"></i>
                             <h4>(3)</h4>
                             </input>
                         </label>
 
                         <label class="input-review in-line">
-                            <input type="checkbox" name="review" class="filter filter-review" value="2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <input type="checkbox"
+                                   name="review"
+                                   class="filter filter-review"
+                                   value="2"
+                                   aria-label="Cantidad de estrellas:">
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="far fa-star"  aria-hidden="true"></i>
+                            <i class="far fa-star"  aria-hidden="true"></i>
+                            <i class="far fa-star"  aria-hidden="true"></i>
                             <h4>(2)</h4>
                             </input>
                         </label>
 
                         <label class="input-review in-line">
-                            <input type="checkbox" name="review" class="filter filter-review" value="1">
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <input type="checkbox"
+                                   name="review"
+                                   class="filter filter-review" 
+                                   value="1"
+                                   aria-label="Cantidad de estrellas:">
+                            <i class="fas fa-star"  aria-hidden="true"></i>
+                            <i class="far fa-star"  aria-hidden="true"></i>
+                            <i class="far fa-star"  aria-hidden="true"></i>
+                            <i class="far fa-star"  aria-hidden="true"></i>
+                            <i class="far fa-star"  aria-hidden="true"></i>
                             <h4>(1)</h>
                                 </input>
                         </label>
@@ -218,20 +272,26 @@
                 <!--  Inicia header de productos  -->
                 <header class="products-header in-line theme-sky">
                     <div>
-                        <p id="products-qty">Mostrando 12 producto(s) de 12</p>
+                        <p id="products-qty"
+                           aria-live="polite">Mostrando 12 producto(s) de 12</p>
                     </div>
                     <div class="view-buttons-container in-line ">
                         <div>
-                            <p>Ver como</p>
+                            <p aria-label="Modificar la vista de la lista de productos">
+                                Ver como</p>
                         </div>
                         <div id="view-button-grid">
                             <button type="button">
-                                <i class="fas fa-th"></i>
+                                <i class="fas fa-th"
+                                   aria-hidden="true"
+                                   title="Mosaico"></i>
                             </button>
                         </div>
                         <div id="view-button-list">
                             <button type="button">
-                                <i class="fas fa-list" aria-hidden="true"></i>
+                                <i class="fas fa-list" 
+                                   aria-hidden="true"
+                                   title="Lista"></i>
                             </button>
                         </div>
                     </div>
@@ -243,17 +303,28 @@
                 <div class="products-list in-grid">
 
 
-                    <article class="product in-stack" data-id="0" data-name="Celular Xiaomi" data-category="celulares"
-                        data-price="22499" data-image="images/xiaomi.jpg" data-review="3">
+                    <article class="product in-stack"
+                             data-id="0"
+                             data-name="Celular Xiaomi" 
+                             data-category="celulares"
+                             data-price="22499"
+                             data-image="images/xiaomi.jpg" 
+                             data-review="3">
 
                         <div class="product-img-container in-line">
-                            <img src="images/xiaomi.jpg" alt="" class="product-img" />
+                            <img src="images/xiaomi.jpg"
+                                 alt="Smartphone con Pantalla de 6.3 pulgadas
+                                      color negro "
+                                 class="product-img" />
                         </div>
 
                         <div class="product-content in-stack">
                             <h2 class="product-name">Celular Xiaomi</h2>
-                            <p class="product-price">$ 22499</p>
-                            <div class="review filters-review">
+                            <p class="product-price"
+                               aria-label="Precio en pesos argentinos:">
+                               $ 22499</p>
+                            <div class="review filters-review"
+                                 aria-label= "Puntaje 5">
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
@@ -261,10 +332,15 @@
                                 <i class="far fa-star" aria-hidden="true"></i>
                             </div>
                             <div>
-                                <button type="button" class="button button-simple-solid button-add-to-cart"
-                                 id= "0">
+                                <button type="button"
+                                        class="button button-simple-solid button-add-to-cart"
+                                        id= "0">
                                     Comprar
                                 </button>
+                                <span>Agregaste el Celular Xiaomi a tu carrito
+                                    <a href="#carrito" title="Ir a mi carrito"></a>
+                                </span>
+                                
                             </div>
                         </div>
                         <div class="product-description is-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -277,16 +353,30 @@
                             </div>
                     </article>
 
-                    <article class="product in-stack" data-id="1" data-name="PlayStation 4" data-category="consolas"
-                        data-price="59999" data-image="images/ps4.jpg" data-review="5">
+                    <article class="product in-stack" 
+                             data-id="1" 
+                             data-name="PlayStation 4" 
+                             data-category="consolas"
+                             data-price="59999" 
+                             data-image="images/ps4.jpg" 
+                             data-review="5">
+
                         <div class="product-img-container in-line">
-                            <img src="images/ps4.jpg" alt="" class="product-img" />
+                            <img src="images/ps4.jpg"
+                                 alt="Consola de videojuegos de tamaño: 35cm de alto
+                                 y 25 de ancho, que puede colocarse en posición vertical
+                                 que termina en forma de dos aletas en la parte superior.
+                                 El interior del cuerpo está iluminado con una luz azul 
+                                 y tiene dos joystick. Color del producto: blanco" 
+                                 class="product-img" />
                         </div>
 
                         <div class="product-content in-stack">
                             <h2 class="product-name">PlayStation 4</h2>
-                            <p class="product-price">$ 59999</p>
-                            <div class="review filters-review">
+                            <p class="product-price"
+                               aria-label="Precio en pesos argentinos:">$ 59999</p>
+                            <div class="review filters-review" 
+                                 aria-label= "Puntaje 5>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
@@ -295,8 +385,9 @@
                             </div>
 
                             <div>
-                                <button type="button" class="button button-simple-solid  button-add-to-cart"
-                                id= "1">
+                                <button type="button"
+                                        class="button button-simple-solid  button-add-to-cart"
+                                        id= "1">
                                     Comprar
                                 </button>
                             </div>
@@ -313,13 +404,18 @@
                     <article class="product in-stack" data-id="2" data-name="Cámara Nikon" data-category="camaras"
                         data-price="54999" data-image="images/nikon.jpg" data-review="2">
                         <div class="product-img-container in-line">
-                            <img src="images/nikon.jpg" alt="" class="product-img" />
+                            <img src="images/nikon.jpg"
+                                 alt="Cámara reflex profesional. Dimensiones: 14.3 centímetros
+                                  de ancho por 11.2 centímetros de alto y 8.3 centimetros de profundidad.
+                                  Peso aproximado: 760 gramos. Color del producto: negro"
+                                 class="product-img" />
                         </div>
 
                         <div class="product-content in-stack">
                             <h2 class="product-name">Cámara Nikon</h2>
-                            <p class="product-price">$ 54999</p>
-                            <div class="review filters-review">
+                            <p class="product-price"
+                               aria-label="Precio en pesos argentinos:">$ 54999</p>
+                            <div class="review filters-review" aria-label= "Puntaje 2>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="far fa-star" aria-hidden="true"></i>
@@ -328,8 +424,9 @@
                             </div>
 
                             <div>
-                                <button type="button" class="button button-simple-solid button-add-to-cart"
-                                id= "2">
+                                <button type="button"
+                                        class="button button-simple-solid button-add-to-cart"
+                                        id= "2">
                                     Comprar
                                 </button>
                             </div>
@@ -346,13 +443,17 @@
                     <article class="product in-stack" data-id="3" data-name="Headphones Sony" data-category="accesorios"
                         data-price="24999" data-image="images/sony.png" data-review="3">
                         <div class="product-img-container in-line">
-                            <img src="images/sony.png" alt="" class="product-img" />
+                            <img src="images/sony.png"
+                                 alt=""
+                                 class="product-img" />
                         </div>
 
                         <div class="product-content in-stack">
                             <h2 class="product-name">Headphones Sony</h2>
-                            <p class="product-price">$ 24999</p>
-                            <div class="review filters-review">
+                            <p class="product-price"
+                               aria-label="Precio en pesos argentinos:">$ 24999</p>
+                            <div class="review filters-review"
+                                 aria-label= "Puntaje 3>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
@@ -361,8 +462,9 @@
                             </div>
 
                             <div>
-                                <button type="button" class="button button-simple-solid button-add-to-cart"
-                                id= "3">
+                                <button type="button" 
+                                        class="button button-simple-solid button-add-to-cart"
+                                        id= "3">
                                     Comprar
                                 </button>
                             </div>
@@ -379,13 +481,17 @@
                     <article class="product in-stack" data-id="4" data-name="Nintendo Switch" data-category="consolas"
                         data-price="46999" data-image="images/switch.jpg" data-review="5">
                         <div class="product-img-container in-line">
-                            <img src="images/switch.jpg" alt="" class="product-img" />
+                            <img src="images/switch.jpg"
+                                 alt=""
+                                 class="product-img" />
                         </div>
 
                         <div class="product-content in-stack">
                             <h2 class="product-name">Nintendo Switch</h2>
-                            <p class="product-price">$ 46999</p>
-                            <div class="review filters-review">
+                            <p class="product-price"
+                               aria-label="Precio en pesos argentinos:">$ 46999</p>
+                            <div class="review filters-review" 
+                                 aria-label= "Puntaje 5>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
@@ -394,8 +500,9 @@
                             </div>
 
                             <div>
-                                <button type="button" class="button button-simple-solid button-add-to-cart"
-                                id= "4">
+                                <button type="button"
+                                        class="button button-simple-solid button-add-to-cart"
+                                        id= "4">
                                     Comprar
                                 </button>
                             </div>
@@ -413,13 +520,15 @@
                     <article class="product in-stack" data-id="5" data-name="Notebook Asus" data-category="notebooks"
                         data-price="32999" data-image="images/asus.png" data-review="1">
                         <div class="product-img-container in-line">
-                            <img src="images/asus.png" alt="" class="product-img" />
+                            <img src="images/asus.png"
+                                 alt="" class="product-img" />
                         </div>
 
                         <div class="product-content in-stack">
                             <h2 class="product-name">Notebook Asus</h2>
-                            <p class="product-price">$ 32999</p>
-                            <div class="review filters-review">
+                            <p class="product-price"
+                               aria-label="Precio en pesos argentinos:">$ 32999</p>
+                            <div class="review filters-review" aria-label= "Puntaje 1>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="far fa-star" aria-hidden="true"></i>
                                 <i class="far fa-star" aria-hidden="true"></i>
@@ -428,8 +537,9 @@
                             </div>
 
                             <div>
-                                <button type="button" class="button button-simple-solid button-add-to-cart"
-                                id= "5">
+                                <button type="button"
+                                        class="button button-simple-solid button-add-to-cart"
+                                        id= "5">
                                     Comprar
                                 </button>
                             </div>
@@ -447,13 +557,17 @@
                     <article class="product in-stack" data-id="6" data-name="Notebook MSI" data-category="notebooks"
                         data-price="37999" data-image="images/msi.png" data-review="3">
                         <div class="product-img-container in-line">
-                            <img src="images/msi.png" alt="" class="product-img" />
+                            <img src="images/msi.png"
+                                 alt=""
+                                 class="product-img" />
                         </div>
 
                         <div class="product-content in-stack">
                             <h2 class="product-name">Notebook MSI</h2>
-                            <p class="product-price">$ 37999</p>
-                            <div class="review filters-review">
+                            <p class="product-price"
+                               aria-label="Precio en pesos argentinos:">$ 37999</p>
+                            <div class="review filters-review"
+                                 aria-label= "Puntaje 3>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
@@ -462,8 +576,9 @@
                             </div>
 
                             <div>
-                                <button type="button" class="button button-simple-solid button-add-to-cart"
-                                id= "6">
+                                <button type="button"
+                                        class="button button-simple-solid button-add-to-cart"
+                                        id= "6">
                                     Comprar
                                 </button>
                             </div>
@@ -481,13 +596,17 @@
                         data-category="accesorios" data-price="11999" data-image="images/headphones.png"
                         data-review="2">
                         <div class="product-img-container in-line">
-                            <img src="images/headphones.png" alt="" class="product-img" />
+                            <img src="images/headphones.png"
+                                 alt=""
+                                 class="product-img" />
                         </div>
 
                         <div class="product-content in-stack">
                             <h2 class="product-name">Headphones Philips</h2>
-                            <p class="product-price">$ 11999</p>
-                            <div class="review filters-review">
+                            <p class="product-price"
+                               aria-label="Precio en pesos argentinos:">$ 11999</p>
+                            <div class="review filters-review"
+                                 aria-label= "Puntaje 2>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="far fa-star" aria-hidden="true"></i>
@@ -496,8 +615,9 @@
                             </div>
 
                             <div>
-                                <button type="button" class="button button-simple-solid button-add-to-cart"
-                                id= "7">
+                                <button type="button"
+                                        class="button button-simple-solid button-add-to-cart"
+                                        id= "7">
                                     Comprar
                                 </button>
                             </div>
@@ -514,13 +634,17 @@
                     <article class="product in-stack" data-id="8" data-name="Macbook" data-category="notebooks"
                         data-price="119999" data-image="images/macbook.png" data-review="4">
                         <div class="product-img-container in-line">
-                            <img src="images/macbook.png" alt="" class="product-img" />
+                            <img src="images/macbook.png"
+                                 alt=""
+                                 class="product-img" />
                         </div>
 
                         <div class="product-content in-stack">
                             <h2 class="product-name">Macbook</h2>
-                            <p class="product-price">$ 119999</p>
-                            <div class="review filters-review">
+                            <p class="product-price"
+                               aria-label="Precio en pesos argentinos:">$ 119999</p>
+                            <div class="review filters-review"
+                                 aria-label= "Puntaje 4>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
@@ -529,8 +653,9 @@
                             </div>
 
                             <div>
-                                <button type="button" class="button button-simple-solid button-add-to-cart"
-                                id= "8">
+                                <button type="button"
+                                        class="button button-simple-solid button-add-to-cart"
+                                        id= "8">
                                     Comprar
                                 </button>
                             </div>
@@ -547,13 +672,17 @@
                     <article class="product in-stack" data-id="9" data-name="iPhone" data-category="celulares"
                         data-price="79999" data-image="images/iphone.jpeg" data-review="3">
                         <div class="product-img-container in-line">
-                            <img src="images/iphone.jpeg" alt="" class="product-img" />
+                            <img src="images/iphone.jpeg"
+                                 alt=""
+                                 class="product-img" />
                         </div>
 
                         <div class="product-content in-stack">
                             <h2 class="product-name">iPhone</h2>
-                            <p class="product-price">$ 79999</p>
-                            <div class="review filters-review">
+                            <p class="product-price"
+                               aria-label="Precio en pesos argentinos:">$ 79999</p>
+                            <div class="review filters-review"
+                                 aria-label= "Puntaje 3>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
@@ -562,8 +691,9 @@
                             </div>
 
                             <div>
-                                <button type="button" class="button button-simple-solid button-add-to-cart"
-                                id= "9">
+                                <button type="button"
+                                        class="button button-simple-solid button-add-to-cart"
+                                        id= "9">
                                     Comprar
                                 </button>
                             </div>
@@ -580,13 +710,17 @@
                     <article class="product in-stack" data-id="10" data-name="Xbox One" data-category="consolas"
                         data-price="69999" data-image="images/xbox.jpg" data-review="4">
                         <div class="product-img-container in-line">
-                            <img src="images/xbox.jpg" alt="" class="product-img" />
+                            <img src="images/xbox.jpg"
+                                 alt="" 
+                                 class="product-img" />
                         </div>
 
                         <div class="product-content in-stack">
                             <h2 class="product-name">Xbox One</h2>
-                            <p class="product-price">$ 69999</p>
-                            <div class="review filters-review">
+                            <p class="product-price"
+                               aria-label="Precio en pesos argentinos:">$ 69999</p>
+                            <div class="review filters-review"
+                                 aria-label= "Puntaje 4>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
@@ -595,8 +729,9 @@
                             </div>
 
                             <div>
-                                <button type="button" class="button button-simple-solid button-add-to-cart"
-                                id= "10">
+                                <button type="button"
+                                        class="button button-simple-solid button-add-to-cart"
+                                        id= "10">
                                     Comprar
                                 </button>
                             </div>
@@ -613,13 +748,17 @@
                     <article class="product in-stack" data-id="11" data-name="Mouse Gamer" data-category="accesorios"
                         data-price="4999" data-image="images/mouse.jpg" data-review="5">
                         <div class="product-img-container in-line">
-                            <img src="images/mouse.jpg" alt="" class="product-img" />
+                            <img src="images/mouse.jpg" 
+                                 alt="" 
+                                 class="product-img" />
                         </div>
 
                         <div class="product-content in-stack">
                             <h2 class="product-name">Mouse Gamer</h2>
-                            <p class="product-price">$ 4999</p>
-                            <div class="review filters-review">
+                            <p class="product-price"
+                               aria-label="Precio en pesos argentinos:">$ 4999</p>
+                            <div class="review filters-review"
+                                 aria-label= "Puntaje 5>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
                                 <i class="fas fa-star" aria-hidden="true"></i>
