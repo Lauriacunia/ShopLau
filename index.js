@@ -393,7 +393,7 @@ for(let btnAddToCart of allBtnAddToCart) {
 
 /******************💛💛💛 1- SELECCIONAR ELEMENTOS 💛💛💛***************/
 
-const btnEmptyCart = document.querySelector(".btn-empty-cart")
+const btnOpenModalEmptyCart = document.querySelector(".btn-empty-cart")
 const modalEmptyCart = document.querySelector (".modal-empty-cart")
 const btnConfirmEmptyCart = document.querySelector(".confirm-cart-empty-btn")
 const btnCancelEmptyCart = document.querySelector(".cancel-empty-cart-btn")
@@ -419,7 +419,7 @@ hideAllProductsOnCart = () => {
 }
 
 
-const emptyCart = () => {
+const openModalEmptyCart = () => {
 show(modalEmptyCart)
 }
 
@@ -432,14 +432,18 @@ const emptyCartConfirm = () => {
 }
 /******************💛💛💛 2- INICIALIZAR EVENTO BTN VACIAR 💛💛💛***************/
 
-btnEmptyCart.onclick = () => {
-  emptyCart()
+btnOpenModalEmptyCart.onclick = () => {
+  openModalEmptyCart()
+  overlay.style.zIndex = "3";
 }
 btnConfirmEmptyCart.onclick = () => {
   emptyCartConfirm()
+  hide(modalEmptyCart)
+  overlay.style.zIndex = "1";
 }
 btnCancelEmptyCart.onclick =() => {
   hide(modalEmptyCart)
+  overlay.style.zIndex = "1";
 }
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                              CHECKOUT
@@ -455,7 +459,6 @@ const btnOpenCheckout = document.querySelector(".btn-buy")
 const btnFinishBuy = document.querySelector(".btn-finish-buy")
 const btnCancelBuy = document.querySelector(".btn-cancel-buy")
 const menuCheckout = document.querySelector(".menu-checkout")
-
 
 /******************💛💛💛 2- ABRIR Y CERRAR CHECKOUT 💛💛💛***************/
 
@@ -490,3 +493,88 @@ btnCancelBuy.onclick = () => {
   hiddeCart()
 }
 
+/******************💛💛💛 3- CALCULAR PRECIO TOTAL DEL CHECKOUT 💛💛💛***************/
+const allPayOptions = document.querySelectorAll(".pay-option")
+// checkboxes
+const cashOption = document.querySelector("#cash-debit")
+const creditOption = document.querySelector("#credit")
+const deliveryOption = document.querySelector("#delivery")
+const discountOption = document.querySelector("#discount")
+// output values span
+const cartTaxValue = document.querySelector(".cart-tax-value")
+console.log(cartTaxValue)
+const discountValue = document.querySelector(".cart-discount-value")
+console.log(discountValue)
+const deliveryValue = document.querySelector(".cart-delivery-value")
+console.log(deliveryValue)
+const cartTotalValue = document.querySelector(".cart-total-value")
+console.log(cartTotalValue)
+
+//parrrafos
+const cartTax = document.querySelector(".cart-tax")
+console.log(cartTax)
+const discount = document.querySelector(".cart-discount")
+console.log(discount)
+const delivery = document.querySelector(".cart-delivery")
+console.log(delivery)
+
+let cartTaxValueCalculated = 0
+let deliveryPrice = 0
+let discountCalculated = 0
+let cartTotalValueCalculated
+cartTotalValue.textContent = subtotalProductsAdded
+
+
+const getCartTax = () => {
+    cartTaxValueCalculated =  subtotalProductsAdded * 0.1 
+    cartTax.textContent = cartTaxValueCalculated
+}
+
+const addDeliveryPrice = () => {
+    deliveryPrice = 50
+    delivery.textContent = deliveryPrice
+}
+
+const getDiscount = () => {
+    discountCalculated = - subtotalProductsAdded * 0.1
+    discount.textContent = discountCalculated
+}
+
+getTotal = () => {
+  if (creditOption.checked) {
+    getCartTax()
+    show(cartTax)
+  }else {
+    cartTaxValueCalculated = 0
+    hide(cartTax)
+  }
+  if (deliveryOption.checked) {
+      addDeliveryPrice()
+      show(delivery)
+  } else {
+      deliveryPrice = 0
+      hide(delivery)
+  }
+  if (discountOption.checked) {
+      getDiscount()
+      show(discount)
+  }else {
+      discountCalculated = 0
+      hide(discount)    
+  }
+
+  // Mostrar en pantalla
+  cartTax.textContent = cartTaxValueCalculated
+  delivery.textContent = deliveryPrice
+  discount.textContent = discountCalculated
+
+  totalValueCalculated = subtotalProductsAdded + deliveryPrice + discountCalculated + cartTaxValueCalculated
+  cartTotalValue.textContent = totalValueCalculated
+  
+}
+// inicializa calculo de precio total
+for (let payOption of allPayOptions) {
+  payOption.onclick = () => {
+    getTotal();
+  }
+}

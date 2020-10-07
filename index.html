@@ -920,75 +920,95 @@
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  FIN MENU CARRITO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  INICIO CONFIRMACION DE COMPRA★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
-    <div class="menu-checkout checkout-is-hidden">
-        <div class="in-line">
-
-            <form class="checkout-info">
-                <h2 class="checkout-title">Checkout</h2>
-                <div class="checkout-personal-info">
-
-                    <h3 class="info-title">Datos Personales</h3>
-
-                    <div class="checkout-personal-info-inputs ">
-                        <label>
-                            Nombre y apellido *
-                            <input type="text" placeholder="p. ej.: Ada Lovelace" name="Nombre y Apellido" required />
-                        </label>
-                        <label>
-                            Email *
-                            <input type="email" placeholder="p. ej.: ada.lovelace@gmail.com" required />
-                        </label>
-                    </div>
-
-                </div>
-
-                <!-- *** [ Comiezo Opciones de Pago ] *** -->
-                <div class="checkout-payment in-stack">
-                    <h3 class="info-title">Opciones de pago</h3>
-                    <div class="checkout-section-container in-stack">
-
-                        <label>
-                            <input type="radio" name="payment" value="cash-debit" checked />Efectivo / Débito
-                        </label>
-                        <label>
-                            <input type="radio" name="payment" value="credit" />Tarjeta
-                            de crédito
-                        </label>
-                        <label>
-                            <input type="checkbox" name="delivery" /> Necesito envío
-                        </label>
-                        <label>
-                            <input type="checkbox" name="discount" /> Tengo tarjeta de
-                            descuento
-                        </label>
-
-                    </div>
-                </div>
-            </form>
+    <div class="menu-checkout in-stack checkout-is-hidden">
+        <div class= "checkout-container in-line">
+            <div class= "form-container">
+                <form>
+                    <h2 class="checkout-title">Checkout</h2>
+                    <fieldset class="checkout-info in-stack">             
+                        <div class="checkout-personal-info">
+                            <legend class="info-title">Datos Personales</legend>
+                            <div class="checkout-personal-info-inputs ">
+                                <label for= "nameAndSurname">
+                                    Nombre y apellido *
+                                    <input type="text" 
+                                        placeholder="p. ej.: Ada Lovelace" 
+                                        name="Nombre y Apellido" required 
+                                        id="nameAndSurname" />
+                                </label>
+                                <label for="email">
+                                    Email *
+                                    <input type="email" 
+                                        placeholder="p. ej.: ada.lovelace@gmail.com" required
+                                        id="email" />
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!-- *** [ Comiezo Opciones de Pago ] *** -->
+                    <fieldset class="checkout-payment in-stack">
+                        <legend class="info-title">Opciones de pago</legend>
+                        <div class="checkout-section-container in-stack">
+                            <label for="cash-debit">
+                                <input type="radio" 
+                                       class= "pay-option"
+                                       name="payment" 
+                                       value="cash-debit" 
+                                       checked 
+                                       id="cash-debit"/>
+                                       Efectivo / Débito
+                                </input>
+                            </label>
+                            <label for="credit">
+                                <input type="radio" 
+                                       class= "pay-option"
+                                       name="payment" 
+                                       value="credit" 
+                                       id="credit"/>
+                                       Tarjeta de crédito
+                                </input>
+                            </label>
+                            <label for="delivery">
+                                <input type="checkbox" 
+                                       class= "pay-option"
+                                       name="delivery" 
+                                       id="delivery"/> 
+                                       Necesito envío
+                            </label>
+                            <label for="discount">
+                                <input type="checkbox" 
+                                       class= "pay-option"
+                                       name="discount" 
+                                       id="discount"/> 
+                                       Tengo tarjeta de descuento
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
             <!-- *** [ Fin Opciones de Pago ] *** -->
 
             <!-- *** [ Comienzo Subtotales ] *** -->
-            <section class="cart-totals">
+            <div class="cart-totals in-stack">
                 <h3 class="info-title">Resumen</h3>
                 <div>
-                    <p class="cart-tax">
-                        Recargo $<span class="cart-tax-value is-hidden">0</span>
-                    </p>
-                    <p class="cart-discount">
-                        Descuento 10% $<span class="cart-discount-value is-hidden"></span>
-                    </p>
-                    <p class="cart-delivery">
-                        Envío $<span class="cart-delivery-value is-hidden">50</span>
-                    </p>
-
                     <p class="cart-subtotal">
                         Subtotal $ <span class="cart-subtotal-value">0</span>
+                    </p>
+                    <p class="cart-tax is-hidden">
+                        Recargo $<span class="cart-tax-value">0</span>
+                    </p>
+                    <p class="cart-discount is-hidden">
+                        Descuento 10% $<span class="cart-discount-value">0</span>
+                    </p>
+                    <p class="cart-delivery is-hidden">
+                        Envío $<span class="cart-delivery-value">0</span>
                     </p>
                     <p class="cart-total">
                         Total: $ <span class="cart-total-value">0</span>
                     </p>
                 </div>
-            </section>
+            </div>
         </div>
         <!-- *** [ Fin Subtotales ] *** -->
 
@@ -1000,14 +1020,17 @@
                 Finalizar
             </button>
         </footer>
-
     </div>
 
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  FIN CONFIRMACION DE COMPRA ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
-    <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  INICIO VACIAR CARRITO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+    <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  INICIO MODAL VACIAR CARRITO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
     
-    <div class="modal modal-empty-cart is-hidden">
+    <div class="modal modal-empty-cart is-hidden"  
+         aria-role="dialog"
+         aria-modal="true"
+         aria-describedby="empty-cart-description"
+         aria-hidden="true">
 
         <p class="modal-message" id="empty-cart-description">
             Estás por vaciar el carrito, ¿quieres continuar?
@@ -1022,7 +1045,7 @@
         </footer>
     </div>
 
-        <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  fin VACIAR CARRITO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
+        <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ FIN MODAL VACIAR CARRITO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
         <script src="index.js"></script>
 
 </body>
