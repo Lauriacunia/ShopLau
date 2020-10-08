@@ -13,10 +13,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-img {
-	width: 100%;
-	height: auto;
-}
+
 a {
 	text-decoration: none;
 	cursor: pointer;
@@ -39,16 +36,16 @@ h1 {
 	font-size: 2em;
 }
 h2 {
-	font-size: 1.8em;
+	font-size: 1em;
 }
 h3 {
-	font-size: 1.6em;
+	font-size: 0.9em;
 }
 h4 {
-	font-size: 1.4em;
+	font-size: 0.8em;
 }
 p {
-	font-size: 1.3em;
+	font-size: 1em;
 }
 
 /*～●～●～●～●～  PSEUDOCLASES Y PSEUDOELEMENTOS ●～●～●～●～●～●～*/
@@ -115,7 +112,7 @@ a:visited {
 .button {
 	font-family: 'Lato', sans-serif;
 	letter-spacing: 3px;
-	font-size: 1.2vw;
+	font-size: 0.8em;
 	text-transform: uppercase;	
 	min-width: 150px;
 	max-width: 350px;
@@ -306,14 +303,12 @@ aside {
 /* ----products ----*/
 
 .products-container {
-	margin: 10px;
- 
 	flex: 4;
 }
 .products-header {
 	justify-content: space-between;
 	padding: 30px 15px;
-	margin-bottom: 10px;
+	margin: 10px;
 	border-radius: 5px;
 	
 	
@@ -342,8 +337,9 @@ aside {
 }
 
 .product {  
-    flex-basis: 340px;
-    padding: 30px 25px;
+    width: calc(100% / 3 - 10px * 2);
+	padding: 30px 25px;
+	margin: 10px;
 	background-color: white;
 	border-radius: 5px;
 	overflow: hidden;
@@ -353,9 +349,13 @@ aside {
 	height: 250px;
     overflow: hidden;
 }
+
+
 .product-img {
-    height: 100%;
-    transition: 0.2s;
+	height: 100%;
+	margin:auto;
+	transition: 0.2s;
+	display:block;
     opacity: 1;
 }
 .product-content {
@@ -364,6 +364,7 @@ margin-top: 15px;
 
 
 .product-name {
+	font-size: 1.17em;
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
@@ -635,11 +636,39 @@ font-size: 18px;
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*
                                      DISEÑO RESPONSIVE 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+/* Large devices (desktops, 992px and up)*/
 
-/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio TABLET   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+	
+	.product {
+		width: calc(100% / 2 - 2 * 10px);
+	  }
+}
 
-/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin TABLET    .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+/* Medium devices (tablets, 768px and up)*/
 
-/*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio SMARTPHONE   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
+@media (min-width: 768px) and (max-width: 991.98px){
+	aside {
+		display:none;
+	}
+	.product {
+		width: calc(100% / 2 - 2 * 1px);
+	  }
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+	.product {
+		width: calc(100% - 20px);
+	  }
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px){
+	.product {
+		width: calc(100% -10px);
+	  }
+}
 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin SMARTPHONE   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
