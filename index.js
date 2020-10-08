@@ -25,7 +25,47 @@ const bodyNoScroll = () => {
 const bodyScroll = () => {
   document.body.classList.remove("no-scroll")
 }
+const centerElement = (element) => {
 
+    let windowHeight = 0;
+    let windowWidth = 0;
+    let elementHeight = 0;
+    let elementWidth = 0;
+   
+  //capturo el tamaño de la pantalla
+    windowWidth = window.innerWidth;
+    console.log(windowHeight)
+    windowHeight = window.innerHeight;
+    console.log(windowHeight)
+   
+  //capturo las dimensiones del elemento
+    elementWidth = element.innerWidth;
+    console.log(elementWidth)
+    elementHeight = element.innerHeight;
+    console.log(elementHeight)
+  
+  // calculo top y left
+    let top = (windowHeight/2 - elementHeight/2) ;
+    console.log(top)
+    let left = (windowWidth/2 - elementWidth/2) ;
+    console.log(left)
+  //para evitar desbordes
+  if (top < 0) {
+      top = 0;
+    }
+    if (left < 0) {
+      left = 0;
+    }
+  //le asigno el calculo al elemento
+    element.style.top = top + 'px';
+    element.style.left = left + 'px';
+}
+
+/*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
+                              ONLOAD
+💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
+const bannerTitle = document.querySelector(".banner-title")
+centerElement(bannerTitle)
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                               FILTROS
 💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
@@ -267,6 +307,7 @@ let subtotalProductsAdded = 0; // empiezo con $0 de compra
 
 
 const showCart = () => {
+  show(cart)
   cart.classList.remove("menu-add-to-card-hidde")
   for(let c of counterProducts) {
     if(c.innerText == 0){
@@ -277,6 +318,7 @@ const showCart = () => {
 }
 const hiddeCart = () => {
   cart.classList.add("menu-add-to-card-hidde")
+  hide(cart)
   show(cartFullMsg)
   hide(cartEmptyMsg)
 }
@@ -420,6 +462,7 @@ hideAllProductsOnCart = () => {
 
 
 const openModalEmptyCart = () => {
+centerElement(modalEmptyCart)
 show(modalEmptyCart)
 }
 
@@ -463,10 +506,12 @@ const menuCheckout = document.querySelector(".menu-checkout")
 /******************💛💛💛 2- ABRIR Y CERRAR CHECKOUT 💛💛💛***************/
 
 const showCheckout = () => {
+  show(menuCheckout)
   menuCheckout.classList.remove("checkout-is-hidden")
 }
 
 const hiddeCheckout = () => {
+  hide(menuCheckout)
   menuCheckout.classList.add("checkout-is-hidden")
 }
 
@@ -474,7 +519,8 @@ btnOpenCheckout.onclick = () => {
   showOverlay()
   overlay.style.zIndex = "3";
   bodyNoScroll()
-  showCheckout() 
+  showCheckout()
+  getTotal() 
 }
 
 btnFinishBuy.onclick = () => {

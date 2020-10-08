@@ -57,9 +57,8 @@
                        categoria electronica."
                  aria-hidden="true" />
         </div>
-        <div>
-            <h1 class="banner-title">ELECTRÓNICA</h1>
-        </div>
+        <h1 class="banner-title">ELECTRÓNICA</h1>
+        
     </section>
 
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･ FIN BANNER  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
@@ -876,7 +875,7 @@
 
     <div class="overlay is-hidden" id="overlay"></div>
 
-    <div class="header-menu-add-to-card in-stack menu-add-to-card-hidde theme-sky-dark">
+    <div class="header-menu-add-to-card in-stack theme-sky-dark menu-add-to-card-hidde is-hidden ">
         <div class="in-stack cart-container ">
             <div class="cart-title-container in-line">
                 <h2>CARRITO</h2>
@@ -909,6 +908,7 @@
             </div>
             
         </div>
+        <!--  MENSAGE DE CARRITO VACÍO -->
         <div class="cart-empty is-hidden">
             <p class="cart-empty-msg ">
                 No tienes productos en el carrito, ¡Agrega algunos!
@@ -920,7 +920,7 @@
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  FIN MENU CARRITO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
 
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  INICIO CONFIRMACION DE COMPRA★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
-    <div class="menu-checkout in-stack checkout-is-hidden">
+    <div class="menu-checkout in-stack checkout-is-hidden is-hidden">
         <div class= "checkout-container in-line">
             <div class= "form-container">
                 <form>
@@ -1026,7 +1026,7 @@
 
     <!--  ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´  INICIO MODAL VACIAR CARRITO ★´･ｪ･`★´･ｪ･`★´･ｪ･`★´･ｪ･`★´ -->
     
-    <div class="modal modal-empty-cart is-hidden"  
+    <div class="modal-empty-cart is-hidden"  
          aria-role="dialog"
          aria-modal="true"
          aria-describedby="empty-cart-description"
@@ -1035,7 +1035,7 @@
         <p class="modal-message" id="empty-cart-description">
             Estás por vaciar el carrito, ¿quieres continuar?
         </p>
-        <footer class="modal-actions">
+        <footer class="modal-btn-container">
             <button type="button" class="button button-simple-solid-reverse cancel-empty-cart-btn">
                 Cancelar
             </button>
