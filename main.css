@@ -24,6 +24,9 @@ body {
 	overflow-x: hidden; 
 
 }
+img {
+    display: block;
+}
 button {
 	outline-style:none;
 	border:none;
@@ -117,7 +120,6 @@ a:visited {
 	min-width: 150px;
 	max-width: 350px;
 	font-weight: 600;
-	margin: 1em;
 	padding: 1em 2em;
 	border-radius: 40px;
 	transition: 0.2s;
@@ -282,7 +284,7 @@ aside {
 	margin: 0px 10px;
 }
 .filters-review {
-	margin-top: 20px;
+
 	color:  #080817;
 	
 }
@@ -343,6 +345,7 @@ aside {
 	background-color: white;
 	border-radius: 5px;
 	overflow: hidden;
+	text-align: center;
 	transition: box-shadow 0.5s;
 }
 .product-img-container{
@@ -355,7 +358,6 @@ aside {
 	height: 100%;
 	margin:auto;
 	transition: 0.2s;
-	display:block;
     opacity: 1;
 }
 .product-content {
@@ -375,7 +377,7 @@ margin-top: 15px;
 	display: flex;
 }
 .button-add-to-cart {
-	margin: 20px;
+	margin-top: 35px;
 	border: 0;
 }
 .in-line-product {
@@ -636,39 +638,58 @@ font-size: 18px;
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*
                                      DISEÑO RESPONSIVE 
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:..｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
-/* Large devices (desktops, 992px and up)*/
 
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+@media (max-width: 1200px) { 
 	
 	.product {
 		width: calc(100% / 2 - 2 * 10px);
+		padding: 25px 15px;
 	  }
-}
 
-/* Medium devices (tablets, 768px and up)*/
-
-@media (min-width: 768px) and (max-width: 991.98px){
-	aside {
-		display:none;
+	  .product-img-container {
+		height: 220px;
 	}
-	.product {
-		width: calc(100% / 2 - 2 * 1px);
-	  }
+
+	
+	.product-name {
+		
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.filters-review {
+		margin: 5px;
+	}
 }
 
 /* Small devices (landscape phones, 576px and up)*/
 
-@media (min-width: 576px) and (max-width: 767.98px) { 
+@media (max-width: 900px) { 
+	aside {
+		display:none;
+	}
 	.product {
-		width: calc(100% - 20px);
+		width: calc(100% / 2 - 2 * 30px);
+		
 	  }
+	  .products-list{
+		justify-content: center;
+	}
 }
 
-/* Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px){
+@media (max-width: 750px){
+	.products-list{
+		justify-content: center;
+	}
+	.product-img-container {
+		height: 250px;
+	}
 	.product {
-		width: calc(100% -10px);
+		width: calc(70% - 20px);
 	  }
 }
-
+@media (max-width: 550px){
+	.product-img-container {
+		height: 200px;
+	}
+}
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin SMARTPHONE   .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
