@@ -117,8 +117,6 @@ a:visited {
 	letter-spacing: 3px;
 	font-size: 0.8em;
 	text-transform: uppercase;	
-	min-width: 150px;
-	max-width: 350px;
 	font-weight: 600;
 	padding: 1em 2em;
 	border-radius: 40px;
@@ -159,7 +157,7 @@ a:visited {
 
 .header {
 	justify-content: space-between;
-	padding: 5px 10px;
+	padding: 15px 10px;
 }
 .branding-logo {
 	width: 25px;
@@ -187,11 +185,11 @@ a:visited {
 .banner{
 	position:relative;
 	margin-bottom: 50px;
-	box-shadow: 10px 5px 10px rgb(134, 134, 134);
-	
-	
+	box-shadow: 10px 5px 10px rgb(134, 134, 134);	
 }
-
+.banner img {
+	width: 100%;
+}
 .banner-title {
 	position:absolute;
 	color: white;
@@ -667,6 +665,19 @@ font-size: 18px;
 	aside {
 		display:none;
 	}
+	.close-filters-btn, .open-filters-btn{
+		display: block;
+	}
+	.products-header {
+		justify-content: space-between;
+		padding: 20px 10px;
+		margin: 5px;
+		border-radius: 5px;
+		font-size: 0.8em;
+	}
+	.banner {
+		margin-bottom: 20px;
+	}
 	.product {
 		width: calc(100% / 2 - 2 * 30px);
 		
@@ -688,6 +699,15 @@ font-size: 18px;
 	  }
 }
 @media (max-width: 550px){
+	.btn-cart {
+		font-size: 0.6em;
+	} 
+	.cart-text{
+		display:none;
+	}
+	.view-buttons-container {
+		display:none;
+	}
 	.product-img-container {
 		height: 200px;
 	}

@@ -39,7 +39,10 @@
                 <i class="fas fa-shopping-cart cart-icon"
                    aria-hidden="true"
                    aria-live="polite"></i>
-                Carrito (<span class="cart-qty">0</span>ítems)
+                <div class= "cart-text">
+                    <p>Carrito (<span class="cart-qty">0</span>ítems)</p>
+                </div>
+                
             </button>
         </div>
         <!--finaliza boton cart-->
@@ -71,8 +74,14 @@
 
         <section class="filters-container in-line"
                  aria-labelledby="filters-title">
+                    
             <aside>
-
+                <button
+                type="button"
+                class="close-filters-btn is-hidden"
+                aria-label="Cerrar filtros">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
                 <!--inicia Header Filtro-->
                 <div class="filters-heading-container in-line">
 
@@ -306,6 +315,13 @@
                             </button>
                         </div>
                     </div>
+                    <button
+                    type="button"
+                    class="open-filters-btn button button-simple-empty is-hidden"
+                    aria-label="Abrir filtros">
+                    <i class="fas fa-filter" aria-hidden="true"></i>
+                    Filtros
+                   </button>
                 </header>
                 <!--  fin header de productos  -->
 
