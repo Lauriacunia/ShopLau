@@ -25,8 +25,8 @@ const bodyNoScroll = () => {
 const bodyScroll = () => {
   document.body.classList.remove("no-scroll")
 }
-const centerElement = (element) => {
-
+const centerElementInBody = (element) => {
+console.log(element)
     let windowHeight = 0;
     let windowWidth = 0;
     let elementHeight = 0;
@@ -34,20 +34,20 @@ const centerElement = (element) => {
    
   //capturo el tamaño de la pantalla
     windowWidth = window.innerWidth;
-    console.log(windowHeight)
+    console.log(windowWidth)
     windowHeight = window.innerHeight;
     console.log(windowHeight)
    
   //capturo las dimensiones del elemento
-    elementWidth = element.innerWidth;
+    elementWidth = element.offsetWidth
     console.log(elementWidth)
-    elementHeight = element.innerHeight;
+    elementHeight = element.offsetHeight
     console.log(elementHeight)
   
   // calculo top y left
-    let top = (windowHeight/2 - elementHeight/2) ;
+    let top = (windowHeight - elementHeight/2) ;
     console.log(top)
-    let left = (windowWidth/2 - elementWidth/2) ;
+    let left = (windowWidth - elementWidth/2) ;
     console.log(left)
   //para evitar desbordes
   if (top < 0) {
@@ -60,12 +60,55 @@ const centerElement = (element) => {
     element.style.top = top + 'px';
     element.style.left = left + 'px';
 }
-
+const centerElementInContainer = (element, container) => {
+  console.log(element)
+      let containerHeight = 0;
+      let containerWidth = 0;
+      let elementHeight = 0;
+      let elementWidth = 0;
+     
+    //capturo el tamaño del container
+      containerWidth = container.offsetWidth
+      console.log(containerWidth)
+      containerHeight = container.offsetHeight
+      console.log(containerHeight)
+      
+    //capturo las dimensiones del elemento
+      elementWidth = element.offsetWidth
+      console.log(elementWidth)
+      elementHeight = element.offsetHeight
+      console.log(elementHeight)
+    
+    // calculo top y left
+      let top = (containerHeight/2 - elementHeight/2) ;
+      console.log(top)
+      let left = (containerWidth/2 - elementWidth/2) ;
+      console.log(left)
+    //para evitar desbordes
+    if (top < 0) {
+        top = 0;
+      }
+      if (left < 0) {
+        left = 0;
+      }
+    //le asigno el calculo al elemento
+      element.style.top = top + 'px';
+      element.style.left = left + 'px';
+  }
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                               ONLOAD
 💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
+const bannerContainer = document.querySelector(".banner")
 const bannerTitle = document.querySelector(".banner-title")
-centerElement(bannerTitle)
+const body = document.body
+
+centerElementInContainer(bannerTitle, bannerContainer)
+
+body.onchange = () => {
+  centerElementInContainer(bannerTitle, bannerContainer)
+}
+
+
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                               FILTROS
 💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
@@ -272,6 +315,27 @@ btnList.onclick = () => {
   showList();
 }
 
+/*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
+                              FILTROS EN RESPONSIVE
+💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
+const btnOpenFilters = document.querySelector(".open-filters-btn")
+const btnCloseFilters = document.querySelector(".close-filters-btn") 
+const filtersAside = document.querySelector(".filters-aside") 
+
+
+btnOpenFilters.onclick = () =>{
+  filtersAside.classList.add("aside-responsive")
+  filtersAside.classList.add("theme-sky-dark")
+  filtersAside.style.display = "block"
+  
+}
+
+btnCloseFilters.onclick = () => {
+  filtersAside.classList.remove("aside-responsive")
+  filtersAside.classList.remove("theme-sky-dark")
+  filtersAside.style.display = "none"
+  
+}
 
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                               CARRITO

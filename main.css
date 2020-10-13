@@ -208,6 +208,7 @@ a:visited {
 aside {
 	padding: 20px;	
 }
+
 .filters-container {
 	align-items: flex-start;
 	justify-content: flex-start;
@@ -666,8 +667,9 @@ font-size: 18px;
 		display:none;
 	}
 	.close-filters-btn, .open-filters-btn{
-		display: block;
+		display: flex;
 	}
+	
 	.products-header {
 		justify-content: space-between;
 		padding: 20px 10px;
@@ -684,6 +686,15 @@ font-size: 18px;
 	  }
 	  .products-list{
 		justify-content: center;
+	}
+	.aside-responsive {
+
+		position:absolute;
+		top: 0;
+		right: 0;
+	}
+	#input-search{
+		color:white;
 	}
 }
 
