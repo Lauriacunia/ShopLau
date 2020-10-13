@@ -45,9 +45,9 @@ console.log(element)
     console.log(elementHeight)
   
   // calculo top y left
-    let top = (windowHeight - elementHeight/2) ;
+    let top = (windowHeight/2 - elementHeight/2) ;
     console.log(top)
-    let left = (windowWidth - elementWidth/2) ;
+    let left = (windowWidth/2 - elementWidth/2) ;
     console.log(left)
   //para evitar desbordes
   if (top < 0) {
@@ -95,19 +95,23 @@ const centerElementInContainer = (element, container) => {
       element.style.top = top + 'px';
       element.style.left = left + 'px';
   }
-/*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
+
+
+/* TODO ESTE CODIGO FUNCIONA, pero al hacerlo
+me di cuenta que solo con el posicionamiento que le di 
+al contenedor del banner y al titulo del banner
+funciona igual. Lo deje por como dato curioso
+💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                               ONLOAD
-💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
+💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
 const bannerContainer = document.querySelector(".banner")
 const bannerTitle = document.querySelector(".banner-title")
-const body = document.body
 
 centerElementInContainer(bannerTitle, bannerContainer)
 
-body.onchange = () => {
+window.onresize = () => {
   centerElementInContainer(bannerTitle, bannerContainer)
-}
-
+}*/
 
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                               FILTROS
@@ -526,7 +530,7 @@ hideAllProductsOnCart = () => {
 
 
 const openModalEmptyCart = () => {
-centerElement(modalEmptyCart)
+centerElementInBody(modalEmptyCart)
 show(modalEmptyCart)
 }
 

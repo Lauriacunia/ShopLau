@@ -418,9 +418,7 @@ margin-top: 15px;
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Inicio MENU CARRITO .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
 .header-menu-add-to-card {
-	width: 100%;
-    height: 100%;
-    max-width: 400px;
+	
 	position: fixed;
 	right: 0;
 	top: 0px;
@@ -496,9 +494,15 @@ margin-top: 15px;
 .menu-add-to-card-hidde {
 	transform: translateX(500px);
 }
+.cart-empty {
+	margin: 150px 0px;
+}
 .cart-empty-msg {
 	max-width: 300px;
 
+}
+.btn-buy {
+	margin: 15px 0px;
 }
 /*☆☆.｡.:*･ﾟ*:.｡.☆☆.｡.:*･ﾟ*:.   Fin MENU CARRITO .｡.☆☆.｡.:*･ﾟ*:.｡.☆☆*/
 
@@ -693,9 +697,10 @@ font-size: 18px;
 		top: 0;
 		right: 0;
 	}
-	#input-search{
+	#input-search,.filters-review, .clear-btn {
 		color:white;
 	}
+	
 }
 
 @media (max-width: 750px){
