@@ -25,93 +25,7 @@ const bodyNoScroll = () => {
 const bodyScroll = () => {
   document.body.classList.remove("no-scroll")
 }
-const centerElementInBody = (element) => {
-console.log(element)
-    let windowHeight = 0;
-    let windowWidth = 0;
-    let elementHeight = 0;
-    let elementWidth = 0;
-   
-  //capturo el tamaño de la pantalla
-    windowWidth = window.innerWidth;
-    console.log(windowWidth)
-    windowHeight = window.innerHeight;
-    console.log(windowHeight)
-   
-  //capturo las dimensiones del elemento
-    elementWidth = element.offsetWidth
-    console.log(elementWidth)
-    elementHeight = element.offsetHeight
-    console.log(elementHeight)
-  
-  // calculo top y left
-    let top = (windowHeight/2 - elementHeight/2) ;
-    console.log(top)
-    let left = (windowWidth/2 - elementWidth/2) ;
-    console.log(left)
-  //para evitar desbordes
-  if (top < 0) {
-      top = 0;
-    }
-    if (left < 0) {
-      left = 0;
-    }
-  //le asigno el calculo al elemento
-    element.style.top = top + 'px';
-    element.style.left = left + 'px';
-}
-const centerElementInContainer = (element, container) => {
-  console.log(element)
-      let containerHeight = 0;
-      let containerWidth = 0;
-      let elementHeight = 0;
-      let elementWidth = 0;
-     
-    //capturo el tamaño del container
-      containerWidth = container.offsetWidth
-      console.log(containerWidth)
-      containerHeight = container.offsetHeight
-      console.log(containerHeight)
-      
-    //capturo las dimensiones del elemento
-      elementWidth = element.offsetWidth
-      console.log(elementWidth)
-      elementHeight = element.offsetHeight
-      console.log(elementHeight)
-    
-    // calculo top y left
-      let top = (containerHeight/2 - elementHeight/2) ;
-      console.log(top)
-      let left = (containerWidth/2 - elementWidth/2) ;
-      console.log(left)
-    //para evitar desbordes
-    if (top < 0) {
-        top = 0;
-      }
-      if (left < 0) {
-        left = 0;
-      }
-    //le asigno el calculo al elemento
-      element.style.top = top + 'px';
-      element.style.left = left + 'px';
-  }
 
-
-/* TODO ESTE CODIGO FUNCIONA, pero al hacerlo
-me di cuenta que solo con el posicionamiento que le di 
-al contenedor del banner y al titulo del banner
-funciona igual. Lo deje por como dato curioso
-💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
-                              ONLOAD
-💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
-const bannerContainer = document.querySelector(".banner")
-const bannerTitle = document.querySelector(".banner-title")
-
-centerElementInContainer(bannerTitle, bannerContainer)
-
-window.onresize = () => {
-  centerElementInContainer(bannerTitle, bannerContainer)
-}*/
 
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                               FILTROS
@@ -348,13 +262,15 @@ btnCloseFilters.onclick = () => {
  * 1- Seleccionar todos los elementos necesarios
  * 2- Inicializar evento que escuche el on-click en el boton de abrir carrito
  * y otro que escuche el boton cerrar carrito
- * 3- Ir a la funcion Mostrar Carrito u Ocular arrito 
+ * 3- Ir a la funcion Mostrar Carrito u Ocular carrito 
  * segun corresponda.
  * Cuando se abre carrito mostrar overlay y evitar scroll en screen.
  * 4- Inicializar evento en Botones Comprar y en contador de 
  * productos del carrito
  * 5-Agregar Funcionalidades: contar productos del carrito y calcular
  * subtotal de la compra
+ * 6-Agregar funcionalidades: dentro del carrito sumar mas productos
+ * del mismo tipo o eliminarlos individualmente
  */
 
 /******************💛💛💛 1-SELECCIONAR ELEMENTOS  💛💛💛***************/
@@ -489,6 +405,9 @@ for(let btnAddToCart of allBtnAddToCart) {
     showProductOnCart(btnAddToCart)
   }
 }
+/******************💛💛💛 1-SELECCIONAR ELEMENTOS  💛💛💛***************/
+const btnRemoveFromCart = document.querySelector(".remove-from-cart-btn")
+console.log(btnRemoveFromCart)
 
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                              MODALES CARRITO
@@ -530,7 +449,6 @@ hideAllProductsOnCart = () => {
 
 
 const openModalEmptyCart = () => {
-centerElementInBody(modalEmptyCart)
 show(modalEmptyCart)
 }
 
@@ -575,12 +493,10 @@ const menuCheckout = document.querySelector(".menu-checkout")
 
 const showCheckout = () => {
   show(menuCheckout)
-  menuCheckout.classList.remove("checkout-is-hidden")
 }
 
 const hiddeCheckout = () => {
   hide(menuCheckout)
-  menuCheckout.classList.add("checkout-is-hidden")
 }
 
 btnOpenCheckout.onclick = () => {
