@@ -26,7 +26,6 @@ const bodyScroll = () => {
   document.body.classList.remove("no-scroll")
 }
 
-
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                               FILTROS
 💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛*/
@@ -45,14 +44,14 @@ LImpiar Filtros
 /************** 💛💛💛 1- SELECCIONAR ELEMENTOS 💛💛💛*********** */ 
 
 const inputSearch = document.querySelector('#input-search');
-const products = document.getElementsByClassName('product'); /*LISTA DE products*/
+const products = document.getElementsByClassName('product'); /*LISTA DE PRODUCTOS*/
 const reviewFilters = document.getElementsByClassName('filter-review'); /*LISTA DE REVIEWS*/
 const categoryFilters = document.getElementsByClassName('filter-category'); /* LISTA DE CATEGORIAS*/
 const checkboxes = document.querySelectorAll(".filter")  /*LISTA DE CHECKBOXES*/
 const clearBtn = document.querySelector('.clear-btn');
 
 
-/************** 💛💛💛 3- FILTRAR products 💛💛💛*********** */
+/************** 💛💛💛 3- FILTRAR PRODUCTOS 💛💛💛*********** */
 
 /*----Chequea si hay checkbox chequeados ON */
 
@@ -112,6 +111,7 @@ const passAllFilters = (product) => {
 
 
 /* ------- Actualizar products Filtrados ------ */
+let productsQty = document.getElementById('products-qty')
 
 const updateQtyProducts = () => {
   let contador = 0
@@ -120,7 +120,6 @@ const updateQtyProducts = () => {
       contador++
     }
   }
-  let productsQty = document.getElementById('products-qty')
   productsQty.innerText = `Mostrando ${contador} product(s) de ${products.length}`
 }
 
@@ -371,10 +370,8 @@ const obtenerPlantillaProductoAgregado = (id, nombre, precio, imagen) => {
 }
 
 
-showProductOnCart = (btnAddToCart) => {
-  
+showProductOnCart = (btnAddToCart) => {  
   let productAdded = knowProduct(btnAddToCart);
-
   const plantilla = obtenerPlantillaProductoAgregado(
     productAdded.dataset.id,
     productAdded.dataset.name,
@@ -405,9 +402,23 @@ for(let btnAddToCart of allBtnAddToCart) {
     showProductOnCart(btnAddToCart)
   }
 }
-/******************💛💛💛 1-SELECCIONAR ELEMENTOS  💛💛💛***************/
-const btnRemoveFromCart = document.querySelector(".remove-from-cart-btn")
-console.log(btnRemoveFromCart)
+/******************💛💛💛 6-AGREGAR O QUITAR PRODUCTOS DEL CARRITO  💛💛💛***************/
+
+const btnRemoveFromCartList = document.querySelectorAll(".remove-from-cart-btn")
+console.log(btnRemoveFromCartList)
+const inputProductQtyList = document.querySelectorAll(".cart-product-qty")
+console.log(inputProductQtyList)
+
+for(btnRemove of btnRemoveFromCartList){
+  console.log(btnRemove)
+  btnRemove.onclick = () =>{
+    console.log("HICISTE CLIC EN TACHITO")
+  } 
+
+for(inputQty of inputProductQtyList){
+  console.log(inputQty)
+}
+}
 
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                              MODALES CARRITO
