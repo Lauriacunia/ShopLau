@@ -14,9 +14,11 @@ const normalize = (str) => {
   return str
 }
 const showOverlay = () => {
+  console.log("estas mostrando overlay")
   show(overlay)
 }
 const hiddeOverlay = () => {
+  console.log("estas ocultando overlay")
   hide(overlay)
 }
 const bodyNoScroll = () => {
@@ -384,12 +386,14 @@ showProductOnCart = (btnAddToCart) => {
 
 btnOpenCart.onclick = () => {
   showOverlay()
+  overlay.style.zIndex = "2";
   bodyNoScroll()
   showCart() 
 }
 
 btnCloseCart.onclick = () => {
   hiddeOverlay()
+  overlay.style.zIndex = "1";
   bodyScroll()
   hiddeCart()
 }
@@ -404,21 +408,21 @@ for(let btnAddToCart of allBtnAddToCart) {
 }
 /******************💛💛💛 6-AGREGAR O QUITAR PRODUCTOS DEL CARRITO  💛💛💛***************/
 
-const btnRemoveFromCartList = document.querySelectorAll(".remove-from-cart-btn")
-console.log(btnRemoveFromCartList)
-const inputProductQtyList = document.querySelectorAll(".cart-product-qty")
-console.log(inputProductQtyList)
+// const btnRemoveFromCartList = document.querySelectorAll(".remove-from-cart-btn")
+// console.log(btnRemoveFromCartList)
+// const inputProductQtyList = document.querySelectorAll(".cart-product-qty")
+// console.log(inputProductQtyList)
 
-for(btnRemove of btnRemoveFromCartList){
-  console.log(btnRemove)
-  btnRemove.onclick = () =>{
-    console.log("HICISTE CLIC EN TACHITO")
-  } 
+// for(btnRemove of btnRemoveFromCartList){
+//   console.log(btnRemove)
+//   btnRemove.onclick = () =>{
+//     console.log("HICISTE CLIC EN TACHITO")
+//   } 
 
-for(inputQty of inputProductQtyList){
-  console.log(inputQty)
-}
-}
+// for(inputQty of inputProductQtyList){
+//   console.log(inputQty)
+// }
+// }
 
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                              MODALES CARRITO
@@ -474,14 +478,20 @@ const emptyCartConfirm = () => {
 
 btnOpenModalEmptyCart.onclick = () => {
   openModalEmptyCart()
+  showOverlay()
+  bodyNoScroll()
   overlay.style.zIndex = "3";
 }
 btnConfirmEmptyCart.onclick = () => {
   emptyCartConfirm()
+  hiddeOverlay()
+  bodyScroll()
   hide(modalEmptyCart)
   overlay.style.zIndex = "1";
 }
 btnCancelEmptyCart.onclick =() => {
+  hiddeOverlay()
+  bodyScroll()
   hide(modalEmptyCart)
   overlay.style.zIndex = "1";
 }
