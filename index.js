@@ -282,7 +282,8 @@ let subtotalProductsAdded = 0; // empiezo con $0 de compra
 
 const showCart = () => {
 	show(cart);
-	cart.classList.remove('menu-add-to-card-hidde');
+  cart.classList.remove('menu-add-to-card-hidde');
+  cart.setAttribute('aria-hidden', false)
 	for (let c of counterProducts) {
 		if (c.innerText == 0) {
 			hide(cartFullMsg);
@@ -291,7 +292,8 @@ const showCart = () => {
 	}
 };
 const hiddeCart = () => {
-	cart.classList.add('menu-add-to-card-hidde');
+  cart.classList.add('menu-add-to-card-hidde');
+  cart.setAttribute('aria-hidden', true)
 	hide(cart);
 	show(cartFullMsg);
 	hide(cartEmptyMsg);
@@ -509,7 +511,8 @@ hideAllProductsOnCart = () => {
 };
 
 const openModalEmptyCart = () => {
-	show(modalEmptyCart);
+  show(modalEmptyCart);
+  modalEmptyCart.setAttribute('aria-hidden', false)
 };
 
 const emptyCartConfirm = () => {
@@ -517,7 +520,8 @@ const emptyCartConfirm = () => {
 	resetPriceToSubtotal();
 	hideAllProductsOnCart();
 	showCart();
-	hide(modalEmptyCart);
+  hide(modalEmptyCart);
+  modalEmptyCart.setAttribute('aria-hidden', true)
 };
 /******************💛💛💛 2- INICIALIZAR EVENTO BTN VACIAR 💛💛💛***************/
 
@@ -558,11 +562,13 @@ const menuCheckout = document.querySelector('.menu-checkout');
 /******************💛💛💛 2- ABRIR Y CERRAR CHECKOUT 💛💛💛***************/
 
 const showCheckout = () => {
-	show(menuCheckout);
+  show(menuCheckout);
+  menuCheckout.setAttribute('aria-hidden', false)
 };
 
 const hiddeCheckout = () => {
-	hide(menuCheckout);
+  hide(menuCheckout);
+  menuCheckout.setAttribute('aria-hidden', true)
 };
 
 btnOpenCheckout.onclick = () => {
@@ -673,5 +679,4 @@ const resetOptionsPay = () => {
  creditOption.checked = false 
  deliveryOption.checked = false
  discountOption.checked = false
-
 }
