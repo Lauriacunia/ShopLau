@@ -521,6 +521,7 @@ const emptyCartConfirm = () => {
 	hideAllProductsOnCart();
 	showCart();
   hide(modalEmptyCart);
+  overlay.style.zIndex = 2
   modalEmptyCart.setAttribute('aria-hidden', true)
 };
 /******************💛💛💛 2- INICIALIZAR EVENTO BTN VACIAR 💛💛💛***************/
@@ -528,8 +529,8 @@ const emptyCartConfirm = () => {
 btnOpenModalEmptyCart.onclick = () => {
 	openModalEmptyCart();
 	showOverlay();
-	bodyNoScroll();
-	overlay.style.zIndex = '3';
+  bodyNoScroll();
+  overlay.style.zIndex = 4
 };
 btnConfirmEmptyCart.onclick = () => {
 	emptyCartConfirm();
@@ -564,6 +565,7 @@ const menuCheckout = document.querySelector('.menu-checkout');
 const showCheckout = () => {
   show(menuCheckout);
   menuCheckout.setAttribute('aria-hidden', false)
+  overlay.style.zIndex = 4
 };
 
 const hiddeCheckout = () => {
