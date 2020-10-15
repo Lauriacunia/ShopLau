@@ -317,6 +317,13 @@ addCounterCart =()=>{
    c.innerText = counterNumber;
   }
 }
+subtractCounterCart =()=>{
+  for(let c of counterProducts){
+    let counterNumber = Number(c.innerText);
+    counterNumber--;
+    c.innerText = counterNumber;
+   }
+ }
 
 /** Saber cual es el producto que compraron
  * comparando id del boton con id del producto */
@@ -326,12 +333,28 @@ knowProduct = (btnAddToCart) => {
     return p
   }
 }
+
+knowProductByCloseness = (element) => {
+const product = element.closest(".cart-product-added")
+console.log(product)
+return product
+}
+
 /** Ir sumando cada producto comprado al valor de Subtotal (de todos los comprados)
  * para usarlo en el checkout (y calcular descuentos y recargos)
  */
 addSubtotal = (subtotal) => {
   //variable acumuladora de subtotales(precio de cada producto)
   subtotalProductsAdded = subtotalProductsAdded + Number(subtotal);
+// para mostrarlo en pantalla
+  for(let c of cartSubtotalOutput){
+    c.innerText = subtotalProductsAdded
+  }
+}
+
+subtractSubtotal = (subtotal) => {
+  //variable acumuladora de subtotales(precio de cada producto)
+  subtotalProductsAdded = subtotalProductsAdded - Number(subtotal);
 // para mostrarlo en pantalla
   for(let c of cartSubtotalOutput){
     c.innerText = subtotalProductsAdded
@@ -351,6 +374,25 @@ addPriceToSubtotal = (btnAddToCart) => {
   let subtotal = productAdded.dataset.price;
   addSubtotal(subtotal)
 }
+const addPriceToSubtotal2 = (element) => {
+
+ let productAdded= knowProductByCloseness(element)
+ let qty = element.getAttribute("value")
+ let subtotal = productAdded.dataset.price * qty;
+
+ addSubtotal(subtotal)
+
+}
+subtractPriceToSubtotal = (element) => {
+  console.log("estas en subtracrToSubtotal")
+  console.log(element)
+  let productAdded= knowProductByCloseness(element)
+  console.log(productAdded)
+  let subtotal = productAdded.dataset.price;
+  console.log(subtotal)
+  subtractSubtotal(subtotal)
+}
+
 
 const obtenerPlantillaProductoAgregado = (id, nombre, precio, imagen) => {
   return `<article class="cart-product-added" data-id="${id}" data-qty="1" data-price=${precio}>
@@ -372,7 +414,7 @@ const obtenerPlantillaProductoAgregado = (id, nombre, precio, imagen) => {
 }
 
 
-showProductOnCart = (btnAddToCart) => {  
+const showProductOnCart = (btnAddToCart) => {  
   let productAdded = knowProduct(btnAddToCart);
   const plantilla = obtenerPlantillaProductoAgregado(
     productAdded.dataset.id,
@@ -382,6 +424,7 @@ showProductOnCart = (btnAddToCart) => {
   )
   carrito.innerHTML += plantilla
 }
+
 /******************💛💛💛 3-INICIALIZAR EVENTO MOSTRAR CARRITO 💛💛💛***************/
 
 btnOpenCart.onclick = () => {
@@ -398,31 +441,62 @@ btnCloseCart.onclick = () => {
   hiddeCart()
 }
 /******************💛💛💛 4-INICIALIZAR EVENTO SUMAR PRODUCTOS 💛💛💛***************/
+const removeProductOfTheList = (btnRemove) => {
+let product = knowProductByCloseness(btnRemove)
+console.log(product)
+subtractCounterCart()
+subtractPriceToSubtotal(btnRemove)
+product.remove()
+listenEventsOnCart()
+}
+
+const addProductToTheCartList = (inputQty) => {
+addCounterCart()
+addPriceToSubtotal2(inputQty)
+listenEventsOnCart()
+}
+
+/** Escucha eventos remover o agregar producto en carrito*/
+
+const listenEventsOnCart = () => {  
+  const btnRemoveFromCartList = document.querySelectorAll(".remove-from-cart-btn")
+  console.log(btnRemoveFromCartList)
+  const inputProductQtyList = document.querySelectorAll(".cart-product-qty")
+  console.log(inputProductQtyList)
+
+  for(btnRemove of btnRemoveFromCartList) {
+    console.log(btnRemove)
+    btnRemove.onclick = () => {
+      console.log("HICISTE CLIC EN TACHITO")
+      removeProductOfTheList(btnRemove)
+    } 
+  }
+
+  for(inputQty of inputProductQtyList){
+    console.log(inputQty)
+    inputQty.onchange = () => {
+      console.log("hiciste un cambio en cantidad de productos")
+      addProductToTheCartList(inputQty)
+    }
+  }
+
+}
+
+/** INICIALIZA BOTONES QUE AGREGAN O QUITAN PRODUCTOS  */
 
 for(let btnAddToCart of allBtnAddToCart) {
   btnAddToCart.onclick = () => {
     addCounterCart()
     addPriceToSubtotal(btnAddToCart) 
     showProductOnCart(btnAddToCart)
-  }
+    listenEventsOnCart()
+  
+ }
+
 }
-/******************💛💛💛 6-AGREGAR O QUITAR PRODUCTOS DEL CARRITO  💛💛💛***************/
+ 
 
-// const btnRemoveFromCartList = document.querySelectorAll(".remove-from-cart-btn")
-// console.log(btnRemoveFromCartList)
-// const inputProductQtyList = document.querySelectorAll(".cart-product-qty")
-// console.log(inputProductQtyList)
 
-// for(btnRemove of btnRemoveFromCartList){
-//   console.log(btnRemove)
-//   btnRemove.onclick = () =>{
-//     console.log("HICISTE CLIC EN TACHITO")
-//   } 
-
-// for(inputQty of inputProductQtyList){
-//   console.log(inputQty)
-// }
-// }
 
 /*💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛💛
                              MODALES CARRITO
