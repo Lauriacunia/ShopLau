@@ -441,6 +441,7 @@ const addProductToTheCartList = (inputQty) => {
 	 * en relacion a la cantida anterior.
 	 * -Actualizar el subtotal de cada producto
 	 * si cambia su cantidad
+	 * -agregar condicion, si qty igual 0 mostrar mgs carrito vacio
 	 */
 	addSubtotal(subtotal);
 	addCounterCart();
