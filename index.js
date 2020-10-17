@@ -253,7 +253,7 @@ btnCloseFilters.onclick = () => {
  * 1- Seleccionar todos los elementos necesarios
  * 2- Inicializar evento que escuche el on-click en el boton de abrir carrito
  * y otro que escuche el boton cerrar carrito
- * 3- Ir a la funcion Mostrar Carrito u Ocular carrito 
+ * 3- Ir a la funcion Mostrar Carrito u Ocultar carrito 
  * segun corresponda.
  * Cuando se abre carrito mostrar overlay y evitar scroll en screen.
  * 4- Inicializar evento en Botones Comprar y en contador de 
@@ -275,6 +275,7 @@ const counterProducts = document.querySelectorAll('.cart-qty');
 const cartFullMsg = document.querySelector('.cart-full');
 const cartEmptyMsg = document.querySelector('.cart-empty');
 const carrito = document.querySelector('.cart-products-added');
+
 
 let subtotalProductsAdded = 0; // empiezo con $0 de compra
 
@@ -302,14 +303,14 @@ const hiddeCart = () => {
 /******************💛💛💛 5-FUNCIONALIDADES DE SUMAR SUBTOTAL Y
  *                                CAMBIAR CONTADOR DE PRODUCTOS  💛💛💛***************/
 
-addCounterCart = () => {
+const addCounterCart = () => {
 	for (let c of counterProducts) {
 		let counterNumber = Number(c.innerText);
 		counterNumber++;
 		c.innerText = counterNumber;
 	}
 };
-subtractCounterCart = () => {
+const subtractCounterCart = () => {
 	for (let c of counterProducts) {
 		let counterNumber = Number(c.innerText);
 		counterNumber--;
@@ -319,23 +320,22 @@ subtractCounterCart = () => {
 
 /** Saber cual es el producto que compraron
  * comparando id del boton con id del producto */
-knowProduct = (btnAddToCart) => {
-	for (let p of products)
-		if (p.dataset.id === btnAddToCart.getAttribute('id')) {
-			return p;
+const knowProduct = (btn,list) => {
+	for (let x of list)
+		if (x.dataset.id === btn.getAttribute('id')) {
+			console.log(x.dataset.id)
+			console.log(btn.getAttribute('id'))
+			console.log(x.dataset.id === btn.getAttribute('id'))
+			return x;
 		}
 };
 
-knowProductByCloseness = (element) => {
-	const product = element.closest('.cart-product-added');
-	console.log(product);
-	return product;
-};
+
 
 /** Ir sumando cada producto comprado al valor de Subtotal (de todos los comprados)
  * para usarlo en el checkout (y calcular descuentos y recargos)
  */
-addSubtotal = (subtotal) => {
+const addSubtotal = (subtotal) => {
 	//variable acumuladora de subtotales(precio de cada producto)
 	subtotalProductsAdded = subtotalProductsAdded + Number(subtotal);
 	// para mostrarlo en pantalla
@@ -344,7 +344,7 @@ addSubtotal = (subtotal) => {
 	}
 };
 
-subtractSubtotal = (subtotal) => {
+const subtractSubtotal = (subtotal) => {
 	//variable acumuladora de subtotales(precio de cada producto)
 	subtotalProductsAdded = subtotalProductsAdded - Number(subtotal);
 	// para mostrarlo en pantalla
@@ -362,24 +362,9 @@ addPriceToSubtotal = (btnAddToCart) => {
    *   (para seleccionalos y mostrarlos en el carrito)
    */
 
-	let productAdded = knowProduct(btnAddToCart);
+	let productAdded = knowProduct(btnAddToCart, products);
 	let subtotal = productAdded.dataset.price;
 	addSubtotal(subtotal);
-};
-const addPriceToSubtotal2 = (element) => {
-  /**Otra forma de sumar montos al subtotal
-   * a partir del evento onchange de cantidad de
-   * productos en el carrito
-   */
-	let productAdded = knowProductByCloseness(element);
-	let qty = element.getAttribute('value');
-	let subtotal = (productAdded.dataset.price) * qty;
-	addSubtotal(subtotal);
-};
-subtractPriceToSubtotal = (element) => {
-	let productAdded = knowProductByCloseness(element);
-	let subtotal = productAdded.dataset.price;
-	subtractSubtotal(subtotal);
 };
 
 const obtenerPlantillaProductoAgregado = (id, nombre, precio, imagen) => {
@@ -388,11 +373,11 @@ const obtenerPlantillaProductoAgregado = (id, nombre, precio, imagen) => {
     <div class="cart-product-details">
       <div class="cart-product-info">
         <h3 class="cart-product-name">${nombre}</h3>
-        <button type="button" class="remove-from-cart-btn"><i class="far fa-trash-alt"></i></button>
+        <button  type="button" class="remove-from-cart-btn" id="${id}"><i class="far fa-trash-alt"></i></button>
       </div>
       <div class="cart-product-price-qty">
         <label>
-          <input type="number" min="0" value="1" class="cart-product-qty" />
+          <input data-precio="${precio}" data-id="${id}" type="number" min="0" value="1" class="cart-product-qty" />
           unidades
         </label>
         <p class="cart-product-price">x $${precio}</p>
@@ -402,7 +387,7 @@ const obtenerPlantillaProductoAgregado = (id, nombre, precio, imagen) => {
 };
 
 const showProductOnCart = (btnAddToCart) => {
-	let productAdded = knowProduct(btnAddToCart);
+	let productAdded = knowProduct(btnAddToCart, products);
 	const plantilla = obtenerPlantillaProductoAgregado(
 		productAdded.dataset.id,
 		productAdded.dataset.name,
@@ -410,6 +395,7 @@ const showProductOnCart = (btnAddToCart) => {
 		productAdded.dataset.image
 	);
 	carrito.innerHTML += plantilla;
+	
 };
 
 /******************💛💛💛 3-INICIALIZAR EVENTO MOSTRAR CARRITO 💛💛💛***************/
@@ -430,27 +416,40 @@ btnCloseCart.onclick = () => {
 /******************💛💛💛 4-INICIALIZAR EVENTO SUMAR PRODUCTOS 💛💛💛***************/
 
 const removeProductOfTheList = (btnRemove) => {
-	let product = knowProductByCloseness(btnRemove);
-	subtractCounterCart();
-	subtractPriceToSubtotal(btnRemove);
-	product.remove();
+	/* Averiguar la tarjeta padre*/
+	const allProductsAdded = document.querySelectorAll(".cart-product-added")	
+	console.log(allProductsAdded)
+
+	let productToRemove = knowProduct(btnRemove, allProductsAdded)
+
+	let subtotal = productToRemove.dataset.price;
+	console.log(subtotal)
+	subtractSubtotal(subtotal)
+	subtractCounterCart()
+	productToRemove.remove();
 	listenEventsOnCart();
 };
 
 const addProductToTheCartList = (inputQty) => {
+	let qty = inputQty.getAttribute('value');
+	console.log(qty)
+	let subtotal = Number(inputQty.dataset.precio) * qty;
+	console.log(subtotal)
+	addSubtotal(subtotal);
 	addCounterCart();
-	addPriceToSubtotal2(inputQty);
 	listenEventsOnCart();
 };
 
 /** Escucha eventos remover o agregar producto en carrito*/
 
 const listenEventsOnCart = () => {
-	const btnRemoveFromCartList = document.querySelectorAll('.remove-from-cart-btn');
+	const allBtnRemove = document.querySelectorAll('.remove-from-cart-btn');
+	console.log(allBtnRemove)
 	const inputProductQtyList = document.querySelectorAll('.cart-product-qty');
 
-	for (btnRemove of btnRemoveFromCartList) {
+	for (btnRemove of allBtnRemove) {
 		btnRemove.onclick = () => {
+			console.log(btnRemove)
 			removeProductOfTheList(btnRemove);
 		};
 	}
@@ -529,7 +528,7 @@ const emptyCartConfirm = () => {
 btnOpenModalEmptyCart.onclick = () => {
 	openModalEmptyCart();
 	showOverlay();
-  bodyNoScroll();
+    bodyNoScroll();
   overlay.style.zIndex = 4
 };
 btnConfirmEmptyCart.onclick = () => {
