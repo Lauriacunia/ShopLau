@@ -377,7 +377,7 @@ const obtenerPlantillaProductoAgregado = (id, nombre, precio, imagen) => {
       </div>
       <div class="cart-product-price-qty">
         <label>
-          <input data-precio="${precio}" data-id="${id}" type="number" min="0" value="1" class="cart-product-qty" />
+          <input data-precio="${precio}" type="number" min="0" value="1" class="cart-product-qty" />
           unidades
         </label>
         <p class="cart-product-price">x $${precio}</p>
@@ -435,6 +435,13 @@ const addProductToTheCartList = (inputQty) => {
 	console.log(qty)
 	let subtotal = Number(inputQty.dataset.precio) * qty;
 	console.log(subtotal)
+	/**
+	 * Falta: 
+	 * -ver sumar o restar el monto si el numero crece o decrece
+	 * en relacion a la cantida anterior.
+	 * -Actualizar el subtotal de cada producto
+	 * si cambia su cantidad
+	 */
 	addSubtotal(subtotal);
 	addCounterCart();
 	listenEventsOnCart();
@@ -445,7 +452,7 @@ const addProductToTheCartList = (inputQty) => {
 const listenEventsOnCart = () => {
 	const allBtnRemove = document.querySelectorAll('.remove-from-cart-btn');
 	console.log(allBtnRemove)
-	const inputProductQtyList = document.querySelectorAll('.cart-product-qty');
+	const allInputsProductQty = document.querySelectorAll('.cart-product-qty');
 
 	for (btnRemove of allBtnRemove) {
 		btnRemove.onclick = () => {
@@ -454,8 +461,9 @@ const listenEventsOnCart = () => {
 		};
 	}
 
-	for (inputQty of inputProductQtyList) {
+	for (inputQty of allInputsProductQty) {
 		inputQty.onchange = () => {
+			console.log("apretaste sumar producto")
 			addProductToTheCartList(inputQty);
 		};
 	}

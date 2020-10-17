@@ -284,7 +284,6 @@ aside {
 
 .products-list {
 	flex-grow: 1;
-	justify-content: space-between;
 	align-items: flex-start;
 }
 #view-button-grid,
