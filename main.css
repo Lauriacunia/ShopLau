@@ -638,9 +638,11 @@ overflow: auto;
 		justify-content: center;
 	}
 	.aside-responsive {
+		height: 100%;
 		position: absolute;
 		top: 0;
 		right: 0;
+        position:fixed;
 	}
 	#input-search,
 	.filters-review,
