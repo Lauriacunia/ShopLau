@@ -432,6 +432,7 @@ const removeProductOfTheList = (btnRemove) => {
 
 const addProductToTheCartList = (inputQty) => {
 	let qty = inputQty.getAttribute('value');
+	console.log(inputQty.value)
 	console.log(qty)
 	let subtotal = Number(inputQty.dataset.precio) * qty;
 	console.log(subtotal)
@@ -465,6 +466,7 @@ const listenEventsOnCart = () => {
 	for (inputQty of allInputsProductQty) {
 		inputQty.onchange = () => {
 			console.log("apretaste sumar producto")
+			console.log(inputQty.value)
 			addProductToTheCartList(inputQty);
 		};
 	}
